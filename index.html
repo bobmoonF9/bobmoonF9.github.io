@@ -13,7 +13,7 @@ let strStartURL = 	str.slice(str.StartsWith, str.search("/index.html"));
 let strFinal = 	str.slice(str.StartsWith, str.search("/index")) + "/Content/Search.html"; 	
 	alert ( 'URL string = ' + strFinal  );
 
-let strFull = `${location.href.substring(0, location.href.lastIndexOf("/"))}`+"/Content/search.html?q=" + query.value
+let strFull = `${location.href.substring(0, location.href.lastIndexOf("/"))}`+"/Content/search.html?q=" // + query.value
 alert ( strFull  );
 
 
