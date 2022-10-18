@@ -14,8 +14,8 @@ document.onclick = storeurl;
 </script>
 
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<h1>Hello World - Search</h1>
+<p>I'm the search page hosted with GitHub Pages.</p>
 
 <p>The lastIndexOf() method returns the position of the last occurrence of a specified text:</p>
 <p id="demo"></p>
@@ -29,13 +29,13 @@ let str = window.location.href;
 document.getElementById("demo").innerHTML = str;  
 
 // find the location of a text value in the string
-document.getElementById("demo1").innerHTML = str.lastIndexOf("/index.html");  
+document.getElementById("demo1").innerHTML = str.lastIndexOf("/tryit.asp");  
 
 // grab the first part of the URL, from the start location up to the specified string value
-document.getElementById("demo2").innerHTML = str.slice(str.StartsWith, str.search("/index.html")); 
+document.getElementById("demo2").innerHTML = str.slice(str.StartsWith, str.search("/tryit.asp")); 
 
 // add a different page name to the end of the URL
-document.getElementById("demo3").innerHTML = str.slice(str.StartsWith, str.search("/index")) + "/Content/Search.html"; 
+document.getElementById("demo3").innerHTML = str.slice(str.StartsWith, str.search("/tryit.asp")) + "/Content/Search.htm"; 
 
 
 </body>
