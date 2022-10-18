@@ -9,6 +9,12 @@ varurl = document.URL;
 document.write(varurl);
 }
 
+function go() {
+let strGo = `${location.href.substring(0, location.href.lastIndexOf("/"))}`+"/Search.html?q=" // + query.value
+	alert ( strGo  );
+	window.location = strGo;
+}
+
 document.onclick = storeurl;
 
 </script>
@@ -53,7 +59,7 @@ let strFull = `${location.href.substring(0, location.href.lastIndexOf("/"))}`+"/
 <input type="text" class="form-control form-input" placeholder="Search anything..." aria-label="Large" aria-describedby="inputGroup-sizing-sm">
 
 
-<p><a href="" onclick="`${location.href.substring(0, location.href.lastIndexOf("/"))}`+"/Search.html?q=";" >Link</a></p>
+<p><a href="" onclick="go();" >Link</a></p>
 
 
 <script>
