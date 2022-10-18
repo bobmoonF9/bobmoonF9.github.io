@@ -3,7 +3,16 @@
 
 
   <script>
-    alert( 'Hello, world! from the header' );
+    alert( 'Hello, world on page load' );
+let str = window.location.href;  
+	alert ( 'URL string = ' + str  );
+let strLocation = 	str.lastIndexOf("/index.html");  
+	alert ( 'URL string = ' + strLocation  );
+let strStartURL = 	str.slice(str.StartsWith, str.search("/index.html")); 
+	alert ( 'URL string = ' + strStartURL  );
+let strFinal = 	str.slice(str.StartsWith, str.search("/index")) + "/Content/Search.html"; 	
+	alert ( 'URL string = ' + strFinal  );
+	
   </script>
 
 
