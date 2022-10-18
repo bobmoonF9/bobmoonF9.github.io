@@ -17,16 +17,16 @@ document.onclick = storeurl;
   <script>
     alert( 'Hello, world on page load' );
 let str = window.location.href;  
-	alert ( 'URL string = ' + str  );
+	//alert ( 'URL string = ' + str  );
 let strLocation = 	str.lastIndexOf("/index.html");  
-	alert ( 'URL string = ' + strLocation  );
+	//alert ( 'URL string = ' + strLocation  );
 let strStartURL = 	str.slice(str.StartsWith, str.search("/index.html")); 
-	alert ( 'URL string = ' + strStartURL  );
+	//alert ( 'URL string = ' + strStartURL  );
 let strFinal = 	str.slice(str.StartsWith, str.search("/index")) + "/Content/Search.html"; 	
-	alert ( 'URL string = ' + strFinal  );
+	//alert ( 'URL string = ' + strFinal  );
 
-let strFull = `${location.href.substring(0, location.href.lastIndexOf("/"))}`+"/Content/Search.html?q=" // + query.value
-alert ( strFull  );
+let strFull = `${location.href.substring(0, location.href.lastIndexOf("/"))}`+"/Search.html?q=" // + query.value
+	alert ( strFull  );
 
 
 	
@@ -53,7 +53,7 @@ alert ( strFull  );
 <input type="text" class="form-control form-input" placeholder="Search anything..." aria-label="Large" aria-describedby="inputGroup-sizing-sm">
 
 
-<p>a href="" onclick="`${location.href.substring(0, location.href.lastIndexOf("/"))}`+"/Content/Search.html?q=";" >Link</a></p>
+<p><a href="" onclick="`${location.href.substring(0, location.href.lastIndexOf("/"))}`+"/Search.html?q=";" >Link</a></p>
 
 
 <script>
