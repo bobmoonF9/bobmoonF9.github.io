@@ -13,6 +13,27 @@ document.onclick = storeurl;
 
 </script>
 
+
+  <script>
+    alert( 'Hello, world on page load' );
+let str = window.location.href;  
+	alert ( 'URL string = ' + str  );
+let strLocation = 	str.lastIndexOf("/index.html");  
+	alert ( 'URL string = ' + strLocation  );
+let strStartURL = 	str.slice(str.StartsWith, str.search("/index.html")); 
+	alert ( 'URL string = ' + strStartURL  );
+let strFinal = 	str.slice(str.StartsWith, str.search("/index")) + "/Content/Search.html"; 	
+	alert ( 'URL string = ' + strFinal  );
+
+let strFull = `${location.href.substring(0, location.href.lastIndexOf("/"))}`+"/Content/Search.html?q=" // + query.value
+alert ( strFull  );
+
+
+	
+  </script>
+
+
+
 <body>
 <h1>Hello World -Home</h1>
 <p>I'm the home page hosted with GitHub Pages.</p>
@@ -23,20 +44,33 @@ document.onclick = storeurl;
 <p id="demo2"></p>
 <p id="demo3"></p>
 
+<p>The lastIndexOf() method returns the position of the last occurrence of a specified text:</p>
+<p id="demo">1</p>
+<p id="demo1">2</p>
+<p id="demo2">3</p>
+<p id="demo3">4</p>
+
+<input type="text" class="form-control form-input" placeholder="Search anything..." aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+
+
+<p>>a href="" onclick="`${location.href.substring(0, location.href.lastIndexOf("/"))}`+"/Content/Search.html?q=";" >Link</a></p>
+
+
 <script>
 // set variable to current URL
-let str = window.location.href;  
+alert( 'Hello, world!' );
+let str2 = window.location.href;  
 document.getElementById("demo").innerHTML = str;  
 
 // find the location of a text value in the string
-document.getElementById("demo1").innerHTML = str.lastIndexOf("/tryit.asp");  
+document.getElementById("demo1").innerHTML = str.lastIndexOf("/index.html");  
 
 // grab the first part of the URL, from the start location up to the specified string value
-document.getElementById("demo2").innerHTML = str.slice(str.StartsWith, str.search("/tryit.asp")); 
+document.getElementById("demo2").innerHTML = str.slice(str.StartsWith, str.search("/index.html")); 
 
 // add a different page name to the end of the URL
-document.getElementById("demo3").innerHTML = str.slice(str.StartsWith, str.search("/tryit.asp")) + "/Content/Search.htm"; 
-
-
+document.getElementById("demo3").innerHTML = str.slice(str.StartsWith, str.search("/index")) + "/Content/Search.html"; 
+</script>
+<script src="main.js"></script>
 </body>
 </html>
