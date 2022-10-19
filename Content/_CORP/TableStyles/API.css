@@ -1,0 +1,1599 @@
+/* MadCap Table Style: */
+
+/*<meta Version="9" />*/
+
+mcTableStyle
+{
+	border-collapse: collapse;
+	border-top-style: solid;
+	border-top-width: 1pt;
+	border-bottom-style: solid;
+	border-bottom-width: 1pt;
+	border-spacing-y: 0;
+	border-spacing-x: 0;
+	name: API;
+	cell-padding-left: 2px;
+	cell-padding-right: 2px;
+	cell-padding-top: 2px;
+	margin-left: 4px;
+	margin-right: 4px;
+	margin-top: 4px;
+	margin-bottom: 30px;
+	border-top-color: #248dc1;
+	border-bottom-color: #248dc1;
+	cell-padding-bottom: 2px;
+	max-id: 8;
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+	border-bottom-left-radius: 0px;
+	mc-hide-bottom-ruling: true;
+}
+
+mcTableColumnStyle
+{
+	span: 2;
+	id: 5;
+	name: CodeFont;
+	type: Automatic;
+	font-family: 'Courier New';
+	font-size: 9pt;
+	cell-padding-right: 12px;
+}
+
+mcTableColumnStyle
+{
+	span: 1;
+	id: 1;
+	name: Other;
+}
+
+mcTableHeadStyle
+{
+	span: 1;
+	id: 2;
+	name: Header1;
+	text-align: left;
+	vertical-align: top;
+	background-color: #f1f1f2;
+	cell-padding-left: 4px;
+	cell-padding-right: 4px;
+	cell-content-style-tag: p;
+	size: 0;
+	font-weight: bold;
+	font-family: Calibri;
+	font-size: 1em;
+}
+
+mcTableBodyStyle
+{
+	span: 1;
+	id: 0;
+	name: Body1;
+	separator-style: solid;
+	separator-width: 1pt;
+	separator-color: #dcdcdc;
+	text-align: left;
+	vertical-align: top;
+	cell-content-style-tag: p;
+}
+
+mcTableBodyStyle
+{
+	span: 1;
+	id: 8;
+	name: Separator;
+	font-weight: bold;
+	background-color: #f1f1f2;
+	text-align: left;
+	vertical-align: middle;
+	separator-style: solid;
+	separator-width: 1pt;
+	separator-color: #dcdcdc;
+	type: Manual;
+	cell-content-style-tag: p;
+	page-break-after: avoid;
+}
+
+mcTableFootStyle
+{
+	span: 1;
+	id: 7;
+	name: Footer1;
+	font-size: 10pt;
+	font-style: italic;
+	cell-content-style-tag: p;
+	font-family: Calibri;
+	separator-style: solid;
+	separator-width: 1pt;
+	separator-color: #dcdcdc;
+	text-align: left;
+	vertical-align: top;
+}
+
+
+/* Cell Styles: */
+ 
+.TableStyle-API
+{
+	border-collapse: collapse;
+	mc-hide-bottom-ruling: true;
+	border-top-style: solid;
+	border-top-color: #248dc1;
+	border-top-width: 1pt;
+	border-bottom-style: solid;
+	border-bottom-color: #248dc1;
+	border-bottom-width: 1pt;
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+	border-bottom-left-radius: 0px;
+	margin-left: 4px;
+	margin-right: 4px;
+	margin-top: 4px;
+	margin-bottom: 30px;
+	border-spacing: 0px 0px;
+}
+
+.TableStyle-API-Column-CodeFont
+{
+	
+}
+
+.TableStyle-API-Column-Other
+{
+	
+}
+
+.TableStyle-API-Head-Header1
+{
+	height: 0;
+}
+
+.TableStyle-API-HeadI-CodeFont-Header1
+{
+	padding-top: 2px;
+	padding-bottom: 2px;
+	font-family: Calibri;
+	font-size: 1em;
+	font-weight: bold;
+	text-align: left;
+	vertical-align: top;
+	background-color: #f1f1f2;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+.TableStyle-API-HeadI-CodeFont-Header1 p
+{
+	font-family: Calibri;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+.TableStyle-API-HeadE-CodeFont-Header1
+{
+	padding-top: 2px;
+	padding-bottom: 2px;
+	font-family: Calibri;
+	font-size: 1em;
+	font-weight: bold;
+	text-align: left;
+	vertical-align: top;
+	background-color: #f1f1f2;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+.TableStyle-API-HeadE-CodeFont-Header1 p
+{
+	font-family: Calibri;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+.TableStyle-API-HeadF-CodeFont-Header1
+{
+	padding-top: 2px;
+	padding-bottom: 2px;
+	font-family: Calibri;
+	font-size: 1em;
+	font-weight: bold;
+	text-align: left;
+	vertical-align: top;
+	background-color: #f1f1f2;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+.TableStyle-API-HeadF-CodeFont-Header1 p
+{
+	font-family: Calibri;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+.TableStyle-API-HeadH-CodeFont-Header1
+{
+	padding-top: 2px;
+	padding-bottom: 2px;
+	font-family: Calibri;
+	font-size: 1em;
+	font-weight: bold;
+	text-align: left;
+	vertical-align: top;
+	background-color: #f1f1f2;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+.TableStyle-API-HeadH-CodeFont-Header1 p
+{
+	font-family: Calibri;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+.TableStyle-API-HeadD-CodeFont-Header1
+{
+	padding-top: 2px;
+	padding-bottom: 2px;
+	font-family: Calibri;
+	font-size: 1em;
+	font-weight: bold;
+	text-align: left;
+	vertical-align: top;
+	background-color: #f1f1f2;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+.TableStyle-API-HeadD-CodeFont-Header1 p
+{
+	font-family: Calibri;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+.TableStyle-API-HeadC-CodeFont-Header1
+{
+	padding-top: 2px;
+	padding-bottom: 2px;
+	font-family: Calibri;
+	font-size: 1em;
+	font-weight: bold;
+	text-align: left;
+	vertical-align: top;
+	background-color: #f1f1f2;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+.TableStyle-API-HeadC-CodeFont-Header1 p
+{
+	font-family: Calibri;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+.TableStyle-API-HeadB-CodeFont-Header1
+{
+	padding-top: 2px;
+	padding-bottom: 2px;
+	font-family: Calibri;
+	font-size: 1em;
+	font-weight: bold;
+	text-align: left;
+	vertical-align: top;
+	background-color: #f1f1f2;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+.TableStyle-API-HeadB-CodeFont-Header1 p
+{
+	font-family: Calibri;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+.TableStyle-API-HeadA-CodeFont-Header1
+{
+	padding-top: 2px;
+	padding-bottom: 2px;
+	font-family: Calibri;
+	font-size: 1em;
+	font-weight: bold;
+	text-align: left;
+	vertical-align: top;
+	background-color: #f1f1f2;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+.TableStyle-API-HeadA-CodeFont-Header1 p
+{
+	font-family: Calibri;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+.TableStyle-API-HeadG-CodeFont-Header1
+{
+	padding-top: 2px;
+	padding-bottom: 2px;
+	font-family: Calibri;
+	font-size: 1em;
+	font-weight: bold;
+	text-align: left;
+	vertical-align: top;
+	background-color: #f1f1f2;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+.TableStyle-API-HeadG-CodeFont-Header1 p
+{
+	font-family: Calibri;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+.TableStyle-API-HeadI-Other-Header1
+{
+	padding-top: 2px;
+	padding-bottom: 2px;
+	font-family: Calibri;
+	font-size: 1em;
+	font-weight: bold;
+	text-align: left;
+	vertical-align: top;
+	background-color: #f1f1f2;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+.TableStyle-API-HeadI-Other-Header1 p
+{
+	font-family: Calibri;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+.TableStyle-API-HeadE-Other-Header1
+{
+	padding-top: 2px;
+	padding-bottom: 2px;
+	font-family: Calibri;
+	font-size: 1em;
+	font-weight: bold;
+	text-align: left;
+	vertical-align: top;
+	background-color: #f1f1f2;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+.TableStyle-API-HeadE-Other-Header1 p
+{
+	font-family: Calibri;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+.TableStyle-API-HeadF-Other-Header1
+{
+	padding-top: 2px;
+	padding-bottom: 2px;
+	font-family: Calibri;
+	font-size: 1em;
+	font-weight: bold;
+	text-align: left;
+	vertical-align: top;
+	background-color: #f1f1f2;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+.TableStyle-API-HeadF-Other-Header1 p
+{
+	font-family: Calibri;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+.TableStyle-API-HeadH-Other-Header1
+{
+	padding-top: 2px;
+	padding-bottom: 2px;
+	font-family: Calibri;
+	font-size: 1em;
+	font-weight: bold;
+	text-align: left;
+	vertical-align: top;
+	background-color: #f1f1f2;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+.TableStyle-API-HeadH-Other-Header1 p
+{
+	font-family: Calibri;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+.TableStyle-API-HeadD-Other-Header1
+{
+	padding-top: 2px;
+	padding-bottom: 2px;
+	font-family: Calibri;
+	font-size: 1em;
+	font-weight: bold;
+	text-align: left;
+	vertical-align: top;
+	background-color: #f1f1f2;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+.TableStyle-API-HeadD-Other-Header1 p
+{
+	font-family: Calibri;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+.TableStyle-API-HeadC-Other-Header1
+{
+	padding-top: 2px;
+	padding-bottom: 2px;
+	font-family: Calibri;
+	font-size: 1em;
+	font-weight: bold;
+	text-align: left;
+	vertical-align: top;
+	background-color: #f1f1f2;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+.TableStyle-API-HeadC-Other-Header1 p
+{
+	font-family: Calibri;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+.TableStyle-API-HeadB-Other-Header1
+{
+	padding-top: 2px;
+	padding-bottom: 2px;
+	font-family: Calibri;
+	font-size: 1em;
+	font-weight: bold;
+	text-align: left;
+	vertical-align: top;
+	background-color: #f1f1f2;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+.TableStyle-API-HeadB-Other-Header1 p
+{
+	font-family: Calibri;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+.TableStyle-API-HeadA-Other-Header1
+{
+	padding-top: 2px;
+	padding-bottom: 2px;
+	font-family: Calibri;
+	font-size: 1em;
+	font-weight: bold;
+	text-align: left;
+	vertical-align: top;
+	background-color: #f1f1f2;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+.TableStyle-API-HeadA-Other-Header1 p
+{
+	font-family: Calibri;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+.TableStyle-API-HeadG-Other-Header1
+{
+	padding-top: 2px;
+	padding-bottom: 2px;
+	font-family: Calibri;
+	font-size: 1em;
+	font-weight: bold;
+	text-align: left;
+	vertical-align: top;
+	background-color: #f1f1f2;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+.TableStyle-API-HeadG-Other-Header1 p
+{
+	font-family: Calibri;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+.TableStyle-API-Foot-Footer1
+{
+	
+}
+
+.TableStyle-API-FootI-CodeFont-Footer1
+{
+	padding-left: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-right: 12px;
+	font-family: Calibri;
+	font-size: 10pt;
+	font-style: italic;
+	text-align: left;
+	vertical-align: top;
+}
+
+.TableStyle-API-FootI-CodeFont-Footer1 p
+{
+	font-family: Calibri;
+	font-size: 10pt;
+	font-style: italic;
+}
+
+.TableStyle-API-FootE-CodeFont-Footer1
+{
+	padding-left: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-right: 12px;
+	font-family: Calibri;
+	font-size: 10pt;
+	font-style: italic;
+	text-align: left;
+	vertical-align: top;
+	border-top-width: 1pt;
+	border-top-color: #dcdcdc;
+	border-top-style: solid;
+}
+
+.TableStyle-API-FootE-CodeFont-Footer1 p
+{
+	font-family: Calibri;
+	font-size: 10pt;
+	font-style: italic;
+}
+
+.TableStyle-API-FootF-CodeFont-Footer1
+{
+	padding-left: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-right: 12px;
+	font-family: Calibri;
+	font-size: 10pt;
+	font-style: italic;
+	text-align: left;
+	vertical-align: top;
+	border-top-width: 1pt;
+	border-top-color: #dcdcdc;
+	border-top-style: solid;
+}
+
+.TableStyle-API-FootF-CodeFont-Footer1 p
+{
+	font-family: Calibri;
+	font-size: 10pt;
+	font-style: italic;
+}
+
+.TableStyle-API-FootH-CodeFont-Footer1
+{
+	padding-left: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-right: 12px;
+	font-family: Calibri;
+	font-size: 10pt;
+	font-style: italic;
+	text-align: left;
+	vertical-align: top;
+}
+
+.TableStyle-API-FootH-CodeFont-Footer1 p
+{
+	font-family: Calibri;
+	font-size: 10pt;
+	font-style: italic;
+}
+
+.TableStyle-API-FootD-CodeFont-Footer1
+{
+	padding-left: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-right: 12px;
+	font-family: Calibri;
+	font-size: 10pt;
+	font-style: italic;
+	text-align: left;
+	vertical-align: top;
+	border-top-width: 1pt;
+	border-top-color: #dcdcdc;
+	border-top-style: solid;
+}
+
+.TableStyle-API-FootD-CodeFont-Footer1 p
+{
+	font-family: Calibri;
+	font-size: 10pt;
+	font-style: italic;
+}
+
+.TableStyle-API-FootC-CodeFont-Footer1
+{
+	padding-left: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-right: 12px;
+	font-family: Calibri;
+	font-size: 10pt;
+	font-style: italic;
+	text-align: left;
+	vertical-align: top;
+}
+
+.TableStyle-API-FootC-CodeFont-Footer1 p
+{
+	font-family: Calibri;
+	font-size: 10pt;
+	font-style: italic;
+}
+
+.TableStyle-API-FootB-CodeFont-Footer1
+{
+	padding-left: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-right: 12px;
+	font-family: Calibri;
+	font-size: 10pt;
+	font-style: italic;
+	text-align: left;
+	vertical-align: top;
+}
+
+.TableStyle-API-FootB-CodeFont-Footer1 p
+{
+	font-family: Calibri;
+	font-size: 10pt;
+	font-style: italic;
+}
+
+.TableStyle-API-FootA-CodeFont-Footer1
+{
+	padding-left: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-right: 12px;
+	font-family: Calibri;
+	font-size: 10pt;
+	font-style: italic;
+	text-align: left;
+	vertical-align: top;
+}
+
+.TableStyle-API-FootA-CodeFont-Footer1 p
+{
+	font-family: Calibri;
+	font-size: 10pt;
+	font-style: italic;
+}
+
+.TableStyle-API-FootG-CodeFont-Footer1
+{
+	padding-left: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	padding-right: 12px;
+	font-family: Calibri;
+	font-size: 10pt;
+	font-style: italic;
+	text-align: left;
+	vertical-align: top;
+}
+
+.TableStyle-API-FootG-CodeFont-Footer1 p
+{
+	font-family: Calibri;
+	font-size: 10pt;
+	font-style: italic;
+}
+
+.TableStyle-API-FootI-Other-Footer1
+{
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	font-family: Calibri;
+	font-size: 10pt;
+	font-style: italic;
+	text-align: left;
+	vertical-align: top;
+}
+
+.TableStyle-API-FootI-Other-Footer1 p
+{
+	font-family: Calibri;
+	font-size: 10pt;
+	font-style: italic;
+}
+
+.TableStyle-API-FootE-Other-Footer1
+{
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	font-family: Calibri;
+	font-size: 10pt;
+	font-style: italic;
+	text-align: left;
+	vertical-align: top;
+	border-top-width: 1pt;
+	border-top-color: #dcdcdc;
+	border-top-style: solid;
+}
+
+.TableStyle-API-FootE-Other-Footer1 p
+{
+	font-family: Calibri;
+	font-size: 10pt;
+	font-style: italic;
+}
+
+.TableStyle-API-FootF-Other-Footer1
+{
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	font-family: Calibri;
+	font-size: 10pt;
+	font-style: italic;
+	text-align: left;
+	vertical-align: top;
+	border-top-width: 1pt;
+	border-top-color: #dcdcdc;
+	border-top-style: solid;
+}
+
+.TableStyle-API-FootF-Other-Footer1 p
+{
+	font-family: Calibri;
+	font-size: 10pt;
+	font-style: italic;
+}
+
+.TableStyle-API-FootH-Other-Footer1
+{
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	font-family: Calibri;
+	font-size: 10pt;
+	font-style: italic;
+	text-align: left;
+	vertical-align: top;
+}
+
+.TableStyle-API-FootH-Other-Footer1 p
+{
+	font-family: Calibri;
+	font-size: 10pt;
+	font-style: italic;
+}
+
+.TableStyle-API-FootD-Other-Footer1
+{
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	font-family: Calibri;
+	font-size: 10pt;
+	font-style: italic;
+	text-align: left;
+	vertical-align: top;
+	border-top-width: 1pt;
+	border-top-color: #dcdcdc;
+	border-top-style: solid;
+}
+
+.TableStyle-API-FootD-Other-Footer1 p
+{
+	font-family: Calibri;
+	font-size: 10pt;
+	font-style: italic;
+}
+
+.TableStyle-API-FootC-Other-Footer1
+{
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	font-family: Calibri;
+	font-size: 10pt;
+	font-style: italic;
+	text-align: left;
+	vertical-align: top;
+}
+
+.TableStyle-API-FootC-Other-Footer1 p
+{
+	font-family: Calibri;
+	font-size: 10pt;
+	font-style: italic;
+}
+
+.TableStyle-API-FootB-Other-Footer1
+{
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	font-family: Calibri;
+	font-size: 10pt;
+	font-style: italic;
+	text-align: left;
+	vertical-align: top;
+}
+
+.TableStyle-API-FootB-Other-Footer1 p
+{
+	font-family: Calibri;
+	font-size: 10pt;
+	font-style: italic;
+}
+
+.TableStyle-API-FootA-Other-Footer1
+{
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	font-family: Calibri;
+	font-size: 10pt;
+	font-style: italic;
+	text-align: left;
+	vertical-align: top;
+}
+
+.TableStyle-API-FootA-Other-Footer1 p
+{
+	font-family: Calibri;
+	font-size: 10pt;
+	font-style: italic;
+}
+
+.TableStyle-API-FootG-Other-Footer1
+{
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	font-family: Calibri;
+	font-size: 10pt;
+	font-style: italic;
+	text-align: left;
+	vertical-align: top;
+}
+
+.TableStyle-API-FootG-Other-Footer1 p
+{
+	font-family: Calibri;
+	font-size: 10pt;
+	font-style: italic;
+}
+
+.TableStyle-API-Body-Body1
+{
+	
+}
+
+.TableStyle-API-BodyI-CodeFont-Body1
+{
+	padding-left: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	text-align: left;
+	vertical-align: top;
+	font-family: 'Courier New';
+	font-size: 9pt;
+	padding-right: 12px;
+}
+
+.TableStyle-API-BodyI-CodeFont-Body1 p
+{
+	font-family: 'Courier New';
+	font-size: 9pt;
+}
+
+.TableStyle-API-BodyE-CodeFont-Body1
+{
+	padding-left: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	text-align: left;
+	vertical-align: top;
+	border-bottom-width: 1pt;
+	border-bottom-color: #dcdcdc;
+	border-bottom-style: solid;
+	font-family: 'Courier New';
+	font-size: 9pt;
+	padding-right: 12px;
+}
+
+.TableStyle-API-BodyE-CodeFont-Body1 p
+{
+	font-family: 'Courier New';
+	font-size: 9pt;
+}
+
+.TableStyle-API-BodyF-CodeFont-Body1
+{
+	padding-left: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	text-align: left;
+	vertical-align: top;
+	border-bottom-width: 1pt;
+	border-bottom-color: #dcdcdc;
+	border-bottom-style: solid;
+	font-family: 'Courier New';
+	font-size: 9pt;
+	padding-right: 12px;
+}
+
+.TableStyle-API-BodyF-CodeFont-Body1 p
+{
+	font-family: 'Courier New';
+	font-size: 9pt;
+}
+
+.TableStyle-API-BodyH-CodeFont-Body1
+{
+	padding-left: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	text-align: left;
+	vertical-align: top;
+	font-family: 'Courier New';
+	font-size: 9pt;
+	padding-right: 12px;
+}
+
+.TableStyle-API-BodyH-CodeFont-Body1 p
+{
+	font-family: 'Courier New';
+	font-size: 9pt;
+}
+
+.TableStyle-API-BodyD-CodeFont-Body1
+{
+	padding-left: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	text-align: left;
+	vertical-align: top;
+	border-bottom-width: 1pt;
+	border-bottom-color: #dcdcdc;
+	border-bottom-style: solid;
+	font-family: 'Courier New';
+	font-size: 9pt;
+	padding-right: 12px;
+}
+
+.TableStyle-API-BodyD-CodeFont-Body1 p
+{
+	font-family: 'Courier New';
+	font-size: 9pt;
+}
+
+.TableStyle-API-BodyC-CodeFont-Body1
+{
+	padding-left: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	text-align: left;
+	vertical-align: top;
+	font-family: 'Courier New';
+	font-size: 9pt;
+	padding-right: 12px;
+}
+
+.TableStyle-API-BodyC-CodeFont-Body1 p
+{
+	font-family: 'Courier New';
+	font-size: 9pt;
+}
+
+.TableStyle-API-BodyB-CodeFont-Body1
+{
+	padding-left: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	text-align: left;
+	vertical-align: top;
+	font-family: 'Courier New';
+	font-size: 9pt;
+	padding-right: 12px;
+}
+
+.TableStyle-API-BodyB-CodeFont-Body1 p
+{
+	font-family: 'Courier New';
+	font-size: 9pt;
+}
+
+.TableStyle-API-BodyA-CodeFont-Body1
+{
+	padding-left: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	text-align: left;
+	vertical-align: top;
+	font-family: 'Courier New';
+	font-size: 9pt;
+	padding-right: 12px;
+}
+
+.TableStyle-API-BodyA-CodeFont-Body1 p
+{
+	font-family: 'Courier New';
+	font-size: 9pt;
+}
+
+.TableStyle-API-BodyG-CodeFont-Body1
+{
+	padding-left: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	text-align: left;
+	vertical-align: top;
+	font-family: 'Courier New';
+	font-size: 9pt;
+	padding-right: 12px;
+}
+
+.TableStyle-API-BodyG-CodeFont-Body1 p
+{
+	font-family: 'Courier New';
+	font-size: 9pt;
+}
+
+.TableStyle-API-BodyI-Other-Body1
+{
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	text-align: left;
+	vertical-align: top;
+}
+
+.TableStyle-API-BodyI-Other-Body1 p
+{
+	
+}
+
+.TableStyle-API-BodyE-Other-Body1
+{
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	text-align: left;
+	vertical-align: top;
+	border-bottom-width: 1pt;
+	border-bottom-color: #dcdcdc;
+	border-bottom-style: solid;
+}
+
+.TableStyle-API-BodyE-Other-Body1 p
+{
+	
+}
+
+.TableStyle-API-BodyF-Other-Body1
+{
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	text-align: left;
+	vertical-align: top;
+	border-bottom-width: 1pt;
+	border-bottom-color: #dcdcdc;
+	border-bottom-style: solid;
+}
+
+.TableStyle-API-BodyF-Other-Body1 p
+{
+	
+}
+
+.TableStyle-API-BodyH-Other-Body1
+{
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	text-align: left;
+	vertical-align: top;
+}
+
+.TableStyle-API-BodyH-Other-Body1 p
+{
+	
+}
+
+.TableStyle-API-BodyD-Other-Body1
+{
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	text-align: left;
+	vertical-align: top;
+	border-bottom-width: 1pt;
+	border-bottom-color: #dcdcdc;
+	border-bottom-style: solid;
+}
+
+.TableStyle-API-BodyD-Other-Body1 p
+{
+	
+}
+
+.TableStyle-API-BodyC-Other-Body1
+{
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	text-align: left;
+	vertical-align: top;
+}
+
+.TableStyle-API-BodyC-Other-Body1 p
+{
+	
+}
+
+.TableStyle-API-BodyB-Other-Body1
+{
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	text-align: left;
+	vertical-align: top;
+}
+
+.TableStyle-API-BodyB-Other-Body1 p
+{
+	
+}
+
+.TableStyle-API-BodyA-Other-Body1
+{
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	text-align: left;
+	vertical-align: top;
+}
+
+.TableStyle-API-BodyA-Other-Body1 p
+{
+	
+}
+
+.TableStyle-API-BodyG-Other-Body1
+{
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	text-align: left;
+	vertical-align: top;
+}
+
+.TableStyle-API-BodyG-Other-Body1 p
+{
+	
+}
+
+.TableStyle-API-Body-Separator
+{
+	page-break-after: avoid;
+}
+
+.TableStyle-API-BodyI-CodeFont-Separator
+{
+	padding-left: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	font-weight: bold;
+	text-align: left;
+	vertical-align: middle;
+	background-color: #f1f1f2;
+	font-family: 'Courier New';
+	font-size: 9pt;
+	padding-right: 12px;
+}
+
+.TableStyle-API-BodyI-CodeFont-Separator p
+{
+	font-weight: bold;
+	font-family: 'Courier New';
+	font-size: 9pt;
+}
+
+.TableStyle-API-BodyE-CodeFont-Separator
+{
+	padding-left: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	font-weight: bold;
+	text-align: left;
+	vertical-align: middle;
+	background-color: #f1f1f2;
+	border-bottom-width: 1pt;
+	border-bottom-color: #dcdcdc;
+	border-bottom-style: solid;
+	font-family: 'Courier New';
+	font-size: 9pt;
+	padding-right: 12px;
+}
+
+.TableStyle-API-BodyE-CodeFont-Separator p
+{
+	font-weight: bold;
+	font-family: 'Courier New';
+	font-size: 9pt;
+}
+
+.TableStyle-API-BodyF-CodeFont-Separator
+{
+	padding-left: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	font-weight: bold;
+	text-align: left;
+	vertical-align: middle;
+	background-color: #f1f1f2;
+	border-bottom-width: 1pt;
+	border-bottom-color: #dcdcdc;
+	border-bottom-style: solid;
+	font-family: 'Courier New';
+	font-size: 9pt;
+	padding-right: 12px;
+}
+
+.TableStyle-API-BodyF-CodeFont-Separator p
+{
+	font-weight: bold;
+	font-family: 'Courier New';
+	font-size: 9pt;
+}
+
+.TableStyle-API-BodyH-CodeFont-Separator
+{
+	padding-left: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	font-weight: bold;
+	text-align: left;
+	vertical-align: middle;
+	background-color: #f1f1f2;
+	font-family: 'Courier New';
+	font-size: 9pt;
+	padding-right: 12px;
+}
+
+.TableStyle-API-BodyH-CodeFont-Separator p
+{
+	font-weight: bold;
+	font-family: 'Courier New';
+	font-size: 9pt;
+}
+
+.TableStyle-API-BodyD-CodeFont-Separator
+{
+	padding-left: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	font-weight: bold;
+	text-align: left;
+	vertical-align: middle;
+	background-color: #f1f1f2;
+	border-bottom-width: 1pt;
+	border-bottom-color: #dcdcdc;
+	border-bottom-style: solid;
+	font-family: 'Courier New';
+	font-size: 9pt;
+	padding-right: 12px;
+}
+
+.TableStyle-API-BodyD-CodeFont-Separator p
+{
+	font-weight: bold;
+	font-family: 'Courier New';
+	font-size: 9pt;
+}
+
+.TableStyle-API-BodyC-CodeFont-Separator
+{
+	padding-left: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	font-weight: bold;
+	text-align: left;
+	vertical-align: middle;
+	background-color: #f1f1f2;
+	font-family: 'Courier New';
+	font-size: 9pt;
+	padding-right: 12px;
+}
+
+.TableStyle-API-BodyC-CodeFont-Separator p
+{
+	font-weight: bold;
+	font-family: 'Courier New';
+	font-size: 9pt;
+}
+
+.TableStyle-API-BodyB-CodeFont-Separator
+{
+	padding-left: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	font-weight: bold;
+	text-align: left;
+	vertical-align: middle;
+	background-color: #f1f1f2;
+	font-family: 'Courier New';
+	font-size: 9pt;
+	padding-right: 12px;
+}
+
+.TableStyle-API-BodyB-CodeFont-Separator p
+{
+	font-weight: bold;
+	font-family: 'Courier New';
+	font-size: 9pt;
+}
+
+.TableStyle-API-BodyA-CodeFont-Separator
+{
+	padding-left: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	font-weight: bold;
+	text-align: left;
+	vertical-align: middle;
+	background-color: #f1f1f2;
+	font-family: 'Courier New';
+	font-size: 9pt;
+	padding-right: 12px;
+}
+
+.TableStyle-API-BodyA-CodeFont-Separator p
+{
+	font-weight: bold;
+	font-family: 'Courier New';
+	font-size: 9pt;
+}
+
+.TableStyle-API-BodyG-CodeFont-Separator
+{
+	padding-left: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	font-weight: bold;
+	text-align: left;
+	vertical-align: middle;
+	background-color: #f1f1f2;
+	font-family: 'Courier New';
+	font-size: 9pt;
+	padding-right: 12px;
+}
+
+.TableStyle-API-BodyG-CodeFont-Separator p
+{
+	font-weight: bold;
+	font-family: 'Courier New';
+	font-size: 9pt;
+}
+
+.TableStyle-API-BodyI-Other-Separator
+{
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	font-weight: bold;
+	text-align: left;
+	vertical-align: middle;
+	background-color: #f1f1f2;
+}
+
+.TableStyle-API-BodyI-Other-Separator p
+{
+	font-weight: bold;
+}
+
+.TableStyle-API-BodyE-Other-Separator
+{
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	font-weight: bold;
+	text-align: left;
+	vertical-align: middle;
+	background-color: #f1f1f2;
+	border-bottom-width: 1pt;
+	border-bottom-color: #dcdcdc;
+	border-bottom-style: solid;
+}
+
+.TableStyle-API-BodyE-Other-Separator p
+{
+	font-weight: bold;
+}
+
+.TableStyle-API-BodyF-Other-Separator
+{
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	font-weight: bold;
+	text-align: left;
+	vertical-align: middle;
+	background-color: #f1f1f2;
+	border-bottom-width: 1pt;
+	border-bottom-color: #dcdcdc;
+	border-bottom-style: solid;
+}
+
+.TableStyle-API-BodyF-Other-Separator p
+{
+	font-weight: bold;
+}
+
+.TableStyle-API-BodyH-Other-Separator
+{
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	font-weight: bold;
+	text-align: left;
+	vertical-align: middle;
+	background-color: #f1f1f2;
+}
+
+.TableStyle-API-BodyH-Other-Separator p
+{
+	font-weight: bold;
+}
+
+.TableStyle-API-BodyD-Other-Separator
+{
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	font-weight: bold;
+	text-align: left;
+	vertical-align: middle;
+	background-color: #f1f1f2;
+	border-bottom-width: 1pt;
+	border-bottom-color: #dcdcdc;
+	border-bottom-style: solid;
+}
+
+.TableStyle-API-BodyD-Other-Separator p
+{
+	font-weight: bold;
+}
+
+.TableStyle-API-BodyC-Other-Separator
+{
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	font-weight: bold;
+	text-align: left;
+	vertical-align: middle;
+	background-color: #f1f1f2;
+}
+
+.TableStyle-API-BodyC-Other-Separator p
+{
+	font-weight: bold;
+}
+
+.TableStyle-API-BodyB-Other-Separator
+{
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	font-weight: bold;
+	text-align: left;
+	vertical-align: middle;
+	background-color: #f1f1f2;
+}
+
+.TableStyle-API-BodyB-Other-Separator p
+{
+	font-weight: bold;
+}
+
+.TableStyle-API-BodyA-Other-Separator
+{
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	font-weight: bold;
+	text-align: left;
+	vertical-align: middle;
+	background-color: #f1f1f2;
+}
+
+.TableStyle-API-BodyA-Other-Separator p
+{
+	font-weight: bold;
+}
+
+.TableStyle-API-BodyG-Other-Separator
+{
+	padding-left: 2px;
+	padding-right: 2px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	font-weight: bold;
+	text-align: left;
+	vertical-align: middle;
+	background-color: #f1f1f2;
+}
+
+.TableStyle-API-BodyG-Other-Separator p
+{
+	font-weight: bold;
+}
+
+

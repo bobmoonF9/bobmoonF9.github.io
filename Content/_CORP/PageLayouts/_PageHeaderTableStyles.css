@@ -1,0 +1,648 @@
+/* MadCap Table Style: */
+
+/*<meta Version="9" />*/
+
+mcTableStyle
+{
+	name: _PageHeaderTableStyles;
+	border-collapse: collapse;
+	max-id: 5;
+}
+
+mcTableColumnStyle
+{
+	span: 1;
+	name: Col_Left;
+	id: 0;
+	size: 40%;
+	text-align: left;
+	font-weight: bold;
+}
+
+mcTableColumnStyle
+{
+	span: 1;
+	id: 5;
+	name: Col_Right;
+	size: 60%;
+	text-align: right;
+}
+
+mcTableBodyStyle
+{
+	span: 1;
+	name: Row1;
+	id: 1;
+	vertical-align: bottom;
+}
+
+
+/* Cell Styles: */
+ 
+.TableStyle-_PageHeaderTableStyles
+{
+	border-collapse: collapse;
+	border-spacing: 0px 0px;
+}
+
+.TableStyle-_PageHeaderTableStyles-Column-Col_Left
+{
+	width: 40%;
+}
+
+.TableStyle-_PageHeaderTableStyles-Column-Col_Right
+{
+	width: 60%;
+}
+
+.TableStyle-_PageHeaderTableStyles-HeadI-Col_Left-
+{
+	font-weight: bold;
+	text-align: left;
+}
+
+.TableStyle-_PageHeaderTableStyles-HeadI-Col_Left- p
+{
+	font-weight: bold;
+}
+
+.TableStyle-_PageHeaderTableStyles-HeadE-Col_Left-
+{
+	font-weight: bold;
+	text-align: left;
+}
+
+.TableStyle-_PageHeaderTableStyles-HeadE-Col_Left- p
+{
+	font-weight: bold;
+}
+
+.TableStyle-_PageHeaderTableStyles-HeadF-Col_Left-
+{
+	font-weight: bold;
+	text-align: left;
+}
+
+.TableStyle-_PageHeaderTableStyles-HeadF-Col_Left- p
+{
+	font-weight: bold;
+}
+
+.TableStyle-_PageHeaderTableStyles-HeadH-Col_Left-
+{
+	font-weight: bold;
+	text-align: left;
+}
+
+.TableStyle-_PageHeaderTableStyles-HeadH-Col_Left- p
+{
+	font-weight: bold;
+}
+
+.TableStyle-_PageHeaderTableStyles-HeadD-Col_Left-
+{
+	font-weight: bold;
+	text-align: left;
+}
+
+.TableStyle-_PageHeaderTableStyles-HeadD-Col_Left- p
+{
+	font-weight: bold;
+}
+
+.TableStyle-_PageHeaderTableStyles-HeadC-Col_Left-
+{
+	font-weight: bold;
+	text-align: left;
+}
+
+.TableStyle-_PageHeaderTableStyles-HeadC-Col_Left- p
+{
+	font-weight: bold;
+}
+
+.TableStyle-_PageHeaderTableStyles-HeadB-Col_Left-
+{
+	font-weight: bold;
+	text-align: left;
+}
+
+.TableStyle-_PageHeaderTableStyles-HeadB-Col_Left- p
+{
+	font-weight: bold;
+}
+
+.TableStyle-_PageHeaderTableStyles-HeadA-Col_Left-
+{
+	font-weight: bold;
+	text-align: left;
+}
+
+.TableStyle-_PageHeaderTableStyles-HeadA-Col_Left- p
+{
+	font-weight: bold;
+}
+
+.TableStyle-_PageHeaderTableStyles-HeadG-Col_Left-
+{
+	font-weight: bold;
+	text-align: left;
+}
+
+.TableStyle-_PageHeaderTableStyles-HeadG-Col_Left- p
+{
+	font-weight: bold;
+}
+
+.TableStyle-_PageHeaderTableStyles-HeadI-Col_Right-
+{
+	text-align: right;
+}
+
+.TableStyle-_PageHeaderTableStyles-HeadI-Col_Right- p
+{
+	
+}
+
+.TableStyle-_PageHeaderTableStyles-HeadE-Col_Right-
+{
+	text-align: right;
+}
+
+.TableStyle-_PageHeaderTableStyles-HeadE-Col_Right- p
+{
+	
+}
+
+.TableStyle-_PageHeaderTableStyles-HeadF-Col_Right-
+{
+	text-align: right;
+}
+
+.TableStyle-_PageHeaderTableStyles-HeadF-Col_Right- p
+{
+	
+}
+
+.TableStyle-_PageHeaderTableStyles-HeadH-Col_Right-
+{
+	text-align: right;
+}
+
+.TableStyle-_PageHeaderTableStyles-HeadH-Col_Right- p
+{
+	
+}
+
+.TableStyle-_PageHeaderTableStyles-HeadD-Col_Right-
+{
+	text-align: right;
+}
+
+.TableStyle-_PageHeaderTableStyles-HeadD-Col_Right- p
+{
+	
+}
+
+.TableStyle-_PageHeaderTableStyles-HeadC-Col_Right-
+{
+	text-align: right;
+}
+
+.TableStyle-_PageHeaderTableStyles-HeadC-Col_Right- p
+{
+	
+}
+
+.TableStyle-_PageHeaderTableStyles-HeadB-Col_Right-
+{
+	text-align: right;
+}
+
+.TableStyle-_PageHeaderTableStyles-HeadB-Col_Right- p
+{
+	
+}
+
+.TableStyle-_PageHeaderTableStyles-HeadA-Col_Right-
+{
+	text-align: right;
+}
+
+.TableStyle-_PageHeaderTableStyles-HeadA-Col_Right- p
+{
+	
+}
+
+.TableStyle-_PageHeaderTableStyles-HeadG-Col_Right-
+{
+	text-align: right;
+}
+
+.TableStyle-_PageHeaderTableStyles-HeadG-Col_Right- p
+{
+	
+}
+
+.TableStyle-_PageHeaderTableStyles-FootI-Col_Left-
+{
+	font-weight: bold;
+	text-align: left;
+}
+
+.TableStyle-_PageHeaderTableStyles-FootI-Col_Left- p
+{
+	font-weight: bold;
+}
+
+.TableStyle-_PageHeaderTableStyles-FootE-Col_Left-
+{
+	font-weight: bold;
+	text-align: left;
+}
+
+.TableStyle-_PageHeaderTableStyles-FootE-Col_Left- p
+{
+	font-weight: bold;
+}
+
+.TableStyle-_PageHeaderTableStyles-FootF-Col_Left-
+{
+	font-weight: bold;
+	text-align: left;
+}
+
+.TableStyle-_PageHeaderTableStyles-FootF-Col_Left- p
+{
+	font-weight: bold;
+}
+
+.TableStyle-_PageHeaderTableStyles-FootH-Col_Left-
+{
+	font-weight: bold;
+	text-align: left;
+}
+
+.TableStyle-_PageHeaderTableStyles-FootH-Col_Left- p
+{
+	font-weight: bold;
+}
+
+.TableStyle-_PageHeaderTableStyles-FootD-Col_Left-
+{
+	font-weight: bold;
+	text-align: left;
+}
+
+.TableStyle-_PageHeaderTableStyles-FootD-Col_Left- p
+{
+	font-weight: bold;
+}
+
+.TableStyle-_PageHeaderTableStyles-FootC-Col_Left-
+{
+	font-weight: bold;
+	text-align: left;
+}
+
+.TableStyle-_PageHeaderTableStyles-FootC-Col_Left- p
+{
+	font-weight: bold;
+}
+
+.TableStyle-_PageHeaderTableStyles-FootB-Col_Left-
+{
+	font-weight: bold;
+	text-align: left;
+}
+
+.TableStyle-_PageHeaderTableStyles-FootB-Col_Left- p
+{
+	font-weight: bold;
+}
+
+.TableStyle-_PageHeaderTableStyles-FootA-Col_Left-
+{
+	font-weight: bold;
+	text-align: left;
+}
+
+.TableStyle-_PageHeaderTableStyles-FootA-Col_Left- p
+{
+	font-weight: bold;
+}
+
+.TableStyle-_PageHeaderTableStyles-FootG-Col_Left-
+{
+	font-weight: bold;
+	text-align: left;
+}
+
+.TableStyle-_PageHeaderTableStyles-FootG-Col_Left- p
+{
+	font-weight: bold;
+}
+
+.TableStyle-_PageHeaderTableStyles-FootI-Col_Right-
+{
+	text-align: right;
+}
+
+.TableStyle-_PageHeaderTableStyles-FootI-Col_Right- p
+{
+	
+}
+
+.TableStyle-_PageHeaderTableStyles-FootE-Col_Right-
+{
+	text-align: right;
+}
+
+.TableStyle-_PageHeaderTableStyles-FootE-Col_Right- p
+{
+	
+}
+
+.TableStyle-_PageHeaderTableStyles-FootF-Col_Right-
+{
+	text-align: right;
+}
+
+.TableStyle-_PageHeaderTableStyles-FootF-Col_Right- p
+{
+	
+}
+
+.TableStyle-_PageHeaderTableStyles-FootH-Col_Right-
+{
+	text-align: right;
+}
+
+.TableStyle-_PageHeaderTableStyles-FootH-Col_Right- p
+{
+	
+}
+
+.TableStyle-_PageHeaderTableStyles-FootD-Col_Right-
+{
+	text-align: right;
+}
+
+.TableStyle-_PageHeaderTableStyles-FootD-Col_Right- p
+{
+	
+}
+
+.TableStyle-_PageHeaderTableStyles-FootC-Col_Right-
+{
+	text-align: right;
+}
+
+.TableStyle-_PageHeaderTableStyles-FootC-Col_Right- p
+{
+	
+}
+
+.TableStyle-_PageHeaderTableStyles-FootB-Col_Right-
+{
+	text-align: right;
+}
+
+.TableStyle-_PageHeaderTableStyles-FootB-Col_Right- p
+{
+	
+}
+
+.TableStyle-_PageHeaderTableStyles-FootA-Col_Right-
+{
+	text-align: right;
+}
+
+.TableStyle-_PageHeaderTableStyles-FootA-Col_Right- p
+{
+	
+}
+
+.TableStyle-_PageHeaderTableStyles-FootG-Col_Right-
+{
+	text-align: right;
+}
+
+.TableStyle-_PageHeaderTableStyles-FootG-Col_Right- p
+{
+	
+}
+
+.TableStyle-_PageHeaderTableStyles-Body-Row1
+{
+	
+}
+
+.TableStyle-_PageHeaderTableStyles-BodyI-Col_Left-Row1
+{
+	vertical-align: bottom;
+	font-weight: bold;
+	text-align: left;
+}
+
+.TableStyle-_PageHeaderTableStyles-BodyI-Col_Left-Row1 p
+{
+	font-weight: bold;
+}
+
+.TableStyle-_PageHeaderTableStyles-BodyE-Col_Left-Row1
+{
+	vertical-align: bottom;
+	font-weight: bold;
+	text-align: left;
+}
+
+.TableStyle-_PageHeaderTableStyles-BodyE-Col_Left-Row1 p
+{
+	font-weight: bold;
+}
+
+.TableStyle-_PageHeaderTableStyles-BodyF-Col_Left-Row1
+{
+	vertical-align: bottom;
+	font-weight: bold;
+	text-align: left;
+}
+
+.TableStyle-_PageHeaderTableStyles-BodyF-Col_Left-Row1 p
+{
+	font-weight: bold;
+}
+
+.TableStyle-_PageHeaderTableStyles-BodyH-Col_Left-Row1
+{
+	vertical-align: bottom;
+	font-weight: bold;
+	text-align: left;
+}
+
+.TableStyle-_PageHeaderTableStyles-BodyH-Col_Left-Row1 p
+{
+	font-weight: bold;
+}
+
+.TableStyle-_PageHeaderTableStyles-BodyD-Col_Left-Row1
+{
+	vertical-align: bottom;
+	font-weight: bold;
+	text-align: left;
+}
+
+.TableStyle-_PageHeaderTableStyles-BodyD-Col_Left-Row1 p
+{
+	font-weight: bold;
+}
+
+.TableStyle-_PageHeaderTableStyles-BodyC-Col_Left-Row1
+{
+	vertical-align: bottom;
+	font-weight: bold;
+	text-align: left;
+}
+
+.TableStyle-_PageHeaderTableStyles-BodyC-Col_Left-Row1 p
+{
+	font-weight: bold;
+}
+
+.TableStyle-_PageHeaderTableStyles-BodyB-Col_Left-Row1
+{
+	vertical-align: bottom;
+	font-weight: bold;
+	text-align: left;
+}
+
+.TableStyle-_PageHeaderTableStyles-BodyB-Col_Left-Row1 p
+{
+	font-weight: bold;
+}
+
+.TableStyle-_PageHeaderTableStyles-BodyA-Col_Left-Row1
+{
+	vertical-align: bottom;
+	font-weight: bold;
+	text-align: left;
+}
+
+.TableStyle-_PageHeaderTableStyles-BodyA-Col_Left-Row1 p
+{
+	font-weight: bold;
+}
+
+.TableStyle-_PageHeaderTableStyles-BodyG-Col_Left-Row1
+{
+	vertical-align: bottom;
+	font-weight: bold;
+	text-align: left;
+}
+
+.TableStyle-_PageHeaderTableStyles-BodyG-Col_Left-Row1 p
+{
+	font-weight: bold;
+}
+
+.TableStyle-_PageHeaderTableStyles-BodyI-Col_Right-Row1
+{
+	vertical-align: bottom;
+	text-align: right;
+}
+
+.TableStyle-_PageHeaderTableStyles-BodyI-Col_Right-Row1 p
+{
+	
+}
+
+.TableStyle-_PageHeaderTableStyles-BodyE-Col_Right-Row1
+{
+	vertical-align: bottom;
+	text-align: right;
+}
+
+.TableStyle-_PageHeaderTableStyles-BodyE-Col_Right-Row1 p
+{
+	
+}
+
+.TableStyle-_PageHeaderTableStyles-BodyF-Col_Right-Row1
+{
+	vertical-align: bottom;
+	text-align: right;
+}
+
+.TableStyle-_PageHeaderTableStyles-BodyF-Col_Right-Row1 p
+{
+	
+}
+
+.TableStyle-_PageHeaderTableStyles-BodyH-Col_Right-Row1
+{
+	vertical-align: bottom;
+	text-align: right;
+}
+
+.TableStyle-_PageHeaderTableStyles-BodyH-Col_Right-Row1 p
+{
+	
+}
+
+.TableStyle-_PageHeaderTableStyles-BodyD-Col_Right-Row1
+{
+	vertical-align: bottom;
+	text-align: right;
+}
+
+.TableStyle-_PageHeaderTableStyles-BodyD-Col_Right-Row1 p
+{
+	
+}
+
+.TableStyle-_PageHeaderTableStyles-BodyC-Col_Right-Row1
+{
+	vertical-align: bottom;
+	text-align: right;
+}
+
+.TableStyle-_PageHeaderTableStyles-BodyC-Col_Right-Row1 p
+{
+	
+}
+
+.TableStyle-_PageHeaderTableStyles-BodyB-Col_Right-Row1
+{
+	vertical-align: bottom;
+	text-align: right;
+}
+
+.TableStyle-_PageHeaderTableStyles-BodyB-Col_Right-Row1 p
+{
+	
+}
+
+.TableStyle-_PageHeaderTableStyles-BodyA-Col_Right-Row1
+{
+	vertical-align: bottom;
+	text-align: right;
+}
+
+.TableStyle-_PageHeaderTableStyles-BodyA-Col_Right-Row1 p
+{
+	
+}
+
+.TableStyle-_PageHeaderTableStyles-BodyG-Col_Right-Row1
+{
+	vertical-align: bottom;
+	text-align: right;
+}
+
+.TableStyle-_PageHeaderTableStyles-BodyG-Col_Right-Row1 p
+{
+	
+}
+
+

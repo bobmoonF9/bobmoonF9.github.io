@@ -1,0 +1,3175 @@
+/*<meta />*/
+
+@namespace MadCap url(http://www.madcapsoftware.com/Schemas/MadCap.xsd);
+
+:root
+{
+	/* color variables */
+	--BrandDark: #53565a;
+	--BrandLight: #53565a;
+	--Black: #000000;
+	--DarkGray: #5b6770;
+	--MediumGray: #7c868d;
+	--LightGray: #d0d3d4;
+	--White: #ffffff;
+	--InternalUse: #ff00ff;
+	--Link: #244CDE;
+	--LinkVisited: #244CDE;
+	--LinkHover: #244CDE;
+	/* Rebrand - new corporate colors -- Suman*/
+	--DigitalNavy: #02147a;
+	--DigitalBlue: #244CDE;
+	--DigitalGray: #444444;
+	--DigitalLightGray: #f7f7f7;
+	--DigitalMagenta: #ff0266;
+	--DigitalBlack: #000000;
+	--PrintBlue: #0059ff;
+	--PrintNavy: #0017a6;
+	--PrintGray: #444444;
+	/* OG font family variables 
+	--FontBody: Calibri, Arial, sans-serif;
+	--FontHeading: 'Trebuchet MS', Helvetica, sans-serif;
+	--FontScreen: 'Courier New', mono;
+	*/
+	/* font family variables sonya - changed to roboto*/
+	--FontBody: 'Roboto', Arial, sans-serif !important;
+	--FontHeading: 'Roboto', Arial, sans-serif !important;
+	--FontScreen: 'Courier New', mono !important;
+	--font-family: 'Roboto', Arial, sans-serif !important;
+	/*font family variables sonya - changed to roboto*/
+}
+
+/* ========== HIDDEN CLASSES ========== */
+/* Classes hidden from Styles window because authors are unlikely to need to apply them directly. This list is likely to change as the stylesheet evolves. */
+
+MadCap|miniTocProxy,
+MadCap|tocProxy,
+h1.Contents,
+h1.Glossary,
+h1.Index,
+h6,
+div.topic-layout,
+p.bookTitle,
+p.bookSubTitle,
+p.copyright,
+p.coverHeader,
+p.footer,
+p.header,
+p.IndexHeading,
+p.Index1,
+p.Index2,
+p.Index3,
+p.MiniTOC1,
+p.MiniTOC2,
+p.MiniTOC3,
+p.MiniTOC4,
+p.MiniTOC5,
+p.MiniTOC6,
+p.platform,
+p.revision,
+p.tableBody,
+p.tableBodyIndented,
+p.tableHeading,
+p.tableBullet,
+p.tableBulletIndented,
+p.tableImportant,
+p.tableNote,
+p.tableStep1,
+p.tableStep2,
+p.TOC1,
+p.TOC2,
+p.TOC3,
+p.TOC4,
+p.TOC5,
+p.TOC6,
+span.callout,
+span.ChapterLabel,
+span.headerBold,
+span.link,
+span.DivNotification,
+span.ParaNotification,
+span.SearchHighlight1,
+span.SearchHighlight2,
+span.SearchHighlight3,
+span.SearchHighlight4,
+span.SearchHighlight5,
+span.SearchHighlight6,
+span.SearchHighlight7,
+span.SearchHighlight3,
+span.SearchHighlight9,
+span.SearchHighlight10,
+span.step,
+span.stepTable,
+ul.menu._Skins_SideMenu.mc-component
+{
+	mc-hidden: hidden;
+}
+
+/*wendy*/
+
+select#lang
+{
+	visibility: hidden;
+}
+
+.title-bar-layout a.logo
+{
+	margin-left: 63px;
+}
+
+/*.nav-title-bar{
+	padding-top: 7px !important;
+	padding-bottom: 7px !important;
+}*/
+
+ul.menu._Skins_SideMenu.mc-component ul > li > a
+{
+	font-family: unset !important;
+}
+
+/*sonya from styles.css*/
+
+.sidenav-container
+{
+	padding-left: 5px !important;
+	padding-right: 5px !important;
+	padding-top: 5px !important;
+}
+
+/*sonya from styles.css 
+ul.sidenav ul > li > a.selected */
+
+/*sonya from styles.css */
+
+ul.sidenav li a.selected
+{
+	font-weight: normal !important;
+}
+
+.navigation-wrapper
+{
+	display: none !important;
+}
+
+ul.sidenav li a
+{
+	font-family: var(--font-family) !important;
+}
+
+/*sonya from foundation*/
+
+.menu.vertical > li
+{
+	padding-bottom: 5px !important;
+	padding-top: 3px !important;
+}
+
+/*sonya from topic.css*/
+
+.xref
+{
+	font-weight: normal !important;
+}
+
+img	/*Setting max-width: 100%; property makes images always fit the width of the container*/
+{
+	max-width: 100%;
+}
+
+img.thumbnail
+{
+	mc-thumbnail: popup;
+}
+
+/*sonya from styles.css toolbar buttons*/
+
+.buttons._Skins_TopicToolbar.mc-component
+{
+	display: none !important;
+}
+
+.center
+{
+	position: relative;
+	margin-right: auto;
+	margin-left: auto;
+	float: none !important;
+	text-align: center;
+}
+
+a.MCBreadcrumbsLink
+{
+	font-style: normal;
+	text-decoration: underline;
+	color: #244CDE;
+}
+
+a.MCBreadcrumbsLink:visited
+{
+	color: #244CDE;
+}
+
+a.MCBreadcrumbsLink:hover
+{
+	color: #244CDE;
+}
+
+MadCap|breadcrumbsProxy
+{
+	border-bottom: none;
+	font-size: 1.2em;
+	color: #244CDE;
+}
+
+MadCap|xref
+{
+	color: #244CDE;
+	font-weight: bold;
+	mc-format: '{para}';
+	text-decoration: underline;
+}
+
+MadCap|xref:hover
+{
+	color: #244CDE;
+}
+
+#pagination a
+{
+	font-family: var(--font-family) !important;
+}
+
+MadCap|dropDownHotspot
+{
+	color: #244CDE;
+}
+
+MadCap|dropDownBody
+{
+	border-bottom: 1px solid #d3d3d3;
+}
+
+MadCap|dropDown	/*Change the "mc-open-image" and "mc-closed-image" properties to change the icons used in drop-downs*/
+{
+	mc-open-image: url('../Images/Arrows/arrow-down-gray.png');
+	mc-closed-image: url('../Images/Arrows/arrow-right-gray.png');
+}
+
+/*==Master Page Topic Layout==*/
+
+nav.title-bar	/*Adds bottom border on top navigation bar*/
+{
+	border-bottom: 1px solid #d3d3d3;
+	padding-top: 7px !important;
+	padding-bottom: 8px !important;
+}
+
+div.top-bar	/*Contains the breadcrumbs and toolbar*/
+{
+	min-height: 50px;
+	padding-bottom: 1px;
+	/*Min-height is necessary for topics that are not included in a TOC*/
+}
+
+/*sonya from topic.css - added letter spacing too*/
+
+div.MCBreadcrumbsBox_0
+{
+	font-size: 14px !important;
+	font-weight: 400 !important;
+	letter-spacing: .5px;
+	border-bottom-style: none !important;
+}
+
+div.search-container
+{
+	float: right;
+	max-width: 25%;
+}
+
+/*==Elements for the left side of Master Page layout==*/
+
+div.side-menu	/*This is the div that the menu proxy is contained in*/
+{
+	padding-left: 10px;
+	margin-top: 15px;
+	/* use if menu is displayed on search results */
+	display: none;
+}
+
+/*Styles that provide the border radius to the menu proxy items*/
+
+ul.menu._Skins_SideMenu.mc-component li > a.selected
+{
+	padding-bottom: 10px;
+	padding-top: 10px;
+	border-radius: 3px;
+}
+
+ul.menu._Skins_SideMenu.mc-component li > a:hover
+{
+	background-color: #FBFBFB;
+	border-radius: 3px;
+}
+
+ul.menu._Skins_SideMenu.mc-component ul > li > a:hover
+{
+	background-color: #FBFBFB;
+	border-radius: 3px;
+}
+
+ul.menu._Skins_SideMenu.mc-component ul ul > li > a:hover
+{
+	background-color: #FBFBFB;
+	border-radius: 3px;
+}
+
+ul.menu._Skins_SideMenu.mc-component ul ul ul > li > a:hover
+{
+	background-color: #d3d3d3;
+	border-radius: 3px;
+}
+
+ul.menu._Skins_SideMenu.mc-component ul ul ul ul > li > a:hover
+{
+	background-color: #d3d3d3;
+	border-radius: 3px;
+}
+
+ul.sidenav li a:hover
+{
+	border-top-left-radius: 2px !important;
+	border-top-right-radius: 2px !important;
+	border-bottom-right-radius: 2px !important;
+	border-bottom-left-radius: 2px !important;
+	color: black !important;
+	font-family: var(--font-family) !important;
+}
+
+/* sonya from styles.css */
+
+ul.menu._Skins_SideMenu.mc-component li > a.selected
+{
+	color: #3C3C3C;
+	font-weight: normal !important;
+	background-color: #EEEEEE !important;
+	/*maybe use this for menu headings whether selected or not
+	  color: #B5B8C2;
+    font-weight: normal !important;
+    background-color: #EEEEEE;
+    text-transform: uppercase;
+    font-size: 13px;
+    letter-spacing: 2px;*/
+}
+
+ul.menu._Skins_SideMenu.mc-component li > a.selected:hover
+{
+	font-weight: normal !important;
+	background-color: #d3d3d3;
+}
+
+div.topic-layout	/*This layout was created using the Responsive Layout Editor in MadCap Flare. Go to: Home Ribbon > Styles Section > Responsive Layout*/
+{
+	mc-grid-row: true;
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: 2px;
+}
+
+div.topic-layout::before
+{
+	content: ' ';
+	display: table;
+}
+
+div.topic-layout::after
+{
+	content: ' ';
+	display: table;
+	clear: both;
+}
+
+div.topic-layout > div
+{
+	float: left;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+div.topic-layout > div:nth-child(1)	/*Menu Proxy container*/
+{
+	width: 25%;
+	margin-left: 0%;
+}
+
+div.topic-layout > div:nth-child(2)
+{
+	width: 73%;
+	margin-left: 0%;
+}
+
+div.topic-hero
+{
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../PageLayouts/hero-2.png');
+}
+
+h2.topic-title
+{
+	font-size: 3em;
+	color: white;
+	text-align: center;
+}
+
+ul.navigation li.is-expanded > a
+{
+	color: black !important;
+}
+
+p.copyright
+{
+	font-family: var(--font-family) !important;
+}
+
+.nav-search
+{
+	display: block !important;
+	width: 50% !important;
+}
+
+.search-bar.search-bar-container .search-submit
+{
+	width: 56px;
+	background-color: transparent !important;
+	border-radius: 5px !important;
+	/* background: url(Images/SearchIcon.png) no-repeat center center !important;
+    -pie-background: url(Skins/Fluid/Stylesheets/Images/SearchIcon.png) no-repeat center center !important; */
+}
+
+.search-bar.search-bar-container .search-submit:hover
+{
+	width: 56px;
+	background-color: white;
+	/* background: url(Images/SearchIcon.png) no-repeat center center !important;
+    -pie-background: url(Skins/Fluid/Stylesheets/Images/SearchIcon.png) no-repeat center center !important; */
+}
+
+.search,
+.search-bar
+{
+	outline: -webkit-focus-ring-color auto 0px !important;
+	border-radius: 5px !important;
+}
+
+.search-bar._Skins_SearchTopics.mc-component
+{
+	display: none !important;
+}
+
+.search-bar .search-field
+{
+	border-radius: 5px !important;
+	font-family: var(--font-family) !important;
+}
+
+.nav-search-wrapper
+{
+	flex-basis: unset !important;
+}
+
+ul.mc-component
+{
+	text-decoration: normal !important;
+}
+
+button
+{
+	font-family: var(--font-family) !important;
+}
+
+/*===========================================================================================================================================================
+Styles after this point are styles that are for specific mediums. If any additional styles are added to this template they will be listed after mediums.
+[@media tablet] declares styles that will apply when the screen is in tablet view
+[@media mobile] declares styles that will apply when the screen is in mobile view
+===========================================================================================================================================================*/
+
+@media only screen and (max-width: 1279px)
+{
+	.row.nav-search
+	{
+		display: block;
+	}
+
+	div.search-container
+	{
+		display: none;
+	}
+
+	div.topic-layout > div:nth-child(1)
+	{
+		display: none;
+	}
+
+	div.topic-layout > div:nth-child(2)
+	{
+		width: 98%;
+		margin-left: 0%;
+	}
+}
+
+@media only screen and (max-width: 767px)
+{
+	div.top-bar
+	{
+		min-height: 0;
+	}
+
+	.row.nav-search
+	{
+		display: block;
+	}
+
+	div.search-container
+	{
+		display: none;
+	}
+
+	div.topic-layout > div:nth-child(1)
+	{
+		display: none;
+	}
+
+	div.topic-layout > div:nth-child(2)
+	{
+		width: 98%;
+		margin-left: 0%;
+	}
+}
+
+/*wendy*/
+/* ========== DEFAULT MEDIUM ========== */
+/* Start of the DEFAULT CSS, used for online. All other mediums inherit from here. */
+
+body
+{
+	font-family: var(--FontBody) !important;
+	font-size: 1.0em;
+	color: var(--Black);
+}
+
+/* ========== GENERIC CLASSES ========== */
+
+.Comment	/*Allows us to leave notes to ourselves & each other as we're working on the content. We will set the targets to automatically exclude this style from output. --Kelby */
+{
+	color: var(--InternalUse);
+	/* background-color: #ffff00; */
+	mc-conditions: '_CORP_OutputConds.Comment';
+	mc-exclude-action: 'remove';
+}
+
+.NotInContents	/* To apply to a heading of any level that you want to keep out of the generated table of contents in a PDF */
+{
+	mc-heading-level: 0;
+}
+
+.SpaceAfterNone
+{
+	margin-bottom: 0;
+}
+
+.SpaceAfterTight
+{
+	margin-bottom: 4pt;
+}
+
+.SmallType	/* Experimental on 9/21. Note sure it will survive. --Nita */
+{
+	font-size: 0.9em;
+}
+
+/* ========== HEADING CLASSES ========== */
+
+h1,
+h1.Appendix,
+h1.Chapter,
+h1.Contents,
+h1.Glossary,
+h1.Index,
+h1.LandingPg,
+h2,
+h3,
+h4,
+h5
+{
+	font-family: var(--FontHeading) !important;
+	font-weight: bold;
+	/* Rebrand - changed color -- Suman*/
+	color: #000000;
+}
+
+h1
+{
+	font-size: 1.7em;
+	margin-top: -10px;
+}
+
+h2
+{
+	font-size: 1.4em;
+}
+
+h3
+{
+	font-size: 1.2em;
+}
+
+h4
+{
+	font-size: 1.0em;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+{
+	/* clear: both; */
+	/* Prevents a heading from running aside something that has a float:left or float:right associated with it. Added 10/15. -- Nita */
+	/* page-break-after: avoid; */
+	/* Prevents a heading from having a page break after it, although this is not foolproof. Added 10/15. -- Nita */
+}
+
+h1.LandingPg	/* Needed so that the heading on a landing page does not move down to "clear" the PDF icon positioned at the right side of the topic */
+{
+	clear: none;
+	margin-top: -21px;
+}
+
+h1.Chapter
+{
+	margin-top: 5px;
+}
+
+/* ========== GENERAL DIV CLASSES ========== */
+
+div.Indent
+{
+	margin-left: 0.25in;
+}
+
+div.Figure
+{
+	page-break-inside: avoid;
+}
+
+div.Wide	/* Does nothing for mediums other than PDF; see the PDF medium */
+{
+	
+}
+
+div.FakeMiniTOC	/* A div into which to put xrefs to topics that are subordinate to anotherh topic on a TOC, in lieu of using a true miniTOC proxy; a use case is a list of xrefs laid out horizontally in a responsive grid such as in a landscape PDF. Not intended for HTML5 output, given that a true miniTOC proxy can be used. Added 10/15. --Nita */
+{
+	margin-bottom: 13pt;
+	/* controls spacing below the fake miniTOC */
+}
+
+div.FakeMiniTOC p	/* controls size and spacing of the paragraphs within the fake miniTOC */
+{
+	font-size: 11pt;
+	margin-top: 0pt;
+	margin-bottom: 0pt;
+	margin-left: 0.25in;
+}
+
+div + p	/* Will cause a p that is preceded by (but is not part of) a div that has a float associated with it to clear the float */
+{
+	clear: both;
+}
+
+/* ========== TOPIC LAYOUT DIVs: Side menu left; topic content right ========== */
+/*Apply shadow to sub-menu -- Suman*/
+
+ul.navigation ul
+{
+	box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+div.topic-layout	/* DO NOT APPLY DIRECTLY TO CONTENT */
+{
+	mc-grid-row: true;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div.topic-layout::before
+{
+	content: ' ';
+	display: table;
+}
+
+div.topic-layout::after
+{
+	content: ' ';
+	display: table;
+	clear: both;
+}
+
+div.topic-layout > div
+{
+	float: left;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+div.topic-layout > div:nth-child(1)	/*Menu Proxy container*/
+{
+	width: 23%;
+	margin-left: 0%;
+	/* border-right: 1px solid #d3d3d3; */
+}
+
+div.topic-layout > div:nth-child(2)
+{
+	width: 100% !important;
+	margin-left: 0%;
+}
+
+/* ========== NOTIFICATION DIV CLASSES and related styles  ========== */
+
+div.Example,
+div.Important,
+div.Note,
+div.Caution
+{
+	border-style: solid;
+	border-width: 2px;
+	margin-top: 24px;
+	margin-bottom: 16pt;
+	margin-left: 24px;
+	position: relative;
+	border-radius: 8px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+div.Example
+{
+	mc-auto-number-format: '{b}Example: {/b}';
+	border-color: #3A5EE1;
+	background-color: #F7F8FD;
+	color: #444444;
+	background-position: 9px 0px;
+	background-repeat: no-repeat;
+	background-image: url('../../Images/MainIcons/example.svg');
+	mc-auto-number-position: inside-head;
+	mc-auto-number-offset: 20px;
+	background-position-y: center;
+	padding-left: 55px;
+	padding-right: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
+	border-bottom-left-radius: 8px;
+	border-left-style: solid;
+	border-left-width: 2px;
+	border-left-color: #3A5EE1;
+	border-right-style: solid;
+	border-right-width: 2px;
+	border-right-color: #3A5EE1;
+	border-top-style: solid;
+	border-top-width: 2px;
+	border-top-color: #3A5EE1;
+	border-bottom-style: solid;
+	border-bottom-width: 2px;
+	border-bottom-color: #3A5EE1;
+	background-position-x: 18px;
+}
+
+div.Important
+{
+	border-color: #FFC834;
+	background-color: #FFF8E5;
+	color: #444444;
+	background-position: 9px 0px;
+	background-repeat: no-repeat;
+	padding-left: 55px;
+	padding-right: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
+	border-bottom-left-radius: 8px;
+	border-left-style: solid;
+	border-left-width: 2px;
+	border-left-color: #FFC834;
+	border-right-style: solid;
+	border-right-width: 2px;
+	border-right-color: #FFC834;
+	border-top-style: solid;
+	border-top-width: 2px;
+	border-top-color: #FFC834;
+	border-bottom-style: solid;
+	border-bottom-width: 2px;
+	border-bottom-color: #FFC834;
+	margin-right: auto;
+	mc-auto-number-position: inside-head;
+	mc-auto-number-offset: 20px;
+	mc-auto-number-format: '{b}Important: {/b}';
+	text-align: justify;
+	background-position-y: center;
+	background-image: url('../../Images/MainIcons/Important.svg');
+	margin-left: 24px;
+	background-position-x: 18px;
+}
+
+div.Note
+{
+	mc-auto-number-format: '{b}Note: {/b}';
+	border-color: #19C877;
+	background-color: #F2FCF7;
+	font-style: normal;
+	color: #444444;
+	background-position: 9px 0px;
+	background-repeat: no-repeat;
+	mc-auto-number-position: inside-head;
+	mc-auto-number-offset: 20px;
+	background-image: url('../../Images/MainIcons/edit.svg');
+	background-position-y: center;
+	text-align: justify;
+	padding-left: 55px;
+	padding-right: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
+	border-bottom-left-radius: 8px;
+	border-left-style: solid;
+	border-left-width: 2px;
+	border-left-color: #19C877;
+	border-right-style: solid;
+	border-right-width: 2px;
+	border-right-color: #19C877;
+	border-top-style: solid;
+	border-top-width: 2px;
+	border-top-color: #19C877;
+	border-bottom-style: solid;
+	border-bottom-width: 2px;
+	border-bottom-color: #19C877;
+	background-position-x: 18px;
+}
+
+div.Caution
+{
+	mc-auto-number-format: '{b}Caution: {/b}';
+	border-color: #FF6971;
+	background-color: #FFF4F5;
+	font-style: normal;
+	color: #444444;
+	background-position: 9px 0px;
+	background-repeat: no-repeat;
+	mc-auto-number-position: inside-head;
+	background-position-y: center;
+	background-image: url('../../Images/MainIcons/caution.svg');
+	text-align: justify;
+	mc-auto-number-offset: 20px;
+	padding-left: 55px;
+	padding-right: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
+	border-bottom-left-radius: 8px;
+	border-left-style: solid;
+	border-left-width: 2px;
+	border-left-color: #FF6971;
+	border-right-style: solid;
+	border-right-width: 2px;
+	border-right-color: #FF6971;
+	border-top-style: solid;
+	border-top-width: 2px;
+	border-top-color: #FF6971;
+	border-bottom-style: solid;
+	border-bottom-width: 2px;
+	border-bottom-color: #FF6971;
+	background-position-x: 18px;
+}
+
+span.DivNotification
+{
+	display: inline-block;
+	font-weight: bold;
+	background-color: var(--White);
+	color: var(--MediumGray);
+	position: absolute;
+	z-index: 99;
+	top: -12px;
+	left: 12px;
+	padding: 2px;
+	margin-top: 0px;
+}
+
+div.Example p:nth-last-child(1),
+div.Important p:nth-last-child(1),
+div.Note p:nth-last-child(1),
+div.Caution p:nth-last-child(1)
+{
+	margin-bottom: 0;
+	/* Removes excessive space after the only or last paragraph in any of these divs */
+}
+
+/* ========== RESPONSIVE GRID DIV CLASSES and related styles ========== */
+/*-------------------2-cell grids--------------------*/
+
+div.grid_2cells_3-9col	/* 2-cell row; cells consume 3 cols and 9 cols of imaginary 12-col grid, respectively */
+{
+	mc-grid-row: true;
+	margin-left: auto;
+	margin-right: auto;
+	clear: both;
+}
+
+div.grid_2cells_3-9col::before
+{
+	content: ' ';
+	display: table;
+}
+
+div.grid_2cells_3-9col::after
+{
+	content: ' ';
+	display: table;
+	clear: both;
+}
+
+div.grid_2cells_3-9col > div
+{
+	float: left;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+div.grid_2cells_3-9col > div:nth-child(1)
+{
+	width: 24%;
+	margin-left: 0%;
+}
+
+div.grid_2cells_3-9col > div:nth-child(2)
+{
+	width: 74%;
+	margin-left: 2%;
+}
+
+div.grid_2cells_4-8col	/* 2-cell row; cells consume 4 cols and 8 cols of imaginary 12-col grid, respectively */
+{
+	mc-grid-row: true;
+	margin-left: auto;
+	margin-right: auto;
+	clear: both;
+}
+
+div.grid_2cells_4-8col::before
+{
+	content: ' ';
+	display: table;
+}
+
+div.grid_2cells_4-8col::after
+{
+	content: ' ';
+	display: table;
+	clear: both;
+}
+
+div.grid_2cells_4-8col > div
+{
+	float: left;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+div.grid_2cells_4-8col > div:nth-child(1)
+{
+	width: 33%;
+	margin-left: 0%;
+}
+
+div.grid_2cells_4-8col > div:nth-child(2)
+{
+	width: 65%;
+	margin-left: 2%;
+}
+
+div.grid_2cells_5-7col	/* 2-cell row; cells consume 5 cols and 7 cols of imaginary 12-col grid, respectively */
+{
+	mc-grid-row: true;
+	margin-left: auto;
+	margin-right: auto;
+	clear: both;
+}
+
+div.grid_2cells_5-7col::before
+{
+	content: ' ';
+	display: table;
+}
+
+div.grid_2cells_5-7col::after
+{
+	content: ' ';
+	display: table;
+	clear: both;
+}
+
+div.grid_2cells_5-7col > div
+{
+	float: left;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+div.grid_2cells_5-7col > div:nth-child(1)
+{
+	width: 41%;
+	margin-left: 0%;
+}
+
+div.grid_2cells_5-7col > div:nth-child(2)
+{
+	width: 57%;
+	margin-left: 2%;
+}
+
+div.grid_2cells_6-6col	/* 2-cell row; cells consume 6 cols and 6 cols of imaginary 12-col grid, respectively */
+{
+	mc-grid-row: true;
+	margin-left: auto;
+	margin-right: auto;
+	clear: both;
+}
+
+div.grid_2cells_6-6col::before
+{
+	content: ' ';
+	display: table;
+}
+
+div.grid_2cells_6-6col::after
+{
+	content: ' ';
+	display: table;
+	clear: both;
+}
+
+div.grid_2cells_6-6col > div
+{
+	float: left;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+div.grid_2cells_6-6col > div:nth-child(1)
+{
+	width: 49%;
+	margin-left: 0%;
+}
+
+div.grid_2cells_6-6col > div:nth-child(2)
+{
+	width: 49%;
+	margin-left: 2%;
+}
+
+div.grid_2cells_7-5col	/* 2-cell row; cells consume 7 cols and 5 cols of imaginary 12-col grid, respectively */
+{
+	mc-grid-row: true;
+	margin-left: auto;
+	margin-right: auto;
+	clear: both;
+}
+
+div.grid_2cells_7-5col::before
+{
+	content: ' ';
+	display: table;
+}
+
+div.grid_2cells_7-5col::after
+{
+	content: ' ';
+	display: table;
+	clear: both;
+}
+
+div.grid_2cells_7-5col > div
+{
+	float: left;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+div.grid_2cells_7-5col > div:nth-child(1)
+{
+	width: 57%;
+	margin-left: 0%;
+}
+
+div.grid_2cells_7-5col > div:nth-child(2)
+{
+	width: 41%;
+	margin-left: 2%;
+}
+
+div.grid_2cells_8-4col	/* 2-cell row; cells consume 8 cols and 4 cols of imaginary 12-col grid, respectively */
+{
+	mc-grid-row: true;
+	margin-left: auto;
+	margin-right: auto;
+	clear: both;
+}
+
+div.grid_2cells_8-4col::before
+{
+	content: ' ';
+	display: table;
+}
+
+div.grid_2cells_8-4col::after
+{
+	content: ' ';
+	display: table;
+	clear: both;
+}
+
+div.grid_2cells_8-4col > div
+{
+	float: left;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+div.grid_2cells_8-4col > div:nth-child(1)
+{
+	width: 65%;
+	margin-left: 0%;
+}
+
+div.grid_2cells_8-4col > div:nth-child(2)
+{
+	width: 33%;
+	margin-left: 2%;
+}
+
+div.grid_2cells_9-3col	/* 2-cell row; cells consume 9 cols and 3 cols of imaginary 12-col grid, respectively */
+{
+	mc-grid-row: true;
+	margin-left: auto;
+	margin-right: auto;
+	clear: both;
+}
+
+div.grid_2cells_9-3col::before
+{
+	content: ' ';
+	display: table;
+}
+
+div.grid_2cells_9-3col::after
+{
+	content: ' ';
+	display: table;
+	clear: both;
+}
+
+div.grid_2cells_9-3col > div
+{
+	float: left;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+div.grid_2cells_9-3col > div:nth-child(1)
+{
+	width: 74%;
+	margin-left: 0%;
+}
+
+div.grid_2cells_9-3col > div:nth-child(2)
+{
+	width: 24%;
+	margin-left: 2%;
+}
+
+/*-------------------3-cell grids--------------------*/
+/* 3-cell row; cells consume 3 cols, 3 cols, and 6 cols of imaginary 12-col grid, respectively */
+
+div.grid_3cells_2-5-5col
+{
+	-ms-grid-row: true;
+	margin-left: auto;
+	margin-right: auto;
+	clear: both;
+	border-bottom: 1px solid var(--LightGray);
+	margin-top: 10px;
+}
+
+div.grid_3cells_2-5-5col::before
+{
+	content: ' ';
+	display: table;
+}
+
+div.grid_3cells_2-5-5col::after
+{
+	content: ' ';
+	display: table;
+	clear: both;
+}
+
+div.grid_3cells_2-5-5col > div
+{
+	float: left;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+div.grid_3cells_2-5-5col > div:nth-child(1)
+{
+	width: 20%;
+	margin-left: 0%;
+}
+
+div.grid_3cells_2-5-5col > div:nth-child(2)
+{
+	width: 40%;
+	margin-left: 0%;
+}
+
+div.grid_3cells_2-5-5col > div:nth-child(3)
+{
+	width: 40%;
+	margin-left: 0%;
+}
+
+div.grid_3cells_3-3-6col
+{
+	mc-grid-row: true;
+	margin-left: auto;
+	margin-right: auto;
+	clear: both;
+}
+
+div.grid_3cells_3-3-6col::before
+{
+	content: ' ';
+	display: table;
+}
+
+div.grid_3cells_3-3-6col::after
+{
+	content: ' ';
+	display: table;
+	clear: both;
+}
+
+div.grid_3cells_3-3-6col > div
+{
+	float: left;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+div.grid_3cells_3-3-6col > div:nth-child(1)
+{
+	width: 25%;
+	margin-left: 0%;
+}
+
+div.grid_3cells_3-3-6col > div:nth-child(2)
+{
+	width: 25%;
+	margin-left: 0%;
+}
+
+div.grid_3cells_3-3-6col > div:nth-child(3)	/* THIS CELL IS NOT WORKING IN PDF */
+{
+	width: 50%;
+	margin-left: 0%;
+}
+
+div.grid_3cells_3-6-3col	/* 3-cell row; cells consume 3 cols, 6 cols, and 3 cols of imaginary 12-col grid, respectively */
+{
+	mc-grid-row: true;
+	margin-left: auto;
+	margin-right: auto;
+	clear: both;
+}
+
+div.grid_3cells_3-6-3col::before
+{
+	content: ' ';
+	display: table;
+}
+
+div.grid_3cells_3-6-3col::after
+{
+	content: ' ';
+	display: table;
+	clear: both;
+}
+
+div.grid_3cells_3-6-3col > div
+{
+	float: left;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+div.grid_3cells_3-6-3col > div:nth-child(1)
+{
+	width: 24%;
+	margin-left: 0%;
+}
+
+div.grid_3cells_3-6-3col > div:nth-child(2)
+{
+	width: 48%;
+	margin-left: 2%;
+}
+
+div.grid_3cells_3-6-3col > div:nth-child(3)	/* THIS CELL IS NOT WORKING IN PDF */
+{
+	width: 24%;
+	margin-left: 2%;
+}
+
+div.grid_3cells_4-4-4col	/* 3-cell row; cells consume 4 cols, 4 cols, and 4 cols of imaginary 12-col grid, respectively */
+{
+	mc-grid-row: true;
+	margin-left: auto;
+	margin-right: auto;
+	clear: both;
+}
+
+div.grid_3cells_4-4-4col::before
+{
+	content: ' ';
+	display: table;
+}
+
+div.grid_3cells_4-4-4col::after
+{
+	content: ' ';
+	display: table;
+	clear: both;
+}
+
+div.grid_3cells_4-4-4col > div
+{
+	float: left;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+div.grid_3cells_4-4-4col > div:nth-child(1)
+{
+	width: 32%;
+	margin-left: 0%;
+}
+
+div.grid_3cells_4-4-4col > div:nth-child(2)
+{
+	width: 32%;
+	margin-left: 2%;
+}
+
+div.grid_3cells_4-4-4col > div:nth-child(3)
+{
+	width: 32%;
+	margin-left: 2%;
+}
+
+div.grid_3cells_6-3-3col	/* 3-cell row; cells consume 6 cols, 3 cols, and 3 cols of imaginary 12-col grid, respectively */
+{
+	mc-grid-row: true;
+	margin-left: auto;
+	margin-right: auto;
+	clear: both;
+}
+
+div.grid_3cells_6-3-3col::before
+{
+	content: ' ';
+	display: table;
+}
+
+div.grid_3cells_6-3-3col::after
+{
+	content: ' ';
+	display: table;
+	clear: both;
+}
+
+div.grid_3cells_6-3-3col > div
+{
+	float: left;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+div.grid_3cells_6-3-3col > div:nth-child(1)
+{
+	width: 48%;
+	margin-left: 0%;
+}
+
+div.grid_3cells_6-3-3col > div:nth-child(2)
+{
+	width: 24%;
+	margin-left: 2%;
+}
+
+div.grid_3cells_6-3-3col > div:nth-child(3)
+{
+	width: 24%;
+	margin-left: 2%;
+}
+
+/*-------------------4-cell grids--------------------*/
+
+div.grid_4cells_3-3-3-3cols	/* 3-cell row; each cell consumes 3 cols of imaginary 12-col grid */
+{
+	mc-grid-row: true;
+	margin-left: auto;
+	margin-right: auto;
+	clear: both;
+}
+
+div.grid_4cells_3-3-3-3cols::before
+{
+	content: ' ';
+	display: table;
+}
+
+div.grid_4cells_3-3-3-3cols::after
+{
+	content: ' ';
+	display: table;
+	clear: both;
+}
+
+div.grid_4cells_3-3-3-3cols > div
+{
+	float: left;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+div.grid_4cells_3-3-3-3cols > div:nth-child(1)
+{
+	width: 25%;
+	margin-left: 0%;
+}
+
+div.grid_4cells_3-3-3-3cols > div:nth-child(2)
+{
+	width: 23%;
+	margin-left: 2%;
+}
+
+div.grid_4cells_3-3-3-3cols > div:nth-child(3)
+{
+	width: 23%;
+	margin-left: 2%;
+}
+
+div.grid_4cells_3-3-3-3cols > div:nth-child(4)
+{
+	width: 23%;
+	margin-left: 2%;
+}
+
+/* ========== IMAGE CLASSES ========== */
+
+img
+{
+	max-width: 100%;
+	/* Ensures image will not exceed the bounds of its container */
+}
+
+img.Border100,
+img.Border95,
+img.Border85,
+img.Border75,
+img.Border65,
+img.Border55,
+img.Border45,
+img.Border35,
+img.NoBorder100,
+img.NoBorder95,
+img.NoBorder85,
+img.NoBorder75,
+img.NoBorder65,
+img.NoBorder55,
+img.NoBorder45,
+img.NoBorder35
+{
+	mc-thumbnail: popup;
+	mc-thumbnail-max-width: 230px;
+	mc-thumbnail-max-height: auto;
+	border: solid 1px var(--LightGray);
+}
+
+img.PDFicon	/* positions the PDF icon on landing pages */
+{
+	float: right;
+	mc-thumbnail: none;
+	margin-left: 10px;
+}
+
+/* ========== PARAGRAPH CLASSES ========== */
+
+p
+{
+	font-size: 1.0em;
+	mc-hyphenate: never;
+	margin-top: 3pt;
+	margin-bottom: 13pt;
+}
+
+p.FigureTitle
+{
+	font-weight: bold;
+	page-break-after: avoid;
+	margin-bottom: 4pt;
+}
+
+p.MiniTOC1,
+p.MiniTOC2
+{
+	/* margin-top: 0;
+	margin-right: 0;
+	margin-bottom: 0; */
+	margin: 0 0 0 0;
+	padding: 0;
+	color: var(--Link);
+	/* Would like to use a color variable. --Nita */
+	/* line-height: 13pt; */
+	text-decoration: underline;
+}
+
+p.MiniTOC1	/*all items except last one* (I don't understand this "last one" business. MiniTOC1 will be for first-level links when Flare replaces the MiniTOC proxy with links. --Nita */
+{
+	margin-left: 0.25in;
+	font-weight: normal;
+	/* had been bold; changed on 9/29. --Nita */
+}
+
+p.MiniTOC2	/*last item*/
+{
+	margin-left: 0.5in;
+	font-weight: normal;
+}
+
+p.Example
+{
+	mc-auto-number-format: '{b}Example: {/b}';
+	border-color: #3A5EE1;
+	background-color: #F7F8FD;
+	color: #444444;
+	background-position: 9px 0px;
+	background-repeat: no-repeat;
+	background-image: url('../../Images/MainIcons/example.svg');
+	mc-auto-number-position: inside-head;
+	mc-auto-number-offset: 20px;
+	background-position-y: center;
+	padding-left: 55px;
+	padding-right: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
+	border-bottom-left-radius: 8px;
+	border-left-style: solid;
+	border-left-width: 2px;
+	border-left-color: #3A5EE1;
+	border-right-style: solid;
+	border-right-width: 2px;
+	border-right-color: #3A5EE1;
+	border-top-style: solid;
+	border-top-width: 2px;
+	border-top-color: #3A5EE1;
+	border-bottom-style: solid;
+	border-bottom-width: 2px;
+	border-bottom-color: #3A5EE1;
+	background-position-x: 18px;
+	margin-left: 24px;
+}
+
+p.Important
+{
+	border-color: #FFC834;
+	background-color: #FFF8E5;
+	color: #444444;
+	background-position: 9px 0px;
+	background-repeat: no-repeat;
+	padding-left: 55px;
+	padding-right: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
+	border-bottom-left-radius: 8px;
+	border-left-style: solid;
+	border-left-width: 2px;
+	border-left-color: #FFC834;
+	border-right-style: solid;
+	border-right-width: 2px;
+	border-right-color: #FFC834;
+	border-top-style: solid;
+	border-top-width: 2px;
+	border-top-color: #FFC834;
+	border-bottom-style: solid;
+	border-bottom-width: 2px;
+	border-bottom-color: #FFC834;
+	margin-right: auto;
+	mc-auto-number-position: inside-head;
+	mc-auto-number-offset: 20px;
+	mc-auto-number-format: '{b}Important: {/b}';
+	text-align: justify;
+	background-position-y: center;
+	background-image: url('../../Images/MainIcons/Important.svg');
+	margin-left: 24px;
+	background-position-x: 18px;
+}
+
+p.Note
+{
+	mc-auto-number-format: '{b}Note: {/b}';
+	border-color: #19C877;
+	background-color: #F2FCF7;
+	font-style: normal;
+	color: #444444;
+	background-position: 9px 0px;
+	background-repeat: no-repeat;
+	mc-auto-number-position: inside-head;
+	mc-auto-number-offset: 20px;
+	background-image: url('../../Images/MainIcons/edit.svg');
+	background-position-y: center;
+	text-align: justify;
+	padding-left: 55px;
+	padding-right: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
+	border-bottom-left-radius: 8px;
+	border-left-style: solid;
+	border-left-width: 2px;
+	border-left-color: #19C877;
+	border-right-style: solid;
+	border-right-width: 2px;
+	border-right-color: #19C877;
+	border-top-style: solid;
+	border-top-width: 2px;
+	border-top-color: #19C877;
+	border-bottom-style: solid;
+	border-bottom-width: 2px;
+	border-bottom-color: #19C877;
+	background-position-x: 18px;
+	margin-left: 24px;
+}
+
+p.Caution
+{
+	mc-auto-number-format: '{b}Caution: {/b}';
+	border-color: #FF6971;
+	background-color: #FFF4F5;
+	font-style: normal;
+	color: #444444;
+	background-position: 9px 0px;
+	background-repeat: no-repeat;
+	mc-auto-number-position: inside-head;
+	background-position-y: center;
+	background-image: url('../../Images/MainIcons/caution.svg');
+	text-align: justify;
+	mc-auto-number-offset: 20px;
+	padding-left: 55px;
+	padding-right: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-top-left-radius: 8px;
+	border-top-right-radius: 8px;
+	border-bottom-right-radius: 8px;
+	border-bottom-left-radius: 8px;
+	border-left-style: solid;
+	border-left-width: 2px;
+	border-left-color: #FF6971;
+	border-right-style: solid;
+	border-right-width: 2px;
+	border-right-color: #FF6971;
+	border-top-style: solid;
+	border-top-width: 2px;
+	border-top-color: #FF6971;
+	border-bottom-style: solid;
+	border-bottom-width: 2px;
+	border-bottom-color: #FF6971;
+	background-position-x: 18px;
+	margin-left: 24px;
+}
+
+span.ParaNotification
+{
+	font-weight: bold;
+}
+
+/* What is a marker in FrameMaker? Kelby wonders if these were the equivalent of index keywords in Flare? --Nita */
+
+/* p.markerParaNoSpace /* For now have commented out, but need to ask Celine about its intended use. --Nita
+{
+	font: 2pt 'Times New Roman', serif;
+	/* Would like to use a font variable. --Nita
+	color: var(--White);
+	text-indent: 0px;
+	line-height: 0pt;
+} */
+
+/* p.marker /* For now have commented out, but need to ask Celine about its intended use. --Nita
+{
+	font: 2pt 'Times New Roman', serif;
+	/* Would like to use a font variable. --Nita
+	color: var(--White);
+	text-indent: 0px;
+	line-height: 0pt;
+} */
+
+p.HIGHLITE	/* NITA: Ask Celine for more informationa about the intended use of this style. Is it redundant with the generic style .Comment? */
+{
+	margin-top: 6pt;
+	margin-bottom: 6pt;
+	font-weight: bold;
+	color: var(--InternalUse);
+	line-height: 13pt;
+	text-decoration: underline;
+	mc-conditions: '_CORP_OutputConds.Comment';
+	mc-exclude-action: 'remove';
+}
+
+pre
+{
+	font-size: 0.9em;
+	font-family: 'Courier New', mono;
+	margin-top: 3px;
+	margin-bottom: 3px;
+	white-space: pre-wrap;
+}
+
+/* ========== LIST CLASSES ========== */
+/* Definition list classes */
+
+dl
+{
+	margin-top: 3pt;
+	margin-bottom: 13pt;
+	page-break-inside: avoid;
+}
+
+dt
+{
+	font-family: var(--FontScreen) !important;
+}
+
+dt p:nth-child(1)	/* controls space above and below the term (dt) tag and the first p nested within it, if present */
+{
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+dd
+{
+	
+}
+
+/* Ordered and unordered list classes */
+
+ol,
+ul
+{
+	margin-top: 6pt;
+	margin-bottom: 13pt;
+}
+
+ol
+{
+	list-style-type: decimal;
+}
+
+ul
+{
+	list-style-type: disc;
+}
+
+ul ul,
+ol ul
+{
+	list-style-type: circle;
+}
+
+ul ul ul,
+ol ul ul
+{
+	list-style-type: none;
+	list-style-image: none;
+}
+
+ul ul ul > li::marker,
+ol ul ul > li::marker
+{
+	/* Causes a third-level bullet list to use a dash. --Nita */
+	content: '–  ';
+}
+
+/* next set of selectors sets the numbers/letters as bold, no periods for OLs; works in PDF but not HTML5, as browsers don't yet support this, so says MadCap --Nita */
+
+ol > li::marker
+{
+	font-weight: bold;
+	font-style: normal;
+	content: counter({n});
+}
+
+ol > li > ol
+{
+	list-style-type: lower-alpha;
+}
+
+ol > li > ol > li::marker
+{
+	font-weight: bold;
+	font-style: normal;
+	content: counter({a});
+}
+
+ol > li > ol > li > ol
+{
+	list-style-type: lower-roman;
+}
+
+ol > li > ol > li > ol > li::marker
+{
+	font-weight: bold;
+	font-style: normal;
+	content: counter({r});
+}
+
+li
+{
+	font-size: 1.0em;
+	mc-hyphenate: never;
+	margin-top: 3pt;
+	margin-bottom: 13pt;
+}
+
+/* EXPERIMENTAL TO SEE IF I CAN CONTROL PAGE BREAKING after a paragraph that immediately precedes a list. The page break setting is on the list, not the paragraph. Added 9/27 --Nita */
+
+p + ol,
+p + ul
+{
+	page-break-before: avoid;
+}
+
+/* controls list item spacing above and below in ordered lists and permutations of sublists */
+
+ol ol > li,
+ol ol ol > li,
+ol ol ul > li,
+ol ul > li,
+ol ul ol > li,
+ol ul ul > li
+{
+	margin-top: 10pt;
+	margin-bottom: 10pt;
+}
+
+/* controls list item spacing above and below in unordered lists and permutations of sublists */
+
+ul ol > li,
+ul ol ol > li,
+ul ol ul > li,
+ul ul > li,
+ul ul ol > li,
+ul ul ul > li
+{
+	margin-top: 10pt;
+	margin-bottom: 10pt;
+}
+
+li p
+{
+	/* controls p spacing above and below in list items */
+	margin-top: 6pt;
+	margin-bottom: 6pt;
+}
+
+li table,
+li table.TableStyle-API,
+li table.TableStyle-NoBorder,
+li table.TableStyle-Plain,
+li table.TableStyle-WhatsNew
+{
+	/* controls table spacing above and below in list items, overriding the settings in the table stylesheets */
+	margin-top: 6pt;
+	margin-bottom: 6pt;
+}
+
+/* Ordered list of callouts that accompany an illustration */
+
+ol.CalloutList
+{
+	margin-bottom: 13pt;
+	margin-left: 20px;
+}
+
+ol.CalloutList p,
+ol.CalloutList li
+{
+	margin-top: 3pt;
+	margin-bottom: 3pt;
+}
+
+ol.CalloutList > li::marker,
+ol.CalloutList > li > ol > li::marker
+{
+	/* Rebrand - changed color -- Suman*/
+	color: var(--DigitalBlue);
+}
+
+ol.CalloutList,
+ol ol.CalloutList,
+ul ol.CalloutList,
+ol ol ol.CalloutList,
+ul ol ol.CalloutList,
+ul ul ol.CalloutList
+{
+	/* Causes 1st-level callout list to always start with a number, even when nested within another list. Added 10/13 --Nita */
+	list-style-type: decimal;
+}
+
+ol.CalloutList > li > ol,
+ol ol.CalloutList > li > ol,
+ul ol.CalloutList > li > ol,
+ol ol.CalloutList > li > ol,
+ul ol.CalloutList > li > ol,
+ul ul ol.CalloutList > li > ol
+{
+	/* Causes 2nd-level callout list to always start with a lowercase alpha, even when the whole callout list is nested within another list. Added 10/13 --Nita */
+	list-style-type: lower-alpha;
+}
+
+/*end of callout list*/
+/* "Tight and very tight one-level lists */
+
+ol.OneLvlTight,
+ul.OneLvlTight	/* For lists of one level only whose list items are to have tight spacing after. --Nita */
+{
+	
+}
+
+ol.OneLvlTight li,
+ol.OneLvlTight li p,
+ul.OneLvlTight li,
+ul.OneLvlTight li p	/* Controls the spacing before and after the list items in a "tight" list. --Nita */
+{
+	margin-top: 3pt;
+	margin-bottom: 4pt;
+}
+
+ol.OneLvlVeryTight,
+ul.OneLvlVeryTight	/* For lists of one level only whose list items are to have almost no spacing before and after. --Nita */
+{
+	
+}
+
+ol.OneLvlVeryTight li,
+ol.OneLvlVeryTight li p,
+ul.OneLvlVeryTight li,
+ul.OneLvlVeryTight li p	/* Controls the spacing before and after the list items in a "very tight" list. --Nita */
+{
+	margin-top: 1pt;
+	margin-bottom: 1pt;
+}
+
+/* ========== LINK CLASSES ========== */
+/* Note that we plan to remove the span.link selector at some point. --Nita */
+
+a.grouplink:link
+{
+	color: var(--Link);
+}
+
+a:link,
+span.link a:link
+{
+	color: var(--Link);
+	text-decoration: underline;
+}
+
+a:visited,
+span.link a:visited
+{
+	color: var(--LinkVisited);
+	text-decoration: underline;
+}
+
+a:hover,
+span.link a:hover
+{
+	color: var(--LinkHover);
+}
+
+a:active,
+span.link a:active
+{
+	color: var(--Link);
+	text-decoration: underline;
+}
+
+a.monospace
+{
+	font-family: var(--FontScreen) !important;
+}
+
+/* ========== MADCAP CLASSES ========== */
+
+MadCap|breadcrumbsProxy
+{
+	mc-breadcrumbs-count: 5;
+	mc-breadcrumbs-divider: ' / ' !important;
+	mc-breadcrumbs-prefix: 'Home:' !important;
+	color: #244CDE;
+}
+
+MadCap|codeSnippetBody
+{
+	font-family: var(--FontScreen) !important;
+	font-size: 10pt;
+}
+
+MadCap|footnote
+{
+	
+}
+
+/* p.footnote /* Commented out for now; we'll use Flare's built-in footnote selectors, such as the one above. --Nita
+{
+	font: italic 10pt Calibri, Arial, sans-serif;
+	/* Would like to use a font variable, but we don't have one that matches this. --Nita
+	line-height: 12pt;
+} */
+
+MadCap|miniTocProxy
+{
+	border-top: none;
+	margin-top: 3pt;
+	margin-bottom: 16pt;
+	padding-left: 0;
+	padding-top: 0;
+	border-bottom: none 2px #000000;
+	border: none 2px #000000;
+}
+
+MadCap|indexProxy,
+MadCap|tocProxy
+{
+	border-top: none;
+}
+
+MadCap|xref
+{
+	mc-format: '{paratext}';
+}
+
+/*
+MadCap|xref.Heading
+{
+	mc-format: '{Link}{paratext}{Default ¹ Font}';
+}
+*/
+
+MadCap|xref:link
+{
+	mc-format: '{para}';
+	text-decoration: underline;
+	font-weight: normal;
+	/* Rebrand - changed color -- Suman*/
+	color: var(--DigitalBlue);
+	/* Do we want the same color as links? --Nita */
+}
+
+MadCap|xref:visited
+{
+	color: var(--LinkVisited);
+	mc-format: '{para}';
+	text-decoration: underline;
+	font-weight: normal;
+}
+
+MadCap|xref:hover
+{
+	color: var(--LinkHover);
+	mc-format: '{para}';
+	text-decoration: underline;
+	font-weight: normal;
+}
+
+MadCap|xref:active
+{
+	color: var(--Link);
+	mc-format: '{para}';
+	text-decoration: underline;
+	font-weight: normal;
+}
+
+MadCap|xref.monospace
+{
+	font-family: var(--FontScreen) !important;
+}
+
+/* ========== TABLE CLASSES ========== */
+
+td img
+{
+	max-width: 100%;
+	/* Ensures that an image does not exceed the bounds of its containing table cell */
+}
+
+td,
+td li,
+td p,
+td a
+{
+	/* Reduces the size of things in table cells. --Nita */
+	/* Removed the td MadCap|xref as it's not needed. 10/28. --Nita */
+	font-size: 10.5pt;
+}
+
+td p
+{
+	/* Reduces the space after paragraphs in table cells. Added on 9/30 to accommodate the Reporting project. Still need to assess the effect on other projects. --Nita */
+	margin-bottom: 3pt;
+}
+
+td li
+{
+	/* Reduces the space after list items in table cells. --Nita */
+	margin-bottom: 6pt;
+}
+
+td ol,
+td ul
+{
+	/* Aligns lists with the edge of the table cell rather than being indented. */
+	margin-left: -20px;
+	margin-top: 3pt;
+}
+
+/* within table cells, controls list item spacing above and below in ordered lists and permutations of sublists */
+
+td ol ol > li,
+td ol ol ol > li,
+td ol ol ul > li,
+td ol ul > li,
+td ol ul ol > li,
+td ol ul ul > li
+{
+	margin-top: 3pt;
+	margin-bottom: 6pt;
+}
+
+/* within table cells, controls list item spacing above and below in unordered lists and permutations of sublists */
+
+td ul ol > li,
+td ul ol ol > li,
+td ul ol ul > li,
+td ul ul > li,
+td ul ul ol > li,
+td ul ul ul > li
+{
+	margin-top: 3pt;
+	margin-bottom: 6pt;
+}
+
+/* EXPERIMENTAL TO SEE IF I CAN CONTROL SPACE ABOVE a first-level list that immediately follows a paragraph inside a table cell. Added 9/27 --Nita */
+
+td p + ol,
+td p + ul
+{
+	margin-top: 0pt;
+	/* had been -10pt; adjusted further on 9/30 to accommodate the Reporting project. Still need to assess how this affects other projects. --Nita */
+}
+
+/* EXPERIMENTAL TO SEE IF I CAN CONTROL SPACE ABOVE a second-level that immediately follows a paragraph inside a table cell. Added 9/27 --Nita */
+
+td ol p + ol,
+td ol p + ul,
+td ul p + ol,
+td ul p + ul
+{
+	margin-top: 0;
+}
+
+/* ========== SPAN CLASSES ========== */
+
+code
+{
+	font-family: var(--FontScreen) !important;
+	font-size: 0.9em;
+}
+
+span.emphasisRed
+{
+	color: red;
+	text-decoration: underline;
+}
+
+span.emphasisBlue
+{
+	color: #0066ff;
+	text-decoration: underline;
+}
+
+span.bold
+{
+	font-weight: bold;
+}
+
+span.callout	/* This is obsolete bc we have defined the notification divs differently */
+{
+	font-family: Calibri, Arial, Verdana, sans-serif;
+	/* Would like to use a font variable, but the one we have reverses Verdana and Arial. --Nita */
+	font-size: 11pt;
+	font-weight: bold;
+	line-height: 13pt;
+	color: var(--BrandLight);
+}
+
+span.HIGHLITE
+{
+	font-weight: bold;
+	color: var(--InternalUse);
+	text-decoration: underline;
+}
+
+span.headerBold
+{
+	/* This span is currently hidden so authors should not be applying it. */
+	font: bold 10 pt Calibri, Arial, Verdana, sans-serif;
+	/* Would like to use a font variable, but the one we have reverses Verdana and Arial. --Nita */
+	color: var(--Black);
+	/* We may not need this as the p class in the PDF medium will be set to black */
+	line-height: 12pt;
+}
+
+span.italic
+{
+	font-style: italic;
+	color: var(--DigitalBlack);
+	/* We may not need this as the p class in the PDF medium will be set to black */
+}
+
+span.italicBold
+{
+	font-weight: bold;
+	font-style: italic;
+	color: var(--DigitalBlack);
+	/* We may not need this as the p class in the PDF medium will be set to black */
+}
+
+span.InlineHead	/* experiment added 10/27. --Nita */
+{
+	font-family: var(--FontHeading) !important;
+	font-weight: bold;
+	font-size: 11pt;
+	/* Rebrand - changed color -- Suman*/
+	color: var(--DigitalBlue);
+}
+
+span.InlineHead::after
+{
+	content: '. ';
+}
+
+span.SearchHighlight1,
+span.SearchHighlight2,
+span.SearchHighlight3,
+span.SearchHighlight4,
+span.SearchHighlight5,
+span.SearchHighlight6,
+span.SearchHighlight7,
+span.SearchHighlight3,
+span.SearchHighlight9,
+span.SearchHighlight10
+{
+	background-color: #EEEEEE !important;
+	mc-hidden: hidden;
+}
+
+/* span.screenText /* NITA: Kelby thinks we should comment this out; it's redundant with the one he created below.
+{
+	font-family: var(--FontScreen);
+	font-size: 9pt;
+	color: var(--Black);
+	/* We may not need this as the p class in the PDF medium will be set to black
+	line-height: 11pt;
+} */
+
+span.Screen_Text	/*Added by Kelby - this is the span class that was already in use in the content. Temporary for now so that I can distinguish more easily as I'm processing content. */
+{
+	font-family: var(--FontScreen) !important;
+	font-size: 0.9em;
+	/* background-color: var(--LightGray); -- debugging */
+	padding-left: 4px;
+	padding-right: 4px;
+}
+
+span.step	/* NITA: Ask Celine about the purpose of this. And COMMENT them out. */
+{
+	/* This span is currently hidden so authors should not be applying it. */
+	font: bold 11pt Calibri, Arial, Verdana, sans-serif;
+	/* Would like to use a font variable, but the one we have reverses Verdana and Arial. --Nita */
+	line-height: 13pt;
+}
+
+span.stepTable	/* NITA: Ask Celine about the purpose of this. And COMMENT them out. */
+{
+	/* This span is currently hidden so authors should not be applying it. */
+	font: bold 10pt Calibri, Arial, Verdana, sans-serif;
+	/* Would like to use a font variable, but the one we have reverses Verdana and Arial. --Nita */
+	color: var(--Black);
+	/* We may not need this as the p class in the PDF medium will be set to black */
+	line-height: 12pt;
+}
+
+/* ========== BACK-TO-TOP BUTTON ========== */
+
+#myBackToTopBtn	/* DO NOT APPLY DIRECTLY TO CONTENT; for BackToTop button */
+{
+	display: none;
+	position: fixed;
+	bottom: 40px;
+	right: 40px;
+	z-index: 99;
+	font-size: 26px;
+	border: none;
+	outline: none;
+	color: transparent;
+	cursor: pointer;
+	padding: 6px;
+	border-radius: 6px;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: transparent;
+	background-image: url('../../Images/FontAwesome/arrow-alt-circle-up.png');
+	mc-hidden: hidden;
+}
+
+#myBackToTopBtn:hover
+{
+	background-image: url('../../Images/FontAwesome/arrow-alt-circle-up_hover.png');
+}
+
+/* ========== IN-TOPIC TABS ========== */
+
+.tabs	/* DO NOT APPLY DIRECTLY TO CONTENT */
+{
+	width: 100%;
+	display: inline-block;
+}
+
+/*----- Tab Links -----*/
+/* Clearfix */
+
+.tab-links:after
+{
+	display: block;
+	clear: both;
+	content: '';
+}
+
+.tab-links	/* DO NOT APPLY DIRECTLY TO CONTENT */
+{
+	border-bottom: 4px solid #d4d4d4;
+	/* This is the CSS on the current doc portal. --Nita */
+	padding-left: 0px;
+}
+
+.tab-links li
+{
+	margin: 0px;
+	float: left;
+	list-style: none;
+	margin-bottom: -4px;
+	width: 25%;
+}
+
+.tab-links a
+{
+	padding: 9px 20px;
+	display: inline-block;
+	border-radius: 3px 3px 0px 0px;
+	background: transparent;
+	font-size: 16px;
+	font-weight: 600;
+	color: var(--DigitalNavy);
+	text-decoration: none;
+}
+
+.tab-links a:hover,
+.tab-links a:focus
+{
+	color: var(--DigitalBlue);
+	background: #f7f7f7;
+	text-decoration: none;
+	border-bottom: 4px solid var(--DigitalBlue);
+}
+
+li.active a,
+li.active a:hover
+{
+	/* 	background:#fff; */
+	background: #f7f7f7;
+	color: var(--DigitalNavy);
+	border-bottom: 4px solid #244CDE;
+	/* This is the CSS on the current doc portal. --Nita */
+}
+
+/*----- Content of Tabs -----*/
+
+.tab-content	/* DO NOT APPLY DIRECTLY TO CONTENT */
+{
+	padding: 15px;
+	background: var(--White);
+}
+
+.tab	/* DO NOT APPLY DIRECTLY TO CONTENT */
+{
+	display: none;
+}
+
+.tab.active	/* DO NOT APPLY DIRECTLY TO CONTENT */
+{
+	display: block;
+}
+
+/* ========== SIDE MENU TWEAKS otherwise not avaiable in a skin ========== */
+
+ul.menu._Skins_SideMenu.mc-component
+{
+	overflow-y: auto;
+	color: #000000;
+	font-size: 1em;
+	font-weight: normal;
+	font-style: normal;
+	line-height: 1em;
+	margin-left: 0px;
+	margin-right: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	width: 100%;
+	height: auto;
+	max-height: 100%;
+	background-color: #fbfbfb !important;
+}
+
+ul.menu._Skins_SideMenu.mc-component ul ul > li::marker
+{
+	/* Removes the dash from third-level side menu list items, which we otherwise use for most other lists. --Nita */
+	content: '';
+}
+
+/* ========== SEARCH RESULTS TWEAKS otherwise not avaiable in a skin ========== */
+
+#resultList .url cite
+{
+	font-family: var(--font-family) !important;
+}
+
+#resultList
+{
+	line-height: 1.2em !important;
+	font-family: var(--font-family) !important;
+}
+
+#resultList h3.title a
+{
+	color: #244CDE !important;
+	font-family: var(--font-family) !important;
+}
+
+#resultList .description
+{
+	line-height: 1.7em !important;
+	font-family: var(--font-family) !important;
+}
+
+/* ========== PRINT MEDIUM ========== */
+/* Medium that controls formatting of web pages when printed from a browser */
+
+@media print
+{
+	
+}
+
+/* ========== TABLET MEDIUM ========== */
+/* Medium that controls formatting for web pages when viewed on a tablet */
+
+@media only screen and (max-width: 1279px)
+{
+	
+}
+
+/* ========== MOBILE MEDIUM ========== */
+/* Medium that controls formatting for web pages when viewed on a smartphone */
+
+@media only screen and (max-width: 767px)
+{
+	/* ========== RESPONSIVE GRID DIV CLASSES and related classes ========== */
+	/* Changes cells' widths so they stack instead of run horizontally */
+
+	div.grid_2cells_3-9col > div:nth-child(1)
+	{
+		width: 100%;
+	}
+
+	div.grid_2cells_3-9col > div:nth-child(2)
+	{
+		width: 100%;
+		margin-left: 0%;
+	}
+
+	div.grid_2cells_4-8col > div:nth-child(1)
+	{
+		width: 100%;
+	}
+
+	div.grid_2cells_4-8col > div:nth-child(2)
+	{
+		width: 100%;
+		margin-left: 0%;
+	}
+
+	div.grid_2cells_5-7col > div:nth-child(1)
+	{
+		width: 100%;
+	}
+
+	div.grid_2cells_5-7col > div:nth-child(2)
+	{
+		width: 100%;
+		margin-left: 0%;
+	}
+
+	div.grid_2cells_6-6col > div:nth-child(1)
+	{
+		width: 100%;
+	}
+
+	div.grid_2cells_6-6col > div:nth-child(2)
+	{
+		width: 100%;
+		margin-left: 0%;
+	}
+
+	div.grid_2cells_7-5col > div:nth-child(1)
+	{
+		width: 100%;
+	}
+
+	div.grid_2cells_7-5col > div:nth-child(2)
+	{
+		width: 100%;
+		margin-left: 0%;
+	}
+
+	div.grid_2cells_8-4col > div:nth-child(1)
+	{
+		width: 100%;
+	}
+
+	div.grid_2cells_8-4col > div:nth-child(2)
+	{
+		width: 100%;
+		margin-left: 0%;
+	}
+
+	div.grid_2cells_9-3col > div:nth-child(1)
+	{
+		width: 100%;
+	}
+
+	div.grid_2cells_9-3col > div:nth-child(2)
+	{
+		width: 100%;
+		margin-left: 0%;
+	}
+
+	div.grid_3cells_3-3-6col > div:nth-child(1)
+	{
+		width: 100%;
+	}
+
+	div.grid_3cells_3-3-6col > div:nth-child(2)
+	{
+		width: 100%;
+		margin-left: 0%;
+	}
+
+	div.grid_3cells_3-3-6col > div:nth-child(3)
+	{
+		width: 100%;
+		margin-left: 0%;
+	}
+
+	div.grid_3cells_3-6-3col > div:nth-child(1)
+	{
+		width: 100%;
+	}
+
+	div.grid_3cells_3-6-3col > div:nth-child(2)
+	{
+		width: 100%;
+		margin-left: 0%;
+	}
+
+	div.grid_3cells_3-6-3col > div:nth-child(3)
+	{
+		width: 100%;
+		margin-left: 0%;
+	}
+
+	div.grid_3cells_4-4-4col > div:nth-child(1)
+	{
+		width: 100%;
+	}
+
+	div.grid_3cells_4-4-4col > div:nth-child(2)
+	{
+		width: 100%;
+		margin-left: 0%;
+	}
+
+	div.grid_3cells_4-4-4col > div:nth-child(3)
+	{
+		width: 100%;
+		margin-left: 0%;
+	}
+
+	div.grid_3cells_6-3-3col > div:nth-child(1)
+	{
+		width: 100%;
+	}
+
+	div.grid_3cells_6-3-3col > div:nth-child(2)
+	{
+		width: 100%;
+		margin-left: 0%;
+	}
+
+	div.grid_3cells_6-3-3col > div:nth-child(3)
+	{
+		width: 100%;
+		margin-left: 0%;
+	}
+
+	div.grid_4cells_3-3-3-3cols > div:nth-child(1)
+	{
+		width: 100%;
+	}
+
+	div.grid_4cells_3-3-3-3cols > div:nth-child(2)
+	{
+		width: 100%;
+		margin-left: 0%;
+	}
+
+	div.grid_4cells_3-3-3-3cols > div:nth-child(3)
+	{
+		width: 100%;
+		margin-left: 0%;
+	}
+
+	div.grid_4cells_3-3-3-3cols > div:nth-child(4)
+	{
+		width: 100%;
+		margin-left: 0%;
+	}
+}
+
+/* ========== PDF MEDIUM ========== */
+/* Medium that defines styles for PDF */
+
+@media PDF
+{
+	body
+	{
+		/* background: #f0ffff; I sometimes use a background color while debugging page layouts. -- Nita */
+		color: var(--Black);
+		margin-left: 0pt;
+	}
+
+	body,
+	p,
+	li
+	{
+		orphans: 2;
+		widows: 2;
+		mc-short-line: 10;
+		mc-short-line-loosen-end-length: 30;
+		mc-short-line-loosen-maximum: 6;
+		mc-short-line-tighten-maximum: 3;
+	}
+
+	/* ========== PDF HEADING CLASSES ========== */
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6
+	{
+		mc-hyphenate: never;
+		page-break-after: avoid;
+	}
+
+	h1
+	{
+		font-size: 26pt;
+		margin-top: -10px;
+		margin-left: -1.0in;
+	}
+
+	h1.Appendix
+	{
+		/* Still need to work out how to get the appendix label and letter to sit above the title, without resorting to a manually inserted line break. --Nita */
+		/* mc-auto-number-format: 'CH:Appendix {chapnum} '; On 10/20, Celine asked to suppress the auto-number. --Nita*/
+		mc-auto-number-class: ChapterLabel;
+		margin-bottom: 1.4in;
+	}
+
+	h1.Chapter
+	{
+		/* Still need to work out how to get the chapter label and number to sit above the title, without resorting to a manually inserted line break. --Nita */
+		/* mc-auto-number-format: 'CH:Chapter {chapnum} '; On 10/20, Celine asked to suppress the auto-number. --Nita*/
+		mc-auto-number-class: ChapterLabel;
+		margin-bottom: 1.4in;
+	}
+
+	span.ChapterLabel	/* This is placeholder styling from another project's CSS, as an experiment. --Nita */
+	{
+		font-family: 'Cambria';
+		font-size: 12pt;
+		font-weight: bold;
+		color: var(--Black);
+	}
+
+	h1.Contents
+	{
+		mc-heading-level: 0;
+		margin-left: -0.75in;
+		margin-bottom: 1.5in;
+	}
+
+	h1.Glossary
+	{
+		
+	}
+
+	h1.Index
+	{
+		frame-break-after: always;
+	}
+
+	h2	/* Title Case (Celine: CSS can't enforce a writing rule.) This is the equivalent of Frame's h1--Nita */
+	{
+		font-size: 20pt;
+		line-height: 24pt;
+		margin-top: 37pt;
+		margin-bottom: 20pt;
+		margin-left: -1.0in;
+	}
+
+	h3	/* Title Case (Celine: CSS can't enforce a writing rule.) This is the equivalent of Frame's h2 --Nita */
+	{
+		font-size: 17pt;
+		line-height: 20pt;
+		margin-top: 30pt;
+		margin-bottom: 10pt;
+		margin-left: -0.5in;
+	}
+
+	h4	/* Title Case (Celine: CSS can't enforce a writing rule.) This is the equivalent of Frame's h3 --Nita */
+	{
+		font-size: 14pt;
+		line-height: 17pt;
+		margin-top: 21pt;
+		margin-bottom: 3pt;
+	}
+
+	/* h5	/* Simplified in anticipation of not using. --Nita)
+	{
+		font-size: 11pt;
+		line-height: normal;
+		margin-top: 1000pt;
+		/* why is this not seeming to do anything? --Nita
+		/* mc-heading-level: 0; NITA: If you do this, it won't show up in the miniTOCs either
+		display: inline-block;
+	}
+
+	h5::after	/* Adds the period after the h5 heading in PDF output. --Nita
+	{
+		content: '. ';
+	}
+
+	h5 + p	/* Causes any paragraph immediately preceded by an h5 to appear inline with the heading. --Nita
+	{
+		display: inline-block;
+	} */
+
+	/* ========== PDF DIV CLASSES ========== */
+
+	div.Wide	/* Use to wrap content that you want to run the full width of the PDF page, e.g., tables on What's New page */
+	{
+		margin-left: -1.0in;
+	}
+
+	div.Note,
+	div.Important,
+	div.Caution,
+	div.Example
+	{
+		page-break-inside: avoid;
+		page-break-before: avoid;
+	}
+
+	div.grid_2cells_3-9col,
+	div.grid_2cells_4-8col,
+	div.grid_2cells_5-7col,
+	div.grid_2cells_6-6col,
+	div.grid_2cells_7-5col,
+	div.grid_2cells_8-4col,
+	div.grid_2cells_9-3col,
+	div.grid_3cells_3-3-6col,
+	div.grid_3cells_3-6-3col,
+	div.grid_3cells_4-4-4col,
+	div.grid_3cells_6-3-3col,
+	div.grid_4cells_3-3-3-3cols
+	{
+		width: 99%;
+		page-break-inside: avoid;
+	}
+
+	/* ========== IMAGE CLASSES ========== */
+
+	img.Border100,
+	img.Border95,
+	img.Border85,
+	img.Border75,
+	img.Border65,
+	img.Border55,
+	img.Border45,
+	img.Border35
+	{
+		mc-thumbnail: none;
+		border: solid 1pt var(--LightGray);
+		height: auto;
+	}
+
+	img.NoBorder100,
+	img.NoBorder95,
+	img.NoBorder85,
+	img.NoBorder75,
+	img.NoBorder65,
+	img.NoBorder55,
+	img.NoBorder45,
+	img.NoBorder35
+	{
+		mc-thumbnail: none;
+		border: none;
+		height: auto;
+	}
+
+	img.Border100,
+	img.NoBorder100
+	{
+		max-width: 100%;
+	}
+
+	img.Border95,
+	img.NoBorder95
+	{
+		max-width: 95%;
+	}
+
+	img.Border85,
+	img.NoBorder85
+	{
+		max-width: 85%;
+	}
+
+	img.Border75,
+	img.NoBorder75
+	{
+		max-width: 75%;
+	}
+
+	img.Border65,
+	img.NoBorder65
+	{
+		max-width: 65%;
+	}
+
+	img.Border55,
+	img.NoBorder55
+	{
+		max-width: 55%;
+	}
+
+	img.Border45,
+	img.NoBorder45
+	{
+		max-width: 45%;
+	}
+
+	img.Border35,
+	img.NoBorder35
+	{
+		max-width: 35%;
+	}
+
+	img.PDFicon	/* not intended for using in PDF output, so we override default meidum settings and hide the class from the Flare UI when viewing topic in PDF view */
+	{
+		float: none;
+		margin-left: 0;
+		mc-hidden: hidden;
+	}
+
+	/* ========== PDF PARAGRAPH CLASSES ========== */
+
+	p
+	{
+		font-size: 11pt;
+		margin-top: 3pt;
+		margin-bottom: 16pt;
+	}
+
+	.SmallType
+	{
+		font-size: 10pt;
+	}
+
+	p.header,
+	p.footer
+	{
+		font-size: 10pt;
+		margin: 0pt;
+	}
+
+	p.bookTitle	/*cover*/
+	{
+		font-family: Arial, sans-serif;
+		/* Would like to use a font variable. --Nita */
+		font-size: 35pt;
+		margin-bottom: 15pt;
+		color: #5b6770;
+		width: 90%;
+	}
+
+	p.bookSubTitle	/*cover*/
+	{
+		font-family: Arial, sans-serif;
+		/* Would like to use a font variable. --Nita */
+		font-size: 16pt;
+		font-weight: bold;
+		margin-bottom: 37pt;
+		color: #7c868d;
+	}
+
+	p.copyright	/* text at bottom of cover*/
+	{
+		font-family: Arial, sans-serif;
+		/* Would like to use a font variable. --Nita */
+		font-size: 7pt;
+		/* Rebrand - changed color -- Suman*/
+		color: var(--PrintGray);
+		/* Would like to use a color variable. --Nita */
+	}
+
+	p.coverHeader	/*top left of cover in cover page layouts, Title page. --Nita*/
+	{
+		font-family: Arial, sans-serif;
+		/* Would like to use a font variable. --Nita */
+		font-size: 9.5pt;
+		margin-top: 2pt;
+		/* Rebrand - changed color -- Suman*/
+		color: var(--PrintGray);
+	}
+
+	p.platform	/*description on cover*/
+	{
+		font-family: Arial, sans-serif;
+		/* Would like to use a font variable. --Nita */
+		font-size: 13pt;
+		color: #7c868d;
+		/* Would like to use a color variable. --Nita */
+	}
+
+	p.revision	/*date on cover*/
+	{
+		font-family: Arial, sans-serif;
+		border-top: solid 1.8pt var(--PrintBlue);
+		font-size: 11pt;
+		font-weight: bold;
+		margin-bottom: 20pt;
+		color: #7c868d;
+		padding-top: 40pt;
+	}
+
+	p.IndexHeading
+	{
+		text-align: left;
+	}
+
+	p.Index1,
+	p.Index2,
+	p.Index3
+	{
+		font-size: 9pt;
+		margin-bottom: 0px;
+		margin-top: 0px;
+	}
+
+	p.TOC1,
+	p.MiniTOC1
+	{
+		page-break-after: avoid;
+	}
+
+	p.TOC1	/* based on old p.c1Chapter1TOC selector. Also made size 11pt to match what I see in Frame-based PDFs. --Nita */
+	{
+		font-family: var(--FontHeading) !important;
+		font-size: 11pt;
+		font-weight: bold;
+		margin-top: 18pt;
+		margin-bottom: 2pt;
+		/*Rebrand - changed color --Suman*/
+		color: #5b6770;
+	}
+
+	p.TOC2,
+	p.TOC3,
+	p.TOC4,
+	p.TOC5,
+	p.TOC6
+	{
+		/* replaces old p.h1Heading1TOC etc. selectors. --Nita */
+		font-family: var(--FontHeading) !important;
+		font-size: 10pt;
+		margin-top: 2pt;
+		margin-bottom: 2pt;
+	}
+
+	p.TOC2
+	{
+		margin-left: 0.0in;
+	}
+
+	p.TOC3
+	{
+		margin-left: 0.2in;
+	}
+
+	p.TOC4
+	{
+		margin-left: 0.4in;
+	}
+
+	p.TOC5
+	{
+		margin-left: 0.6in;
+	}
+
+	p.TOC6
+	{
+		margin-left: 0.8in;
+	}
+
+	p.MiniTOC1,
+	p.MiniTOC2,
+	p.MiniTOC3,
+	p.MiniTOC4,
+	p.MiniTOC5,
+	p.MiniTOC6
+	{
+		/* Suppresses page numbers from miniTOC listings in PDFs. --Nita */
+		mc-pagenum-display: none;
+	}
+
+	pre
+	{
+		font-size: 9pt;
+	}
+
+	/* ========== PDF LIST CLASSES ========== */
+
+	li
+	{
+		font-size: 11pt;
+	}
+
+	ol.CalloutList
+	{
+		/* font-size: 10pt; Not sure why I had this, but it doesn't seem to do anything, so have commented it out. 11/20. --Nita*/
+		margin-top: -6pt;
+		page-break-before: avoid;
+	}
+
+	ol.CalloutList p,
+	ol.CalloutList li
+	{
+		font-size: 9pt;
+	}
+
+	td ol,
+	td ul
+	{
+		/* Aligns lists with the edge of the table cell rather than being indented */
+		margin-left: 0.18in;
+	}
+
+	/* ========== PDF SPAN CLASSES ========== */
+
+	code,
+	span.Screen_Text
+	{
+		font-size: 9pt;
+	}
+}
+

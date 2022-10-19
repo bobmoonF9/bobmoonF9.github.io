@@ -1,0 +1,339 @@
+/* MadCap Table Style: */
+
+/*<meta Version="9" />*/
+
+mcTableStyle
+{
+	name: NoBorders;
+	border-collapse: collapse;
+	max-id: 4;
+}
+
+mcTableColumnStyle
+{
+	span: 1;
+	name: Column1;
+	id: 0;
+}
+
+mcTableHeadStyle
+{
+	span: 1;
+	name: Header1;
+	id: 2;
+}
+
+mcTableBodyStyle
+{
+	span: 1;
+	name: Body1;
+	id: 1;
+}
+
+mcTableFootStyle
+{
+	span: 1;
+	name: Footer1;
+	id: 3;
+}
+
+
+/* Cell Styles: */
+ 
+.TableStyle-NoBorders
+{
+	border-collapse: collapse;
+	border-spacing: 0px 0px;
+}
+
+.TableStyle-NoBorders-Column-Column1
+{
+	
+}
+
+.TableStyle-NoBorders-Head-Header1
+{
+	
+}
+
+.TableStyle-NoBorders-HeadI-Column1-Header1
+{
+	
+}
+
+.TableStyle-NoBorders-HeadI-Column1-Header1 p
+{
+	
+}
+
+.TableStyle-NoBorders-HeadE-Column1-Header1
+{
+	
+}
+
+.TableStyle-NoBorders-HeadE-Column1-Header1 p
+{
+	
+}
+
+.TableStyle-NoBorders-HeadF-Column1-Header1
+{
+	
+}
+
+.TableStyle-NoBorders-HeadF-Column1-Header1 p
+{
+	
+}
+
+.TableStyle-NoBorders-HeadH-Column1-Header1
+{
+	
+}
+
+.TableStyle-NoBorders-HeadH-Column1-Header1 p
+{
+	
+}
+
+.TableStyle-NoBorders-HeadD-Column1-Header1
+{
+	
+}
+
+.TableStyle-NoBorders-HeadD-Column1-Header1 p
+{
+	
+}
+
+.TableStyle-NoBorders-HeadC-Column1-Header1
+{
+	
+}
+
+.TableStyle-NoBorders-HeadC-Column1-Header1 p
+{
+	
+}
+
+.TableStyle-NoBorders-HeadB-Column1-Header1
+{
+	
+}
+
+.TableStyle-NoBorders-HeadB-Column1-Header1 p
+{
+	
+}
+
+.TableStyle-NoBorders-HeadA-Column1-Header1
+{
+	
+}
+
+.TableStyle-NoBorders-HeadA-Column1-Header1 p
+{
+	
+}
+
+.TableStyle-NoBorders-HeadG-Column1-Header1
+{
+	
+}
+
+.TableStyle-NoBorders-HeadG-Column1-Header1 p
+{
+	
+}
+
+.TableStyle-NoBorders-Foot-Footer1
+{
+	
+}
+
+.TableStyle-NoBorders-FootI-Column1-Footer1
+{
+	
+}
+
+.TableStyle-NoBorders-FootI-Column1-Footer1 p
+{
+	
+}
+
+.TableStyle-NoBorders-FootE-Column1-Footer1
+{
+	
+}
+
+.TableStyle-NoBorders-FootE-Column1-Footer1 p
+{
+	
+}
+
+.TableStyle-NoBorders-FootF-Column1-Footer1
+{
+	
+}
+
+.TableStyle-NoBorders-FootF-Column1-Footer1 p
+{
+	
+}
+
+.TableStyle-NoBorders-FootH-Column1-Footer1
+{
+	
+}
+
+.TableStyle-NoBorders-FootH-Column1-Footer1 p
+{
+	
+}
+
+.TableStyle-NoBorders-FootD-Column1-Footer1
+{
+	
+}
+
+.TableStyle-NoBorders-FootD-Column1-Footer1 p
+{
+	
+}
+
+.TableStyle-NoBorders-FootC-Column1-Footer1
+{
+	
+}
+
+.TableStyle-NoBorders-FootC-Column1-Footer1 p
+{
+	
+}
+
+.TableStyle-NoBorders-FootB-Column1-Footer1
+{
+	
+}
+
+.TableStyle-NoBorders-FootB-Column1-Footer1 p
+{
+	
+}
+
+.TableStyle-NoBorders-FootA-Column1-Footer1
+{
+	
+}
+
+.TableStyle-NoBorders-FootA-Column1-Footer1 p
+{
+	
+}
+
+.TableStyle-NoBorders-FootG-Column1-Footer1
+{
+	
+}
+
+.TableStyle-NoBorders-FootG-Column1-Footer1 p
+{
+	
+}
+
+.TableStyle-NoBorders-Body-Body1
+{
+	
+}
+
+.TableStyle-NoBorders-BodyI-Column1-Body1
+{
+	
+}
+
+.TableStyle-NoBorders-BodyI-Column1-Body1 p
+{
+	
+}
+
+.TableStyle-NoBorders-BodyE-Column1-Body1
+{
+	
+}
+
+.TableStyle-NoBorders-BodyE-Column1-Body1 p
+{
+	
+}
+
+.TableStyle-NoBorders-BodyF-Column1-Body1
+{
+	
+}
+
+.TableStyle-NoBorders-BodyF-Column1-Body1 p
+{
+	
+}
+
+.TableStyle-NoBorders-BodyH-Column1-Body1
+{
+	
+}
+
+.TableStyle-NoBorders-BodyH-Column1-Body1 p
+{
+	
+}
+
+.TableStyle-NoBorders-BodyD-Column1-Body1
+{
+	
+}
+
+.TableStyle-NoBorders-BodyD-Column1-Body1 p
+{
+	
+}
+
+.TableStyle-NoBorders-BodyC-Column1-Body1
+{
+	
+}
+
+.TableStyle-NoBorders-BodyC-Column1-Body1 p
+{
+	
+}
+
+.TableStyle-NoBorders-BodyB-Column1-Body1
+{
+	
+}
+
+.TableStyle-NoBorders-BodyB-Column1-Body1 p
+{
+	
+}
+
+.TableStyle-NoBorders-BodyA-Column1-Body1
+{
+	
+}
+
+.TableStyle-NoBorders-BodyA-Column1-Body1 p
+{
+	
+}
+
+.TableStyle-NoBorders-BodyG-Column1-Body1
+{
+	
+}
+
+.TableStyle-NoBorders-BodyG-Column1-Body1 p
+{
+	
+}
+
+

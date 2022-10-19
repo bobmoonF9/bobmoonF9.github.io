@@ -1,0 +1,55 @@
+﻿/*<meta />*/
+
+/* Provides additional refinements for landscape PDFs; segregated so as not to disturb the CSS for portrait PDFs.*/
+
+@import url('MainStyles.css');
+
+@media PDF
+{
+	h1.Appendix,
+	h1.Chapter,
+	h1.Contents,
+	h1.Glossary,
+	h1.Index
+	{
+	}
+
+	h2	/* tightens up space before and after. Added 10/19. --Nita */
+	{
+		margin-top: 27pt;
+		/* is 37pt for portrait PDFs */
+		margin-bottom: 10pt;
+		/* is 20pt for portrait PDFs */
+	}
+
+	h3	/* tightens up space before and after. Added 10/19. --Nita */
+	{
+		margin-top: 20pt;
+		/* is 30pt for portrait PDFs */
+		margin-bottom: 7pt;
+		/* is 10pt for portrait PDFs */
+	}
+
+	h4	/* tightens up space before and after. Added 10/19. --Nita */
+	{
+		margin-top: 16pt;
+		/* is 21pt for portrait PDFs */
+		margin-bottom: 3pt;
+		/* is 3pt for portrait PDFs */
+	}
+
+	.TableStyle-Plain	/* tightens up space after the Plain table style */
+	{
+		margin-bottom: 10px;
+	}
+
+	.TableStyle-Plain tr	/* avoids page breaks inside rows in Plain table style */
+	{
+		page-break-inside: avoid;
+	}
+
+	.TableStyle-WhatsNew	/* tightens up space after the Whats New table style */
+	{
+		margin-bottom: 10px;
+	}
+}
