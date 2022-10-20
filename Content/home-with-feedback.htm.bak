@@ -18,6 +18,43 @@
 	</script>
 
 
+<style>
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  color: var(--search-color);
+  background: var(--search-background);
+  font-size: 14px;
+  font-family: 'ProximaNova-Semibold', Helvetica, Arial, sans-serif;
+}
+div#feedback-reason
+{
+	display: none;
+	border: 1px solid lightgray;
+	padding: 10px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 20px;
+	background: var(--banner-background);
+	width: 340px;
+}
+
+div#feedback-question
+{
+	border: 1px solid lightgray;
+	padding: 10px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 20px;
+	background: var(--banner-background);
+	width: 90%;
+	max-width: 350px;
+}
+
+</style>
+
 <div class="container">
 	<nav class="navbar navbar-expand-lg navbar-light">
 		<div class="container-fluid">
@@ -533,6 +570,7 @@
                     <input type="radio" class="container" name="entry.57287538" id="no" value="No" />
                     <label for="no">No</label>
                     <input type="text" name="KHxj8b tL9Q4c" id="comment" placeholder="Comment" />
+					<input type="hidden" name="URL" id="currURL" value="window.location;" />
                     <input type="submit" value="Submit" />
                 </form>
             </div>
@@ -558,7 +596,7 @@
 			});
 			});
 		</script>
-                        <script>
+        <script>
 			$(document).ready(function() {
 			$("#form").submit(function(e) {
 			e.preventDefault();
