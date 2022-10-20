@@ -572,7 +572,7 @@ div#feedback-question
                     <label for="no">No</label>
                     <input type="text" name="entry.2026861954" id="comment" placeholder="Comment" />
 					
-					<input type="hidden" name="entry.2127076247" id="currURL" value="window.location;" />
+					<input type="hidden" name="entry.2127076247" id="currURL" value="testvar" />
                     <input type="submit" value="Submit" />
                 </form>
             </div>
@@ -583,6 +583,8 @@ div#feedback-question
 		</div>
         <script>
 			$('#form').submit(function(e) {
+			let testvar = window.location
+			
 			e.preventDefault();
 			$.ajax({
 			url: "https://docs.google.com/forms/d/1oO9yubFk9TvQGS1SuH0copBZJb83lSYInnKUHtdfIJg/formResponse",
