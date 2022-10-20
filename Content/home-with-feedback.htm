@@ -16,7 +16,7 @@
     <!--Fontawesome-->
 	<script src="https://kit.fontawesome.com/1b9d3716b4.js" crossorigin="anonymous">
 	</script>
-	<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 
 <style>
@@ -572,7 +572,7 @@ div#feedback-question
                     <label for="no">No</label>
                     <input type="text" name="entry.2026861954" id="comment" placeholder="Comment" />
 					
-					<input type="hidden" name="entry.2127076247" id="currURL" value="testvar" />
+					<input type="hidden" name="entry.2127076247" id="currURL" value="URL" />
                     <input type="submit" value="Submit" />
                 </form>
             </div>
@@ -583,10 +583,7 @@ div#feedback-question
 		</div>
         <script>
 			$('#form').submit(function(e) {
-			let testvar = window.location
-			document.getElementById("currURL").value = "My value";
-			document.getElementById("currURL").value = window.location;
-			
+			document.getElementById("currURL").value = window.location;  // Update the form's input field value with the current URL  			
 			e.preventDefault();
 			$.ajax({
 			url: "https://docs.google.com/forms/d/1oO9yubFk9TvQGS1SuH0copBZJb83lSYInnKUHtdfIJg/formResponse",
