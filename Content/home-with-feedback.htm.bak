@@ -569,8 +569,9 @@ div#feedback-question
                     <label for="yes">Yes</label>
                     <input type="radio" class="container" name="entry.57287538" id="no" value="No" />
                     <label for="no">No</label>
-                    <input type="text" name="KHxj8b tL9Q4c" id="comment" placeholder="Comment" />
-					<input type="hidden" name="URL" id="currURL" value="window.location;" />
+                    <input type="text" name="entry.2026861954" id="comment" placeholder="Comment" />
+					<input type="text" name="entry.2127076247" id="currURL" value="window.location;" />
+					<input type="hidden" name="entry.2127076247" id="currURL" value="window.location;" />
                     <input type="submit" value="Submit" />
                 </form>
             </div>
@@ -580,7 +581,7 @@ div#feedback-question
         </section>
 		</div>
        <script>
-			$('#form').submit(function(e) {
+			('#form').submit(function(e) {
 			e.preventDefault();
 			$.ajax({
 			url: "https://docs.google.com/forms/d/1oO9yubFk9TvQGS1SuH0copBZJb83lSYInnKUHtdfIJg/formResponse",
