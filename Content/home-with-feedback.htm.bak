@@ -580,11 +580,11 @@ div#feedback-question
             </div>
         </section>
 		</div>
-       <script>
-			('#form').submit(function(e) {
+        <script>
+			$('#form').submit(function(e) {
 			e.preventDefault();
 			$.ajax({
-			url: "https://docs.google.com/forms/d/1oO9yubFk9TvQGS1SuH0copBZJb83lSYInnKUHtdfIJg/formResponse",
+			url: "https://docs.google.com/forms/d/1W1qR3r8FC_IJN_fRlBe9tD2Lh63gbCUN4eGASePH7P4/formResponse",
 			data: $(this).serialize(),
 			type: "POST",
 			dataType: "xml",
@@ -597,7 +597,7 @@ div#feedback-question
 			});
 			});
 		</script>
-        <script>
+                        <script>
 			$(document).ready(function() {
 			$("#form").submit(function(e) {
 			e.preventDefault();

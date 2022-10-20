@@ -580,8 +580,8 @@ div#feedback-question
             </div>
         </section>
 		</div>
-       <script>
-			('#form').submit(function(e) {
+        <script>
+			$('#form').submit(function(e) {
 			e.preventDefault();
 			$.ajax({
 			url: "https://docs.google.com/forms/d/1oO9yubFk9TvQGS1SuH0copBZJb83lSYInnKUHtdfIJg/formResponse",
@@ -597,8 +597,8 @@ div#feedback-question
 			});
 			});
 		</script>
-        <script>
-			(document).ready(function() {
+                        <script>
+			$(document).ready(function() {
 			$("#form").submit(function(e) {
 			e.preventDefault();
 			$("#feedback-question").hide();
