@@ -584,7 +584,7 @@ div#feedback-question
 			$('#form').submit(function(e) {
 			e.preventDefault();
 			$.ajax({
-			url: "https://docs.google.com/forms/d/1W1qR3r8FC_IJN_fRlBe9tD2Lh63gbCUN4eGASePH7P4/formResponse",
+			url: "https://docs.google.com/forms/d/1oO9yubFk9TvQGS1SuH0copBZJb83lSYInnKUHtdfIJg/formResponse",
 			data: $(this).serialize(),
 			type: "POST",
 			dataType: "xml",
