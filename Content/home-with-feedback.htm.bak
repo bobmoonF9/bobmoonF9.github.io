@@ -16,6 +16,7 @@
     <!--Fontawesome-->
 	<script src="https://kit.fontawesome.com/1b9d3716b4.js" crossorigin="anonymous">
 	</script>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
 
 
 <style>
@@ -570,7 +571,7 @@ div#feedback-question
                     <input type="radio" class="container" name="entry.57287538" id="no" value="No" />
                     <label for="no">No</label>
                     <input type="text" name="entry.2026861954" id="comment" placeholder="Comment" />
-					<input type="text" name="entry.2127076247" id="currURL" value="window.location;" />
+					
 					<input type="hidden" name="entry.2127076247" id="currURL" value="window.location;" />
                     <input type="submit" value="Submit" />
                 </form>
