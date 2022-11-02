@@ -45,7 +45,7 @@ function use_lang() {
 	if (path.indexOf('/' + lang + '/') == -1) {
 		var url = window.location.toString();
 		var landingpage = url.lastIndexOf(curLang);			//str.lastIndexOf("/index.html"); 
-			alert ( 'URL string = ' + landingpage  );
+			// alert ( 'URL string = ' + landingpage  );
 		landingpage = url.slice(url.StartsWith, url.search(curLang)); 			
 			alert ( 'URL string = ' + landingpage  );
 		content1 = url.slice(url.StartsWith, url.search(lastIndexOf(curLang));
@@ -56,5 +56,5 @@ function use_lang() {
 			alert ( 'URL string = ' + landingpage  );
 		url = url.replace(curLang, lang);
 		url = url.substring(0, url.indexOf(lang)) + lang + "/Content/" + "landing-" +landingpage + ".htm";
-		window.location = url;
+		// window.location = url;
 	}
