@@ -48,7 +48,8 @@ function use_lang() {
 			// alert ( 'URL string = ' + landingpage  );
 		landingpage = url.slice(url.StartsWith, url.search(curLang)); 			
 			alert ( 'URL string = ' + landingpage  );
-		content1 = url.slice(url.StartsWith, url.search(lastIndexOf(curLang)));
+		content1 = url.lastIndexOf(curLang);
+		content1 = url.slice(url.StartsWith, url.search(url.lastIndexOf(curLang)));
 			alert (content1);
 		landingpage= url.slice(url.StartsWith, url.search(curLang)) + "/Content/" + "landing-" +landingpage + ".htm"; 	
 			alert ( 'URL string = ' + landingpage  );
