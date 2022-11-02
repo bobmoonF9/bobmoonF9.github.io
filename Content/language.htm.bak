@@ -562,6 +562,14 @@ div#feedback-question
 		</div>
 		
 		<div class="container">
+		<form name="langList">
+		<option value="en-us">English</option>
+		<option value="fr-ca">Français Canadien</option>
+		<option value="de">German</option>
+		</form>
+		</div>
+		
+		<div class="container">
 		<section>
             <div class="radio-toolbar" id="feedback-question">
                 <h3>Was this information helpful?</h3>
