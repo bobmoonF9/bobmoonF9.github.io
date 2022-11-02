@@ -58,3 +58,4 @@ function use_lang() {
 		url = url.substring(0, url.indexOf(lang)) + lang + "/Content/" + "landing-" +landingpage + ".htm";
 		// window.location = url;
 	}
+}
