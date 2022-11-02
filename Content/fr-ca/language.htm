@@ -699,11 +699,11 @@ function use_lang() {
 	var filename = path.substring(path.lastIndexOf('/') + 1);
 	if (path.indexOf('/' + lang + '/') == -1) {
 		var url = window.location.toString();
-		var landingpage = url.lastIndexOf(lang);			//str.lastIndexOf("/index.html"); 
+		var landingpage = url.lastIndexOf(curLang);			//str.lastIndexOf("/index.html"); 
 			alert ( 'URL string = ' + landingpage  );
-		landingpage = url.slice(path.StartsWith, url.search(lang)); 			
+		landingpage = url.slice(path.StartsWith, url.search(curLang)); 			
 			alert ( 'URL string = ' + landingpage  );
-		landingpage= url.slice(url.StartsWith, url.search(lang)) + "/Content/Search.html"; 	
+		landingpage= url.slice(url.StartsWith, url.search(curLang)) + "/Content/Search.html"; 	
 			alert ( 'URL string = ' + landingpage  );
 		url = url.replace(curLang, lang);
 		url = url.substring(0, url.indexOf(lang)) + lang + "/Default.htm";
