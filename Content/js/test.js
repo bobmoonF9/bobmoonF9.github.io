@@ -3,8 +3,6 @@
 
 // alert ('current page URL is ' + window.location.href);
 
-var url = "https://documentation.five9.com/de/crm-agents/ADT/morefolders/_ch-preparing-your-station.htm";
-
 // supported languages
 var langs = [ 'en-us', 'fr-ca', 'de' ];
 var frca_langpairs = [ 'agent-desktop-plus', 'supervisor-plus', 'technical-reqs' ];
@@ -50,44 +48,7 @@ function use_lang() {					// on change to the language drop down
 		}
 	}
 
-	if(contentID=="crm-agents") {
-	  //rootURL = url.slice(url.StartsWith, url.search(contentID) + contentID.length ); 
-	  //alert ("rootURL = " + rootURL );  
-	  
-	  //get all up to the contentID
-	  //test = rootURL;
-	  
-	  alert ("all up to the contentID = " + rootURL );    
-	  //grab the value after the contentID
-	  //test2 = url.substring(rootURL.length + 1 ); 
-	  //alert ("all up to the contentID = " + test2 );    
-	  
-	  //tempfolders = subfolders;
 
-	  //alert ("remainder of URL tempfolders = " + tempfolders );  
-	  
-	  //integrationID = tempfolders.substring(0,tempfolders.indexOf("/")); 
-	  integrationID = subfolders.substring(contentID.length + 1); 
-	  alert ("chop = " + integrationID );  
-	  integrationID = integrationID.substring(0,integrationID.indexOf("/")); 
-	  alert ("crm subfolder = " + integrationID );  
-	  contentID = contentID + "/" + integrationID;
-	  alert ("content ID  = " + contentID );  
-	  //rootURL = url.substring(rootURL.length + 1, url.lastIndexOf("/")  ); 
-	  
-	  //alert ("rootURL = " + rootURL );  
-	}
-
-
-	if(lang == "de") {
-		if(de_langpairs.indexOf(contentID) +1) {
-			//alert ("rootURL = " + rootURL );  
-			url = rootURL + "/" + contentID + "/landing-" + contentID + ".htm";
-		} else {
-			url = rootURL + lang + "/" + "Default.htm";
-		}
-      alert ("URL = " + url ); 
-	}
 
 
 
@@ -96,6 +57,8 @@ function use_lang() {					// on change to the language drop down
 	if (path.indexOf('/' + lang + '/') == -1) {
 		var url = window.location.toString();					// set the url variable to current path	
 		
+		var url = "https://documentation.five9.com/de/crm-agents/ADT/morefolders/_ch-preparing-your-station.htm";
+
 		rootURL = url.slice(url.StartsWith, url.search(curLang) ); 	// grab the URL up to the current language
 
 		subfolders = url.substring(rootURL.length + curLang.length + 1,url.lastIndexOf("/")); //grab the folders in the URL from the rootURL location to the last slash
@@ -106,6 +69,48 @@ function use_lang() {					// on change to the language drop down
 		} else {
 			contentID = subfolders.substring(0,subfolders.indexOf("/")) ;     // else chop the subfolders after the first slash 
 		}
+
+
+		if(contentID=="crm-agents") {
+		  //rootURL = url.slice(url.StartsWith, url.search(contentID) + contentID.length ); 
+		  //alert ("rootURL = " + rootURL );  
+		  
+		  //get all up to the contentID
+		  //test = rootURL;
+		  
+		  alert ("all up to the contentID = " + rootURL );    
+		  //grab the value after the contentID
+		  //test2 = url.substring(rootURL.length + 1 ); 
+		  //alert ("all up to the contentID = " + test2 );    
+		  
+		  //tempfolders = subfolders;
+
+		  //alert ("remainder of URL tempfolders = " + tempfolders );  
+		  
+		  //integrationID = tempfolders.substring(0,tempfolders.indexOf("/")); 
+		  integrationID = subfolders.substring(contentID.length + 1); 
+		  alert ("chop = " + integrationID );  
+		  integrationID = integrationID.substring(0,integrationID.indexOf("/")); 
+		  alert ("crm subfolder = " + integrationID );  
+		  contentID = contentID + "/" + integrationID;
+		  alert ("content ID  = " + contentID );  
+		  //rootURL = url.substring(rootURL.length + 1, url.lastIndexOf("/")  ); 
+		  
+		  //alert ("rootURL = " + rootURL );  
+		}
+
+
+		if(lang == "de") {
+			if(de_langpairs.indexOf(contentID) +1) {
+				//alert ("rootURL = " + rootURL );  
+				url = rootURL + "/" + contentID + "/landing-" + contentID + ".htm";
+			} else {
+				url = rootURL + lang + "/" + "Default.htm";
+			}
+		  alert ("URL = " + url ); 
+		}
+
+
 
 		url = rootURL + lang + "/" + contentID + "/landing-" + contentID + ".htm" ;   // combine elements to make the landing page URL
 		window.location = url;
