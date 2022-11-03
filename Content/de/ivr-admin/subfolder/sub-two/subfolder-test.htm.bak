@@ -252,10 +252,12 @@ div#feedback-question
 
 
 
-<h1>Test page</h1>
+<h1>Deutsch Second Subfolder Test page</h1>
 
-<p>&nbsp;</p>
-<p>&nbsp;</p>
+<p><a href="../../landing-ivr-admin.htm">Landing page</a></p>
+<p><a href="../../test.htm">Test page</a></p>
+<p><a href="../subfolder-test.htm">Subfolder Test page</a></p>
+<p><a href="subfolder-test.htm">Second Subfolder Test page</a></p>
 		
 		
         <script>
