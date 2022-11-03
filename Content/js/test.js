@@ -76,11 +76,11 @@ function use_lang() {					// on change to the language drop down
 
 		if(contentID=="crm-agents") {
 		  integrationID = subfolders.substring(contentID.length + 1); 
-		  alert ("chop = " + integrationID );  
+		  //alert ("chop = " + integrationID );  
 		  integrationID = integrationID.substring(0,integrationID.indexOf("/")); 
 		  alert ("crm subfolder = " + integrationID );  
 		  contentID = contentID + "/" + integrationID;
-		  alert ("content ID  = " + contentID );  
+		  //alert ("content ID  = " + contentID );  
 		  //rootURL = url.substring(rootURL.length + 1, url.lastIndexOf("/")  ); 
 		  
 		  //alert ("rootURL = " + rootURL );  
@@ -90,7 +90,7 @@ function use_lang() {					// on change to the language drop down
 		if(lang == "de") {
 			if(de_langpairs.indexOf(contentID) +1) {
 				//alert ("rootURL = " + rootURL );  
-				url = rootURL + "/" + contentID + "/landing-" + contentID + ".htm";
+				url = rootURL + "/" + contentID + "/landing-" + contentID.substring(0,integrationID.length) + ".htm";
 			} else {
 				url = rootURL + lang + "/" + "Default.htm";
 			}
