@@ -1,5 +1,5 @@
 
-alert ('current page URL is ' + window.location.href);
+// alert ('current page URL is ' + window.location.href);
 
 // supported languages
 var langs = [ 'en-us', 'fr-ca', 'de' ];
@@ -35,7 +35,7 @@ $(document).ready(function() { 			// on page load, set the language drop down to
 function use_lang() {					// on change to the language drop down
 	for (var i = 0; i < langs.length; i++) {
 		if (path.indexOf('/' + langs[i] + '/') != -1) {
-			curLang = langs[i];
+			curLang = langs[i];			// set current language 
 		}
 	}
 
