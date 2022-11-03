@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="Description" content="Put your description here.">
+	
+	<title>Five9 Documentation</title>
+
+	<!-- Bootsrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+	<!-- IGX Styles -->
+	<link rel="stylesheet" href="css/five9.css">
+
+    <!--Fontawesome-->
+	<script src="https://kit.fontawesome.com/1b9d3716b4.js" crossorigin="anonymous">
+	</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+
+<style>
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  color: var(--search-color);
+  background: var(--search-background);
+  font-size: 14px;
+  font-family: 'ProximaNova-Semibold', Helvetica, Arial, sans-serif;
+}
+div#feedback-reason
+{
+	display: none;
+	border: 1px solid lightgray;
+	padding: 10px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 20px;
+	background: var(--banner-background);
+	width: 340px;
+}
+
+div#feedback-question
+{
+	border: 1px solid lightgray;
+	padding: 10px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 20px;
+	background: var(--banner-background);
+	width: 90%;
+	max-width: 350px;
+}
+
+</style>
+
+<div class="container">
+	<nav class="navbar navbar-expand-lg navbar-light">
+		<div class="container-fluid">
+		 <a class="navbar-brand" href="#"><img src="./img/Five9_logo_black_md.png"></a>
+		 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main_nav"  aria-expanded="false" aria-label="Toggle navigation">
+			 <span class="navbar-toggler-icon"></span>
+		 </button>
+		 <div class="right collapse navbar-collapse" id="main_nav">
+			<ul class="navbar-nav">
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Administrators</a>
+					<div class="dropdown-menu dropdown-large">
+						<div class="row g-3">
+							<div class="col-6">
+								<h6 class="title">Core Contact Center</h6>
+								<ul class="list-unstyled">
+									<li class="list-unstyled-item"><a href="basic-admin/landing-basic-admin.htm">Basic Configuration</a></li>
+									<li class="list-unstyled-item"><a href="ivr-admin/landing-ivr-admin.htm">IVR</a></li>
+									<li class="list-unstyled-item"><a href="campaign-admin/landing-campaign-admin.htm">Campaign</a></li>
+									<li class="list-unstyled-item"><a href="digital-engagement/landing-digital-engagement.htm">Digital Engagement</a></li>
+									<li class="list-unstyled-item"><a href="single-sign-on/landing-single-sign-on.htm">Single Sign-On</a></li>
+								</ul>
+							</div><!-- end col-3 -->
+							<div class="col-6">
+								<h6 class="title">CRM Integrations</h6>
+								<ul class="list-unstyled">
+									<li class="list-unstyled-item"><a href="crm-admins/ADT/landing-crm-admins-ADT.htm">Agent Desktop Toolkit Plus</a></li>
+									<li class="list-unstyled-item"><a href="crm-admins/MSDynamics/landing-crm-admins-MSDynamics.htm">Microsoft Dynamics</a></li>
+									<li class="list-unstyled-item"><a href="crm-admins/Oracle/landing-crm-admins-Oracle.htm">Oracle</a></li>
+									<li class="list-unstyled-item"><a href="crm-admins/NetSuite/landing-crm-admins-NetSuite.htm">NetSuite</a></li>
+									<li class="list-unstyled-item"><a href="crm-admins/Salesforce/landing-crm-admins-Salesforce.htm">Salesforce</a></li>
+									<li class="list-unstyled-item"><a href="crm-admins/ServiceNow/landing-crm-admins-ServiceNow.htm">ServiceNOW</a></li>
+									<li class="list-unstyled-item"><a href="crm-admins/Zendesk/landing-crm-admins-Zendesk.htm">Zendesk</a></li>
+								</ul>
+							</div><!-- end col-3 -->
+						</div><!-- end row -->
+						<div class="row g-3">
+							<div class="col-6">
+								<h6 class="title pt-15">Cloud</h6>
+								<ul class="list-unstyled">
+									<li class="list-unstyled-item"><a href="admin-console/landing-admin-console.htm">Administrator Console</a></li>
+								</ul>
+							</div><!-- end col-3 -->
+							<div class="col-6">
+								<h6 class="title pt-15">Reporting</h6>
+								<ul class="list-unstyled">
+									<li class="list-unstyled-item"><a href="analytics/landing-analytics.htm">Five9 Analytics</a></li><!--analytics/landing-analytics.htm-->
+									<li class="list-unstyled-item"><a href="reports-dashboards/landing-reports-dashboards.htm">VCC Dashboards and Reports</a></li>
+								</ul>
+							</div><!-- end col-3 -->
+						</div><!-- end row -->
+						<div class="row g-3">
+							<div class="col-6">
+								<h6 class="title pt-15">Communications</h6>
+								<ul class="list-unstyled">
+									<li class="list-unstyled-item"><a href="uc-adapters/landing-uc-adapters-admin-gd.htm">Unified Communication Adapters</a></li>
+									<li class="list-unstyled-item"><a href="voicestream-admin-guide/landing-voicestream-admin-guide.htm">VoiceStream Subscriptions</a></li>
+									<li class="list-unstyled-item"><a href="https://five9.e911cloud.com/login" target="_blank" title="Requires login on Horizon Mobility website">Five9 Emergency Services</a></li>
+								</ul>
+							</div><!-- end col-3 -->
+							<div class="col-6">
+								<h6 class="title pt-15">Digital Workforce</h6>
+								<ul class="list-unstyled">
+									<li class="list-unstyled-item"><a href="#">Agent Assist Administrator</a></li><!--agent-assist-admin/landing-agent-assist-admin.htm-->
+									<li class="list-unstyled-item"><a href="studio-analyze/topics/virtualagentusage.htm">Studio Intelligent Virtual Agent</a></li>
+									<li class="list-unstyled-item"><a href="workflow-automation/landing-workflow-automation.htm">Workflow Automation</a></li>
+								</ul>
+							</div><!-- end col-3 -->
+						</div><!-- end row -->
+						<div class="row g-3">
+							<div class="col-6">
+								<h6 class="title pt-15">Employee Engagement</h6>
+								<ul class="list-unstyled">
+									<li class="list-unstyled-item"><a href="#">Workforce Optimization</a></li>
+									<li class="list-unstyled-item"><a href="http://help.clearviewportal.com/" target="_blank" title="Requires login on ClearView Portal website">Performance Dashboard</a></li>
+								</ul>
+							</div><!-- end col-3 -->
+						</div><!-- end row -->
+					</div> <!-- dropdown-large.// -->
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Supervisors</a>
+					<div class="dropdown-menu dropdown-large">
+						<div class="row g-3">
+							<div class="col-6">
+								<h6 class="title">Core Contact Center</h6>
+								<ul class="list-unstyled">
+									<li class="list-unstyled-item"><a href="supervisor-plus/landing-supervisor-plus.htm">Supervisor Plus</a></li>
+								</ul>
+							</div><!-- end col-3 -->
+							<div class="col-6">
+								<h6 class="title">Reporting</h6>
+								<ul class="list-unstyled">
+									<li class="list-unstyled-item"><a href="analytics/landing-analytics.htm">Five9 Analytics</a></li>
+									<li class="list-unstyled-item"><a href="reports-dashboards/landing-reports-dashboards.htm">VCC Dashboards and Reports</a></li>
+								</ul>
+							</div><!-- end col-3 -->
+						</div><!-- end row -->
+					</div> <!-- dropdown-large.// -->
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Agents</a>
+					<div class="dropdown-menu dropdown-large">
+						<div class="row g-3">
+							<div class="col-6">
+								<h6 class="title">Core Contact Center</h6>
+								<ul class="list-unstyled">
+									<li class="list-unstyled-item"><a href="agent-desktop-plus/landing-agent-desktop-plus.htm">Agent Desktop Plus</a></li>
+								</ul>
+							</div><!-- end col-3 -->
+							<div class="col-6">
+								<h6 class="title">CRM Integrations</h6>
+								<ul class="list-unstyled">
+									<li class="list-unstyled-item"><a href="crm-agents/ADT/landing-crm-agents-guide-ADT.htm">Agent Desktop Toolkit</a></li>
+									<li class="list-unstyled-item"><a href="crm-agents/MSDynamics/landing-crm-agents-guide-MSD.htm">Microsoft Dynamics</a></li>
+									<li class="list-unstyled-item"><a href="crm-agents/Oracle/landing-crm-agents-guide-Oracle.htm">Oracle</a></li>
+									<li class="list-unstyled-item"><a href="crm-agents/NetSuite/landing-crm-agents-guide-NetSuite.htm">NetSuite</a></li>
+									<li class="list-unstyled-item"><a href="crm-agents/Salesforce/landing-crm-agents-guide-Salesforce.htm">Salesforce</a></li>
+									<li class="list-unstyled-item"><a href="crm-agents/ServiceNow/landing-crm-agents-guide-ServiceNow.htm">ServiceNOW</a></li>
+									<li class="list-unstyled-item"><a href="crm-agents/Zendesk/landing-crm-agents-guide-Zendesk.htm">Zendesk</a></li>
+								</ul>
+							</div><!-- end col-3 -->
+						</div><!-- end row -->
+						<div class="row g-3">
+							<div class="col-6">
+								<h6 class="title pt-15">Employee Engagement</h6>
+								<ul class="list-unstyled">
+									<li class="list-unstyled-item"><a href="#">Workforce Optimization</a></li>
+								</ul>
+							</div><!-- end col-3 -->
+							<div class="col-6">
+								<h6 class="title pt-15">Digital Workforce</h6>
+								<ul class="list-unstyled">
+									<li class="list-unstyled-item"><a href="#">Agent Assist</a></li><!--agent-assist-admin/landing-agent-assist-admin.htm-->
+								</ul>
+							</div><!-- end col-3 -->
+						</div><!-- end row -->
+					</div> <!-- dropdown-large.// -->
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Reporting</a>
+					<div class="dropdown-menu dropdown-large">
+						<div class="row g-3">
+							<div class="col-6">
+								<h6 class="title">Cloud</h6>
+								<ul class="list-unstyled">
+									<li class="list-unstyled-item"><a href="analytics/landing-analytics.htm">Five9 Analytics</a></li><!--analytics/landing-analytics.htm-->
+								</ul>
+							</div><!-- end col-3 -->
+							<div class="col-6">
+								<h6 class="title">Core Contact Center</h6>
+								<ul class="list-unstyled">
+									<li class="list-unstyled-item"><a href="reports-dashboards/landing-reports-dashboards.htm">VCC Dashboards and Reports</a></li>
+								</ul>
+							</div><!-- end col-3 -->
+						</div><!-- end row -->
+					</div> <!-- dropdown-large.// -->
+				</li>
+				<li class="nav-item dropdown">
+					<a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown">Developers</a>
+					<div class="dropdown-menu dropdown-large">
+						<div class="row g-3">
+							<div class="col-6">
+								<h6 class="title">REST API</h6>
+								<ul class="list-unstyled">
+									<li class="list-unstyled-item"><a href="agent-supervisor-rest-api/landing-agent-supervisor-rest-api.htm">Agent and Supervisor</a></li>
+									<li class="list-unstyled-item"><a href="messaging-api/landing-messaging-api.htm">Messaging</a></li>
+									<li class="list-unstyled-item"><a href="voicestream-api/landing-voicestream-api.htm">VoiceStream Developers</a></li>
+								</ul>
+							</div><!-- end col-3 -->
+							<div class="col-6">
+								<h6 class="title">Web Services</h6>
+								<ul class="list-unstyled">
+									<li class="list-unstyled-item"><a href="supervisor-web-services-api/landing-supervisor-web-services-api.htm">Statistics Web Services</a></li>
+									<li class="list-unstyled-item"><a href="config-web-services/landing-config-web-services.htm">Configuration Web Services</a></li>
+									<li class="list-unstyled-item"><a href="config-web-dotnet/landing-config-web-dotnet.htm">Configuration Web Services for .NET</a></li>
+									<li class="list-unstyled-item"><a href="web2campaign/landing-web2campaign.htm">Web2Campaign</a></li>
+								</ul>
+							</div><!-- end col-3 -->
+						</div><!-- end row -->
+					</div> <!-- dropdown-large.// -->
+				</li>
+				<li class="nav-item dropdown">
+			<a class="nav-link  dropdown-toggle" href="https://releasenotes.five9.com/" target="_blank" title="Requires login on Five9 Release Notes website">Release Notes</a>
+		 </li>
+				<div class="dropdown">
+					<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+					  Language
+					  <i class="fa-solid fa-globe"></i></button>
+					<ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+					  <li><a class="dropdown-item" href="#">English</a></li>
+					  <li><a class="dropdown-item" href="#">Français Canadien</a></li>
+					  <li><a class="dropdown-item" href="#">Deutsch</a></li>
+					</ul>
+				</div>
+					</ul>
+			</div>
+		</nav>
+</div>
+</head>
+<body>
+
+
+<!-- Hero -->
+<div class="f9image">
+	<div class="container-fluid">
+	  <div class="row hero-row">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		  <div class="row height d-flex justify-content-center align-items-center">
+			<div class="col-md-6">
+				<h5 class=" hero-title">Five9 Documentation</h5>
+				<h5 class="hero-text">Find help using and administering Five9 products</h5>
+				<div class="form">
+					<i class="fa fa-search"></i>
+					<input type="text" class="form-control form-input" placeholder="Search anything..." aria-label="Large" aria-describedby="inputGroup-sizing-sm">
+				  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+</div>
+
+<!-- tray one -->
+	<div class="tray-one">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-sm-3">
+					<div class="accordion h-100 pd-30 accordion-flush" id="accordionFlushExample">
+						<i class="icon-background fa-solid fa-star"></i>
+						<!-- <img class="icon-background" src="./img/New-content.svg"> -->
+						<div class="accordion-item">
+							<h5 class="card-title">New Content</h5>
+							<ul class="card-list">
+								<li class="card-list-item">
+									<a href="studio-combo/topics/studio-7.htm" class="card-link">Jul 29: Studio 7</a>
+								</li>
+								<li class="card-list-item">
+									<a href="admin-console/landing-admin-console.htm" class="card-link">Jul 15: Administrator Console</a><!--admin-console/landing-admin-console.htm-->
+							  	</li>
+							  	<li class="card-list-item">
+									<a href="agent-desktop-plus/landing-agent-desktop-plus.htm" class="card-link">Jul 15: Agent Desktop Plus</a>
+								</li>
+							  	<li class="card-list-item">
+									<a href="uc-adapters/landing-uc-adapters-admin-gd.htm" class="card-link">Jul 8: UC Adapters</a>
+								</li>
+							</ul>
+						  <h2 class="accordion-header" id="flush-headingZero">
+							<button class="accordion-button-zero collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseZero" aria-expanded="false" aria-controls="flush-collapseZero">
+							  More....
+							</button>
+						  </h2>
+						  <div id="flush-collapseZero" class="accordion-collapse collapse" aria-labelledby="flush-headingZero" data-bs-parent="#accordionFlushExample">
+							<ul class="card-list">
+								<li class="card-list-item">
+									<a href="reports-dashboards/landing-reports-dashboards.htm" class="card-link">Jul 6: Dashboards and Reports</a>
+								</li>
+								<li class="card-list-item">
+									<a href="technical-reqs/landing-technical-reqs.htm" class="card-link">Jul 3: Technical Requirements</a>
+								</li>
+								<li class="card-list-item">
+									<a href="supervisor-plus/landing-supervisor-plus.htm" class="card-link">Jul 1: Supervisor Plus</a>
+							  	</li>
+							</ul>
+						  </div>
+						</div>
+					</div>
+				  </div>
+					<div class="col-sm-3">
+						<div class="card">
+						<div class="card-body">
+							<i class="icon-background fa-solid fa-link"></i>
+							<!-- <img class="icon-background" src="./img/admin.svg"> -->
+						  <h5 class="card-title">Top Links</h5>
+						  <ul class="card-list">
+						  	<li class="card-list-item">
+								<a href="technical-reqs/landing-technical-reqs.htm" class="card-link">Technical Requirements</a>
+						  	</li>						  	
+						 	<li class="card-list-item">
+								<a href="reports-dashboards/landing-reports-dashboards.htm" class="card-link">Dashboards and Reports</a>
+						 	</li>
+						  	<li class="card-list-item">
+								<a href="studio-combo/topics/studio-7.htm" class="card-link">Studio</a>
+							</li>
+						  	<li class="card-list-item">
+								<a href="supervisor-plus/landing-supervisor-plus.htm" class="card-link">Supervisor Plus</a>
+						  	</p>
+						  	<li class="card-list-item">
+								<a href="crm-admins/Salesforce/landing-crm-admins-Salesforce.htm" class="card-link">Salesforce Plus Adapter for Administators</a>
+							</li>
+						</ul>
+						</div>
+					  </div>
+					</div>
+					<div class="col-sm-3">
+						<div class="card">
+						<div class="card-body">
+							<i class="icon-background fa-solid fa-book-open"></i>
+							<!-- <img class="icon-background-zero" src="./img/users.svg"> -->
+						  <h5 class="card-title">Resources</h5>
+						  <ul class="card-list">
+						  	<li class="card-list-item">
+								<a href="https://systemstatus.five9.com/login" target="_blank" title="Requires login on Five9 System Status website" class="card-link">System Status</a>
+							</li>
+						  	<li class="card-list-item">
+								<a href="https://webapps.five9.com/product-documentation/" target="_blank" title="Requires login on the legacy Five9 Product Documentation website" class="card-link">Customer Guide PDFs</a>
+							</li>
+						  	<li class="card-list-item">
+								<a href="https://releasenotes.five9.com/" target="_blank" title="Requires login on Five9 Release Notes website" class="card-link">Five9 Release Notes</a>
+							</li>
+						  	<li class="card-list-item">
+								<a href="https://five9.e911cloud.com/login" target="_blank" title="Requires login on Horizon Mobility website" class="card-link">Five9 Emergency Services</a>
+							</li>
+						  	<li class="card-list-item">
+								<a href="headsets/landing-headsets.htm" class="card-link">Recommended Headsets</a>
+							</li>
+							<li class="card-list-item">
+								<a href="_portal/topnav/landing-compliance.htm" class="card-link">Compliance Information</a>
+							</li>
+							</ul>
+						</div>
+					  </div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	<!-- tray two -->
+	
+		<div class="tray-two">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-4 offset-lg-2 offset-sm-0 offset-md-2">
+						<div class="accordion accordion-flush" id="accordionFlushExample">
+							<i class="icon-background-two fa-solid fa-user-gear"></i>
+							<!-- <img class="icon-background-two" src="./img/admin.svg"> -->
+							<div class="accordion-item">
+								<p class="card-title-two">Administrators</p>
+							  <h2 class="accordion-header" id="flush-headingOne">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+								  View Documentation
+								</button>
+							  </h2>
+							  <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+								<p class="accordion-body"><a href="admin-console/landing-admin-console.htm">Administrator Console</a></li><!--admin-console/landing-admin-console.htm-->
+								<p class="accordion-body"><a href="#">Agent Assist Administration</a></li><!--agent-assist-admin/landing-agent-assist-admin.htm-->
+								<p class="accordion-body"><a href="crm-admins/ADT/landing-crm-admins-ADT.htm">Agent Desktop Toolkit Plus</a></p>
+								<p class="accordion-body"><a href="basic-admin/landing-basic-admin.htm">Basic Configuration</a></p>
+								<p class="accordion-body"><a href="campaign-admin/landing-campaign-admin.htm">Campaigns</a></p>
+								<p class="accordion-body"><a href="digital-engagement/landing-digital-engagement.htm">Digital Engagement</a></p>
+								<p class="accordion-body"><a href="https://five9.e911cloud.com/login" title="Requires login on Horizon Mobility website">Five9 Emergency Services</a></p>
+								<p class="accordion-body"><a href="ivr-admin/landing-ivr-admin.htm">Interactive Voice Response (IVR)</a></p>
+								<p class="accordion-body"><a href="crm-admins/MSDynamics/landing-crm-admins-MSDynamics.htm">Microsoft Dynamics 365 Plus Adapter</a></p>
+								<p class="accordion-body"><a href="crm-admins/NetSuite/landing-crm-admins-NetSuite.htm">NetSuite Plus Adapter</a></p>
+								<p class="accordion-body"><a href="crm-admins/Oracle/landing-crm-admins-Oracle.htm">Oracle Service Cloud Plus Adapter</a></p>
+								<p class="accordion-body"><a href="crm-admins/Salesforce/landing-crm-admins-Salesforce.htm">Salesforce Plus Adapter</a></p>
+								<p class="accordion-body"><a href="crm-admins/ServiceNow/landing-crm-admins-ServiceNow.htm">ServiceNOW Plus Adapter</a></p>
+								<p class="accordion-body"><a href="single-sign-on/landing-single-sign-on.htm">Single Sign-On</a></p>
+								<p class="accordion-body"><a href="uc-adapters/landing-us-adapters.htm">UC Adapters</a></p>
+			  				<p class="accordion-body"><a href="voicestream-admin-guide/landing-voicestream-admin-guide.htm">VoiceStream Subscriptions</a></p>
+								<p class="accordion-body"><a href="workflow-automation/landing-workflow-automation.htm">Workflow Automation</a></p>
+								<p class="accordion-body"><a href="crm-admins/Zendesk/landing-crm-admins-Zendesk.htm">Zendesk Plus Adapter</a></p>
+							  </div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="accordion mt-30 accordion-flush" id="accordionFlushExample">
+							<i class="icon-background-two fa-solid fa-user-group"></i>
+							<!-- <img class="icon-background-two" src="./img/users.svg"> -->
+							<div class="accordion-item">
+								<p class="card-title-two">Supervisors</p>
+							  <h2 class="accordion-header" id="flush-headingTwo">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+								  View Documentation
+								</button>
+							  </h2>
+							  <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+								<p class="accordion-body"><a href="analytics/landing-analytics.htm">Five9 Analytics</a></p> <!--analytics/landing-analytics.htm-->
+								<p class="accordion-body"><a href="supervisor-plus/landing-supervisor-plus.htm">Supervisor Plus</a></p>
+								<p class="accordion-body"><a href="reports-dashboards/landing-reports-dashboards.htm">VCC Dashboards and Reports</a></p>
+							  </div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row padding-top">
+					<div class="col-sm-4 offset-lg-2 offset-sm-0 offset-md-2">
+						<div class="accordion accordion-flush" id="accordionFlushExample">
+							<i class="icon-background-two fa-solid fa-users-between-lines"></i>
+							<!-- <img class="icon-background-two" src="./img/agent.svg"> -->
+							<div class="accordion-item">
+								<p class="card-title-two">Agents</p>
+								
+							  <h2 class="accordion-header" id="flush-headingThree">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+								  View Documentation
+								</button>
+							  </h2>
+							  <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+								<p class="accordion-body"><a href="agent-assist-agent/landing-agent-assist.htm">Agent Assist</a></p>
+								<p class="accordion-body"><a href="agent-desktop-plus/landing-agent-desktop-plus.htm">Agent Desktop Plus</a></p>
+								<p class="accordion-body"><a href="crm-agents/ADT/landing-crm-agents-guide-ADT.htm.htm">Agent Desktop Toolkit Plus</a></p>
+								<p class="accordion-body"><a href="crm-agents/MSDynamics/landing-crm-agents-guide-MSD.htm">Microsoft Dynamics 365 Plus Adapter</a></p>
+								<p class="accordion-body"><a href="crm-agents/NetSuite/landing-crm-agents-guide-NetSuite.htm">NetSuite Plus Adapter</a></p>
+								<p class="accordion-body"><a href="crm-agents/Oracle/landing-crm-agents-guide-Oracle.htm">Oracle Service Cloud Plus Adapter</a></p>
+								<p class="accordion-body"><a href="crm-agents/Salesforce/landing-crm-agents-guide-Salesforce.htm">Salesforce Plus Adapter</a></p>
+								<p class="accordion-body"><a href="crm-agents/ServiceNow/landing-crm-agents-guide-ServiceNow.htm">ServiceNOW Plus Adapter</a></p>
+								<p class="accordion-body"><a href="https://webapps.five9.com/assets/files/for_customers/documentation/integrations/velocify/velocify-administrators-guide.pdf" target="_blank" title="Requires login on the legacy Five9 Product Documentation website">Velocify Plus Adapter</a></p>
+								<p class="accordion-body"><a href="crm-agents/Zendesk/landing-crm-agents-guide-Zendesk.htm">Zendesk Plus Adapter</a></p>
+								<p class="accordion-body"><a href="rapid-remote-agent/landing-rapid-remote-agent.htm">Rapid Remote Deployment</a></p>
+							  </div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="accordion mt-30 accordion-flush" id="accordionFlushExample">
+							<i class="icon-background-two fa-solid fa-chart-line"></i>
+							<!-- <img class="icon-background-two" src="./img/Code.svg"> -->
+							<div class="accordion-item">
+								<p class="card-title-two">Reporting</p>
+								
+							  <h2 class="accordion-header" id="flush-headingFour">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+								  View Documentation
+								</button>
+							  </h2>
+							  <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour" data-bs-parent="#accordionFlushExample">
+								<p class="accordion-body"><a href="reports-dashboards/call-and-interaction-segments/call-segments.htm">Call Segments</a></p>
+								<p class="accordion-body"><a href="analytics/landing-analytics.htm">Five9 Analytics</a></p><!--analytics/landing-analytics.htm-->
+								<p class="accordion-body"><a href="http://help.clearviewportal.com/" target="_blank" title="Requires login on ClearView Portal website">Performance Dashboard</a></p>
+								<p class="accordion-body"><a href="reports-dashboards/landing-reports-dashboards.htm">VCC Dashboards and Reports</a></p>
+							  </div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row padding-top">
+					<div class="col-sm-4 offset-lg-2 offset-sm-0 offset-md-2">
+						<div class="accordion accordion-flush" id="accordionFlushExample">
+							<i class="icon-background-two fa-solid fa-palette"></i>
+							<!-- <img class="icon-background-two" src="./img/CRM.svg"> -->
+							<div class="accordion-item">
+								<p class="card-title-two">Studio</p>
+							  <h2 class="accordion-header" id="flush-headingFive">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFive" aria-expanded="false" aria-controls="flush-collapseFive">
+								  View Documentation
+								</button>
+							  </h2>
+							  <div id="flush-collapseFive" class="accordion-collapse collapse" aria-labelledby="flush-headingFive" data-bs-parent="#accordionFlushExample">
+								<p class="accordion-body"><a href="studio-combo/landing-studio-combo.htm">Studio 7</a></p>
+							  </div>
+							</div>
+						</div>
+					</div>
+					<div class="col-sm-4">
+						<div class="accordion mt-30 accordion-flush" id="accordionFlushExample">
+							<i class="icon-background-two fa-solid fa-people-group"></i>
+							<!-- <img class="icon-background-two" src="./img/dashboard.svg"> -->
+							<div class="accordion-item">
+								<p class="card-title-two">Workforce Optimization</p>
+							  <h2 class="accordion-header" id="flush-headingSix">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSix" aria-expanded="false" aria-controls="flush-collapseSix">
+								  View Documentation
+								</button>
+							  </h2>
+							  <div id="flush-collapseSix" class="accordion-collapse collapse" aria-labelledby="flush-headingSix" data-bs-parent="#accordionFlushExample">
+								<p class="accordion-body"><a href="#">Link to PDFs</a></p>
+								<p class="accordion-body"><a href="wfo/index.htm">Administrator Help</a></p>
+								<p class="accordion-body"><a href="wfo/index.htm">Agent Help</a></p>
+								<p class="accordion-body"><a href="wfo/index.htm">Supervisor and Evaluator Help</a></p>
+							  </div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row padding-top">
+					<div class="col-sm-4 offset-lg-2 offset-sm-0 offset-md-2">
+						<div class="accordion accordion-flush" id="accordionFlushExample">
+							<i class="icon-background-two fa-solid fa-laptop-code"></i>
+							<!-- <img class="icon-background-two" src="./img/CRM.svg"> -->
+							<div class="accordion-item">
+								<p class="card-title-two">Developers</p>
+							
+							  <h2 class="accordion-header" id="flush-headingSeven">
+								<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseSeven" aria-expanded="false" aria-controls="flush-collapseSeven">
+								  View Documentation
+								</button>
+							  </h2>
+							  <div id="flush-collapseSeven" class="accordion-collapse collapse" aria-labelledby="flush-headingSeven" data-bs-parent="#accordionFlushExample">
+								<p class="accordion-body"><a href="agent-supervisor-rest-api/landing-agent-supervisor-rest-api.htm">Agent and Supervisor REST APIs</a></p>
+								<p class="accordion-body"><a href="config-web-services/landing-config-web-services.htm">Configuration Web Services</a></p>
+								<p class="accordion-body"><a href="config-web-dotnet/landing-config-web-dotnet.htm">Configuration Web Services for .NET</a></p>
+								<p class="accordion-body"><a href="messaging-api/landing-messaging-api.htm">Messaging REST API</a></p>
+								<p class="accordion-body"><a href="supervisor-web-services-api/landing-supervisor-web-services-api.htm">Statistics Web Services</a></p>
+								<p class="accordion-body"><a href="voicestream-api/landing-voicestream-api.htm">VoiceStream Developers</a></p>
+								<p class="accordion-body"><a href="web2campaign/landing-web2campaign.htm">Web2Campaign</a></p>
+							  </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="container">
+		<form name="langList">
+		<select id="lang" name="langSelect" style="visibility: visible;">
+                                                <option value="en-us">English</option>
+                                                <option value="fr-ca">Français Canadien</option>
+                                                <option value="de">German</option>
+                                            </select>
+		</form>
+		</div>
+		
+		<div class="container">
+		<section>
+            <div class="radio-toolbar" id="feedback-question">
+                <h3>Was this information helpful?</h3>
+                <form method="post" id="form" action="https://docs.google.com/forms/d/1oO9yubFk9TvQGS1SuH0copBZJb83lSYInnKUHtdfIJg/formResponse">
+                    <input type="radio" name="entry.57287538" id="yes" value="Yes" />
+                    <label for="yes">Yes</label>
+                    <input type="radio" name="entry.57287538" id="no" value="No" />
+                    <label for="no">No</label>
+                    <input type="text" name="entry.2026861954" id="comment" placeholder="Comment" />
+					
+					<input type="hidden" name="entry.2127076247" id="currURL" value="URL" />
+                    <input type="submit" value="Submit" />
+                </form>
+            </div>
+            <div id="feedback-reason" style="display:none">
+                <h4>Thanks for your feedback.</h4>
+            </div>
+        </section>
+		</div>
+        <script>
+			$('#form').submit(function(e) {
+			document.getElementById("currURL").value = window.location.href;  // Update the form's input field value with the current URL  			
+			e.preventDefault();
+			$.ajax({
+			url: "https://docs.google.com/forms/d/1oO9yubFk9TvQGS1SuH0copBZJb83lSYInnKUHtdfIJg/formResponse",
+			data: $(this).serialize(),
+			type: "POST",
+			dataType: "xml",
+			success: function(data) {
+			console.log('Submission successful');
+			},
+			error: function(xhr, status, error) {
+			console.log('Submission failed: ' + error);
+			}
+			});
+			});
+		</script>
+                        <script>
+			$(document).ready(function() {
+			$("#form").submit(function(e) {
+			e.preventDefault();
+			$("#feedback-question").hide();
+			$("#feedback-reason").show();
+			});
+			});
+		</script>
+		
+
+		
+		
+		<div class="container">
+			<footer class="py-3 my-4">
+			  <div class="nav justify-content-center pb-3 mb-3">
+				<p class="px-2 text-muted">2022 Five9, Inc. 3001 Bishop Drive, Suite 350, San Ramon, CA 94538, USA
+					<a href="#" class="px-2 text-muted ft-blue">www.five9.com</a> | 
+					<a href="#" class="px-2 text-muted ft-blue">Privacy Policy</a> |
+					<a href="mailto:CustomerDocsRequests@five9.com">Feedback</a>
+				</p>
+			</div>
+			  <!-- <p class="text-center text-muted">&copy; 2021 Company, Inc</p> -->
+			</footer>
+		  </div>
+
+	<!-- jQuery Dependancies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous">
+	</script>
+
+
+    <!-- five9 jQuery -->
+    <script src="js/main.js"></script>
+
+      <!-- Google Tag Manager -->
+      <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-KED6KQJ04X">
+      </script>
+      <!-- End Google Tag Manager -->
+      <!--Google Analytics code-->
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag (){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-KED6KQJ04X');
+      </script>
+      <!--end Google Analytics code-->	
+	
+	
+			<script>
+// supported languages
+var langs = [ 'en-us', 'fr-ca', 'de' ];
+var path = location.pathname;
+var curLang = "en-us";
+var lang;
+var landingpage;
+
+$(document).ready(function() {
+	for (var i = 0; i < langs.length; i++) {
+		if (path.indexOf('/' + langs[i] + '/') != -1) {
+			curLang = langs[i];
+		}
+	}
+});
+
+
+$(document).ready(function() { 
+	// set language selector current language
+	$('select#lang').val(curLang);
+	$('select#lang').css('visibility','visible');
+
+	// process language change
+	$('select#lang').change(function() {
+		lang = $(this).val();
+		localStorage.setItem('lang', lang);
+		use_lang(lang);
+	});
+});
+
+
+// redirect
+function use_lang() {
+	for (var i = 0; i < langs.length; i++) {
+		if (path.indexOf('/' + langs[i] + '/') != -1) {
+			curLang = langs[i];
+		}
+	}
+
+	var filename = path.substring(path.lastIndexOf('/') + 1);
+	if (path.indexOf('/' + lang + '/') == -1) {
+		var url = window.location.toString();
+		var landingpage = url.lastIndexOf(curLang);			//str.lastIndexOf("/index.html"); 
+			alert ( 'URL string = ' + landingpage  );
+		landingpage = url.slice(path.StartsWith, url.search(curLang)); 			
+			alert ( 'URL string = ' + landingpage  );
+		landingpage= url.slice(url.StartsWith, url.search(curLang)) + "/Content/Search.html"; 	
+			alert ( 'URL string = ' + landingpage  );
+		url = url.replace(curLang, lang);
+		url = url.substring(0, url.indexOf(lang)) + lang + "/Default.htm";
+		window.location = url;
+	}
+}
+		</script>
+
+	
+	
+</body>
+</html>
