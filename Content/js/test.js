@@ -6,6 +6,7 @@ var langs = [ 'en-us', 'fr-ca', 'de' ];
 var path = location.pathname;
 var curLang = "en-us";
 var lang;
+var rootURL;			// the root portion of the URL up to the language
 var subfolders;			// the portions of the URL between the language and the topic file name
 var contentID;			// the portion of the URL relating to the content repo
 
