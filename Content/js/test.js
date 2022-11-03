@@ -75,6 +75,6 @@ function use_lang() {
 		//url = url.replace(curLang, lang);
 		//url = url.substring(0, url.indexOf(lang)) + lang + "/Content/" + "landing-" +landingpage + ".htm";
 		url = landingpageURL;
-		// window.location = url;
+		window.location = url;
 	}
 }
