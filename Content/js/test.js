@@ -8,7 +8,6 @@ var curLang = "en-us";
 var lang;
 var subfolders;			// the portions of the URL between the language and the topic file name
 var contentID;			// the portion of the URL relating to the content repo
-var landingpageURL;  	// construct the url of the landing page 
 
 $(document).ready(function() {			// on page load, find which language folder is in the URL
 	for (var i = 0; i < langs.length; i++) {
