@@ -57,8 +57,11 @@ function use_lang() {					// on change to the language drop down
 	if (path.indexOf('/' + lang + '/') == -1) {
 		var url = window.location.toString();					// set the url variable to current path	
 		
+		//overrides for testing
 		var url = "https://documentation.five9.com/de/crm-agents/ADT/morefolders/_ch-preparing-your-station.htm";
-
+		curLang = "de";
+		lang = "de";
+		
 		rootURL = url.slice(url.StartsWith, url.search(curLang) ); 	// grab the URL up to the current language
 
 		subfolders = url.substring(rootURL.length + curLang.length + 1,url.lastIndexOf("/")); //grab the folders in the URL from the rootURL location to the last slash
@@ -72,22 +75,6 @@ function use_lang() {					// on change to the language drop down
 
 
 		if(contentID=="crm-agents") {
-		  //rootURL = url.slice(url.StartsWith, url.search(contentID) + contentID.length ); 
-		  //alert ("rootURL = " + rootURL );  
-		  
-		  //get all up to the contentID
-		  //test = rootURL;
-		  
-		  alert ("all up to the contentID = " + rootURL );    
-		  //grab the value after the contentID
-		  //test2 = url.substring(rootURL.length + 1 ); 
-		  //alert ("all up to the contentID = " + test2 );    
-		  
-		  //tempfolders = subfolders;
-
-		  //alert ("remainder of URL tempfolders = " + tempfolders );  
-		  
-		  //integrationID = tempfolders.substring(0,tempfolders.indexOf("/")); 
 		  integrationID = subfolders.substring(contentID.length + 1); 
 		  alert ("chop = " + integrationID );  
 		  integrationID = integrationID.substring(0,integrationID.indexOf("/")); 
