@@ -1,13 +1,8 @@
 
-
-
 // alert ('current page URL is ' + window.location.href);
 
 // supported languages
 var langs = [ 'en-us', 'fr-ca', 'de' ];
-
-
-
 var path = location.pathname;
 var curLang = "en-us";
 var lang;
@@ -45,16 +40,9 @@ function use_lang() {					// on change to the language drop down
 		}
 	}
 
-
-
-
-
-
 	var filename = path.substring(path.lastIndexOf('/') + 1); 	// sets current topic file name, not used in the current script
 	if (path.indexOf('/' + lang + '/') == -1) {
 		var url = window.location.toString();					// set the url variable to current path	
-		
-		//overrides for testing
 		
 		rootURL = url.slice(url.StartsWith, url.search(curLang) ); 	// grab the URL up to the current language
 
@@ -66,18 +54,6 @@ function use_lang() {					// on change to the language drop down
 		} else {
 			contentID = subfolders.substring(0,subfolders.indexOf("/")) ;     // else chop the subfolders after the first slash 
 		}
-
-
-		  //alert ("chop = " + integrationID );  
-		  //alert ("content ID  = " + contentID );  
-		  //rootURL = url.substring(rootURL.length + 1, url.lastIndexOf("/")  ); 
-		  
-		  //alert ("rootURL = " + rootURL );  
-
-
-				//alert ("rootURL = " + rootURL );  
-
-
 
 		url = rootURL + lang + "/" + contentID + "/landing-" + contentID + ".htm" ;   // combine elements to make the landing page URL
 		window.location = url;
