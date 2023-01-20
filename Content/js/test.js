@@ -82,6 +82,7 @@ function use_lang() {					// on change to the language drop down
 		  integrationID = integrationID.substring(0,integrationID.indexOf("/")); 
 		  alert ("includes a crm subfolder = " + integrationID );  
 		  integrationPath = contentID + "/" + integrationID;	// add the subfolder for the crm-agents content 
+		  contentID = contentID + "/" + integrationID;	// add the subfolder for the crm-agents content 
 		  //alert ("content ID  = " + contentID );  
 		  //rootURL = url.substring(rootURL.length + 1, url.lastIndexOf("/")  ); 
 		  
