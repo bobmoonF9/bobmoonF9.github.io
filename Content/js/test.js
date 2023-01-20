@@ -17,6 +17,7 @@ var rootURL;			// the root portion of the URL up to the language
 var subfolders;			// the portions of the URL between the language and the topic file name
 var contentID;			// the portion of the URL relating to the content repo
 var integrationID;		// the crm integration indicator from the URL
+var integrationPath; 	// the path for crm integrations (contentID/integrationID)
 
 $(document).ready(function() {			// on page load, find which language folder is in the URL
 	for (var i = 0; i < langs.length; i++) {
@@ -59,6 +60,7 @@ function use_lang() {					// on change to the language drop down
 		
 		//overrides for testing
 		var url = "https://documentation.five9.com/de/crm-agents/ADT/morefolders/_ch-preparing-your-station.htm";
+		// https://documentation.five9.com/de/Content/crm-agents/ADT/softphone/preparing-your-station.htm
 		curLang = "de";
 		lang = "de";
 		
@@ -74,12 +76,12 @@ function use_lang() {					// on change to the language drop down
 		}
 
 
-		if(contentID=="crm-agents") {
+		if(contentID=="crm-agents") {	// process the crm-agents and crm-admin content which has a different structure
 		  integrationID = subfolders.substring(contentID.length + 1); 
 		  //alert ("chop = " + integrationID );  
 		  integrationID = integrationID.substring(0,integrationID.indexOf("/")); 
-		  alert ("crm subfolder = " + integrationID );  
-		  contentID = contentID + "/" + integrationID;
+		  alert ("includes a crm subfolder = " + integrationID );  
+		  integrationPath = contentID + "/" + integrationID;	// add the subfolder for the crm-agents content 
 		  //alert ("content ID  = " + contentID );  
 		  //rootURL = url.substring(rootURL.length + 1, url.lastIndexOf("/")  ); 
 		  
@@ -87,10 +89,12 @@ function use_lang() {					// on change to the language drop down
 		}
 
 
-		if(lang == "de") {
+		if(lang == "de") {								// check the content ID against the defined languages for german
 			if(de_langpairs.indexOf(contentID) +1) {
+				alert ("grab content id = " + contentID.slice(0,integrationID.search("/") ) );
 				//alert ("rootURL = " + rootURL );  
-				url = rootURL + "/" + contentID + "/landing-" + contentID.substring(0,integrationID.length) + ".htm";
+				url = rootURL +  contentID + "/landing-" + contentID.slice(0,integrationID.search("/") ) + ".htm";
+				// url = rootURL + "/" + contentID + "/landing-" + contentID.substring(0,integrationID.length) + ".htm";
 			} else {
 				url = rootURL + lang + "/" + "Default.htm";
 			}
