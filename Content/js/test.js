@@ -92,9 +92,10 @@ function use_lang() {					// on change to the language drop down
 
 		if(lang == "de") {								// check the content ID against the defined languages for german
 			if(de_langpairs.indexOf(contentID) +1) {
-				alert ("grab content id = " + contentID.slice(0,integrationID.search("/") ) );
+				alert ("grab content id = " + contentID.slice(0,contentID.search("/") ) );
+				alert ("remove content id = " + contentID.slice(0,integrationID.search("/") ) );
 				//alert ("rootURL = " + rootURL );  
-				url = rootURL +  contentID + "/landing-" + contentID.slice(0,integrationID.search("/") ) + ".htm";
+				url = rootURL +  contentID + "/landing-" + contentID.slice(0,contentID.search("/") ) + ".htm";
 				// url = rootURL + "/" + contentID + "/landing-" + contentID.substring(0,integrationID.length) + ".htm";
 			} else {
 				url = rootURL + lang + "/" + "Default.htm";
