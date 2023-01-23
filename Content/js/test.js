@@ -78,14 +78,16 @@ function use_lang() {					// on change to the language drop down
 		  integrationPath = contentID + "/" + integrationID;	// add the subfolder for the crm-agents content 
 		  contentID = contentID + "/" + integrationID;	// add the subfolder for the crm-agents content 
 
-		  landingPage =  "-guide-ADT";	//https://documentation.five9.com/de/Content/crm-agents/ADT/landing-crm-agents-guide-ADT.htm
+			if(integrationID=="ADT") {
+			  landingPage =  "-guide-ADT";	//https://documentation.five9.com/de/Content/crm-agents/ADT/landing-crm-agents-guide-ADT.htm
+			} 
 		}
 
 
 		if(lang == "de") {								// check the content ID against the defined languages for german
 			if(de_langpairs.indexOf(contentID) +1) {	// if the contentID matches a language pair, add the project landing page
 				alert ("grab content id = " + contentID.slice(0,contentID.search("/") ) );
-				url = rootURL + lang + "/" + contentID + "/landing-" + contentID.slice(0,contentID.search("/") ) + landingPage + ".htm";
+				url = rootURL + lang + "/Content/" + contentID + "/landing-" + contentID.slice(0,contentID.search("/") ) + landingPage + ".htm";
 				// url = rootURL + "/" + contentID + "/landing-" + contentID.substring(0,integrationID.length) + ".htm";
 			} else {									// else route to the German landing page 
 				url = rootURL + lang + "/" + "Default.htm";
@@ -95,7 +97,7 @@ function use_lang() {					// on change to the language drop down
 
 
 
-		url = rootURL + lang + "/" + contentID + "/landing-" + contentID.slice(0,contentID.search("/") ) + ".htm" ;   // combine elements to make the landing page URL
+		// url = rootURL + lang + "/" + contentID + "/landing-" + contentID.slice(0,contentID.search("/") ) + ".htm" ;   // combine elements to make the landing page URL
 		// window.location = url;
 		alert ("URL = " + url ); 
 	}
