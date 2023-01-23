@@ -88,7 +88,7 @@ function use_lang() {					// on change to the language drop down
 			} else if (integrationID=="salesforce") {
 			  landingPage =  "-guide-Salesforce" ;	// crm-agents/salesforce/landing-crm-agents-guide-Salesforce.htm
 			} else  {
-			  landingPage =  "-guide-" + integrationID ;	// crm-agents/ADT/landing-crm-agents-guide-ADT.htm
+			  landingPage =  "-guide-" + integrationID ;	// crm-agents/ADT/landing-crm-agents-guide-ADT.htm 
 			}
 			
 		}
