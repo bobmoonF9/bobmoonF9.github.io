@@ -56,7 +56,7 @@ function use_lang() {					// on change to the language drop down
 		
 		//overrides for testing
 		// var url = "https://documentation.five9.com/de/crm-agents/ADT/morefolders/test/_ch-preparing-your-station.htm";
-		var url = "https://documentation.five9.com/de/crm-agents/ADT/softphone/preparing-your-station.htm";
+		var url = "https://documentation.five9.com/de/crm-agents/ADT/softphone/preparing-your-station.htm" ;
 		// var url = "https://documentation.five9.com/de/crm-agents/NetSuite/engagement/_ch-processing-digital-engagement-interactions.htm";
 		
 		curLang = "de";											// for testing, always use de
