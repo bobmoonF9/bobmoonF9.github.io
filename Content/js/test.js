@@ -58,6 +58,8 @@ function use_lang() {					// on change to the language drop down
 		// var url = "https://documentation.five9.com/de/crm-agents/ADT/morefolders/test/_ch-preparing-your-station.htm";
 		// var url = "https://documentation.five9.com/de/crm-agents/ADT/softphone/preparing-your-station.htm" ;
 		var url = "https://documentation.five9.com/de/crm-agents/NetSuite/engagement/_ch-processing-digital-engagement-interactions.htm";
+		// var url = "https://documentation.five9.com/de/crm-agents/MSDynamics/engagement/_ch-processing-digital-engagement-interactions.htm";
+		// var url = "https://documentation.five9.com/de/crm-agents/salesforce/engagement/_ch-processing-digital-engagement-interactions.htm";
 		// var url = "https://documentation.five9.com/de/Content/agent-desktop-plus/using-adp/customizing-station/sound-alert-settings.htm";
 		
 		curLang = "de";											// for testing, always use de
@@ -74,16 +76,21 @@ function use_lang() {					// on change to the language drop down
 		}
 
 
-		if(contentID=="crm-agents") {	// process the crm-agents and crm-admin content which has a different structure
+		if (contentID=="crm-agents") {	// process the crm-agents and crm-admin content which has a different structure
 		  integrationID = subfolders.substring(contentID.length + 1); 		// set integrationID to the first level of the subfolders
 		  integrationID = integrationID.substring(0,integrationID.indexOf("/")); // chop off extra subfolders
 		  //alert ("includes a crm subfolder = " + integrationID );  
 		  integrationPath = contentID + "/" + integrationID;	// add the subfolder for the crm-agents content 
 		  contentID = contentID + "/" + integrationID;	// add the subfolder for the crm-agents content 
 
-			if(integrationID=="ADT") {
-			  landingPage =  "-guide-" + integrationID ;	//https://documentation.five9.com/de/Content/crm-agents/ADT/landing-crm-agents-guide-ADT.htm
-			} 
+			if (integrationID=="MSDynamics") {
+			  landingPage =  "-guide-MSD";	// crm-agents/MSDynamics/landing-crm-agents-guide-MSD.htm
+			} else if (integrationID=="salesforce") {
+			  landingPage =  "-guide-Salesforce" ;	// crm-agents/salesforce/landing-crm-agents-guide-Salesforce.htm
+			} else  {
+			  landingPage =  "-guide-" + integrationID ;	// crm-agents/ADT/landing-crm-agents-guide-ADT.htm
+			}
+			
 		}
 
 
