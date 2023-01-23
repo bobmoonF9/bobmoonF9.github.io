@@ -56,9 +56,9 @@ function use_lang() {					// on change to the language drop down
 		
 		//overrides for testing
 		// var url = "https://documentation.five9.com/de/crm-agents/ADT/morefolders/test/_ch-preparing-your-station.htm";
-		
-		var url = "https://documentation.five9.com/de/crm-agents/ADT/softphone/preparing-your-station.htm" ;
-		// var url = "https://documentation.five9.com/de/crm-agents/NetSuite/engagement/_ch-processing-digital-engagement-interactions.htm";
+		// var url = "https://documentation.five9.com/de/crm-agents/ADT/softphone/preparing-your-station.htm" ;
+		var url = "https://documentation.five9.com/de/crm-agents/NetSuite/engagement/_ch-processing-digital-engagement-interactions.htm";
+		// var url = "https://documentation.five9.com/de/Content/agent-desktop-plus/using-adp/customizing-station/sound-alert-settings.htm";
 		
 		curLang = "de";											// for testing, always use de
 		lang = "de";
@@ -89,7 +89,7 @@ function use_lang() {					// on change to the language drop down
 
 		if(lang == "de") {								// check the content ID against the defined languages for german
 			if(de_langpairs.indexOf(contentID) +1) {	// if the contentID matches a language pair, add the project landing page
-				alert ("grab content id = " + contentID.slice(0,contentID.search("/") ) );
+				// alert ("grab content id = " + contentID.slice(0,contentID.search("/") ) );
 				url = rootURL + lang + "/Content/" + contentID + "/landing-" + contentID.slice(0,contentID.search("/") ) + landingPage + ".htm";
 				// url = rootURL + "/" + contentID + "/landing-" + contentID.substring(0,integrationID.length) + ".htm";
 			} else {									// else route to the German landing page 
