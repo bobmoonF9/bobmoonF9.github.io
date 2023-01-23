@@ -85,10 +85,7 @@ function use_lang() {					// on change to the language drop down
 		if(lang == "de") {								// check the content ID against the defined languages for german
 			if(de_langpairs.indexOf(contentID) +1) {	// if the contentID matches a language pair, add the project landing page
 				alert ("grab content id = " + contentID.slice(0,contentID.search("/") ) );
-				
-				url = rootURL + lang + "/" + contentID + "/landing-" + contentID.slice(0,contentID.search("/") ) + ".htm";
-				alert ("root URL = " + rootURL );
-				
+				url = rootURL + lang + "/" + contentID + "/landing-" + contentID.slice(0,contentID.search("/") ) + landingPage + ".htm";
 				// url = rootURL + "/" + contentID + "/landing-" + contentID.substring(0,integrationID.length) + ".htm";
 			} else {									// else route to the German landing page 
 				url = rootURL + lang + "/" + "Default.htm";
@@ -99,6 +96,7 @@ function use_lang() {					// on change to the language drop down
 
 
 		url = rootURL + lang + "/" + contentID + "/landing-" + contentID.slice(0,contentID.search("/") ) + ".htm" ;   // combine elements to make the landing page URL
-		window.location = url;
+		// window.location = url;
+		alert ("URL = " + url ); 
 	}
 }
