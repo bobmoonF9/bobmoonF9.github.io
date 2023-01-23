@@ -90,15 +90,16 @@ function use_lang() {					// on change to the language drop down
 			} else  {
 			  landingPage =  "-guide-" + integrationID ;	// crm-agents/ADT/landing-crm-agents-guide-ADT.htm 
 			}
+		  landingPage = "landing-" + contentID.slice(0,contentID.search("/") ) + landingPage ;	
 		} else {
-			landingPage =  "" ;	// set landing page empty
+		  landingPage =  "landing-" + contentID ;	// 
 		}
 
 
 		if(lang == "de") {								// check the content ID against the defined languages for german
 			if(de_langpairs.indexOf(contentID) +1) {	// if the contentID matches a language pair, add the project landing page
 				// alert ("grab content id = " + contentID.slice(0,contentID.search("/") ) );
-				url = rootURL + lang + "/Content/" + contentID + "/landing-" + contentID.slice(0,contentID.search("/") ) + landingPage + ".htm";
+				url = rootURL + lang + "/Content/" + contentID + landingPage + ".htm";
 				// url = rootURL + "/" + contentID + "/landing-" + contentID.substring(0,integrationID.length) + ".htm";
 			} else {									// else route to the German landing page 
 				url = rootURL + lang + "/" + "Default.htm";
