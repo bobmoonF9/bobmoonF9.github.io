@@ -55,7 +55,7 @@ function use_lang() {					// on change to the language drop down
 		var url = window.location.toString();					// set the url variable to current path	
 		
 		//overrides for testing
-		var url = "https://documentation.five9.com/de/crm-agents/ADT/morefolders/_ch-preparing-your-station.htm";
+		var url = "https://documentation.five9.com/de/crm-agents/ADT/morefolders/test/_ch-preparing-your-station.htm";
 		// https://documentation.five9.com/de/Content/crm-agents/ADT/softphone/preparing-your-station.htm
 		curLang = "de";											// for testing, always use de
 		lang = "de";
