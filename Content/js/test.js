@@ -90,7 +90,8 @@ function use_lang() {					// on change to the language drop down
 			} else  {
 			  landingPage =  "-guide-" + integrationID ;	// crm-agents/ADT/landing-crm-agents-guide-ADT.htm 
 			}
-			
+		} else {
+			landingPage =  "" ;	// set landing page empty
 		}
 
 
