@@ -81,7 +81,7 @@ function use_lang() {					// on change to the language drop down
 		  contentID = contentID + "/" + integrationID;	// add the subfolder for the crm-agents content 
 
 			if(integrationID=="ADT") {
-			  landingPage =  "-guide-ADT";	//https://documentation.five9.com/de/Content/crm-agents/ADT/landing-crm-agents-guide-ADT.htm
+			  landingPage =  "-guide-" + integrationID ;	//https://documentation.five9.com/de/Content/crm-agents/ADT/landing-crm-agents-guide-ADT.htm
 			} 
 		}
 
