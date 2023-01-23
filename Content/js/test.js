@@ -6,7 +6,7 @@
 // supported languages
 var langs = [ 'en-us', 'fr-ca', 'de' ];
 var frca_langpairs = [ 'agent-desktop-plus', 'supervisor-plus', 'technical-reqs' ];
-var de_langpairs = [ 'agent-desktop-plus', 'supervisor-plus', 'crm-agents/ADT' ];
+var de_langpairs = [ 'agent-desktop-plus', 'supervisor-plus', 'crm-agents/ADT', 'crm-agents/NetSuite', 'crm-agents/MSDynamics' ];
 
 
 
