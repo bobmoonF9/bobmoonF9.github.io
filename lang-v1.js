@@ -49,7 +49,7 @@ function use_lang() {					// on change to the language drop down
 
 	var filename = path.substring(path.lastIndexOf('/') + 1); 	// sets current topic file name, not used in the current script
 	
-	if (path.indexOf('/' + lang + '/') == -1) {				// If the current path doesn't include the language picked in the drop-down...
+	if (path.indexOf('/' + lang + '/') == -1) {				// what is the logic here?
 		var url = window.location.toString();					// set the url variable to current path	
 		
 		//overrides for testing
@@ -58,10 +58,10 @@ function use_lang() {					// on change to the language drop down
 		//var url = "https://documentation.five9.com/de/crm-agents/NetSuite/engagement/_ch-processing-digital-engagement-interactions.htm";
 		// var url = "https://documentation.five9.com/de/crm-agents/MSDynamics/engagement/_ch-processing-digital-engagement-interactions.htm"; 
 		// var url = "https://documentation.five9.com/de/crm-agents/salesforce/engagement/_ch-processing-digital-engagement-interactions.htm";
-		var url = "https://documentation.five9.com/fr-ca/agent-desktop-plus/using-adp/customizing-station/sound-alert-settings.htm";
+		//var url = "https://documentation.five9.com/de/agent-desktop-plus/using-adp/customizing-station/sound-alert-settings.htm";
 		
-		curLang = "fr-ca";											// for testing, always use de
-		lang = "de";
+		// curLang = "de";											// for testing, always use de
+		// lang = "de";
 		
 		rootURL = url.slice(url.StartsWith, url.search(curLang) ); 	// grab the URL up to the language of the current page
 		subfolders = url.substring(rootURL.length + curLang.length + 1,url.lastIndexOf("/")); //grab the folders in the URL between the rootURL and the /topic-filename.htm
@@ -73,29 +73,12 @@ function use_lang() {					// on change to the language drop down
 			contentID = subfolders.substring(0,subfolders.indexOf("/")) ;   // else chop the subfolders after the first slash to get the repo
 		}
 
-alert ("contentID =  " + contentID + "\n rootURL = " + rootURL + "\n url = " + url + "\n curLang = " + curLang );  
-
-	
-		for (var i = 0; i < de_langpairs.length; i++) {
-		if (url.search(de_langpairs[i])  != -1) {
-			if (contentID = "agent-desktop-plus") {
-				landingPage = "hello world";			// set current language -- IS THIS DUPLICATING LINE 23?
-			} else if (contentID = "supervisor-plus") {
-				landingPage = "hello world";
-			}
-		}
-		}
-
-
-
 		if (contentID=="crm-agents") {	// process the crm-agents and crm-admin content which has a different structure
 		  integrationID = subfolders.substring(contentID.length + 1); 		// set integrationID to the first level of the subfolders
 		  integrationID = integrationID.substring(0,integrationID.indexOf("/")); // chop off extra subfolders
 		  //alert ("includes a crm subfolder = " + integrationID );  
 		  // integrationPath = contentID + "/" + integrationID;	// add the subfolder for the crm-agents content 
 		  contentID = contentID + "/" + integrationID;	// add the subfolder for the crm-agents content 
-
-alert ("integrationID =  " + integrationID + "contentID =  " + contentID + "\n rootURL = " + rootURL + "\n curLang = " + curLang );  
 
 			if (integrationID=="MSDynamics") {			// set the landing page for each integration 
 			  landingPage =  "-guide-MSD";	// crm-agents/MSDynamics/landing-crm-agents-guide-MSD.htm
