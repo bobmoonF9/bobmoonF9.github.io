@@ -46,9 +46,7 @@ function use_lang() {					// on change to the language drop down
 			curLang = langs[i];			// set current language -- IS THIS DUPLICATING LINE 23?
 		}
 	}
-
-	var filename = path.substring(path.lastIndexOf('/') + 1); 	// sets current topic file name, not used in the current script
-	
+		
 	if (path.indexOf('/' + lang + '/') == -1) {				// If the current path doesn't include the language picked in the drop-down...
 		var url = window.location.toString();					// set the url variable to current path	
 		
@@ -57,88 +55,80 @@ function use_lang() {					// on change to the language drop down
 		// var url = "https://documentation.five9.com/de/crm-agents/ADT/softphone/preparing-your-station.htm" ;
 		//var url = "https://documentation.five9.com/de/crm-agents/NetSuite/engagement/_ch-processing-digital-engagement-interactions.htm";
 		// var url = "https://documentation.five9.com/de/crm-agents/MSDynamics/engagement/_ch-processing-digital-engagement-interactions.htm"; 
-		 var url = "https://documentation.five9.com/de/crm-agents/salesforce/engagement/_ch-processing-digital-engagement-interactions.htm";
-		//var url = "https://documentation.five9.com/fr-ca/agent-desktop-plus/using-adp/customizing-station/sound-alert-settings.htm";
+		// var url = "https://documentation.five9.com/de/crm-agents/salesforce/engagement/_ch-processing-digital-engagement-interactions.htm";
+		var url = "https://documentation.five9.com/fr-ca/agenzt-desktop-plus/using-adp/customizing-station/sound-alert-settings.htm";
 		
 		curLang = "de";											// for testing, always use de
-		lang = "de";
+		lang = "fr-ca";
 		
 		rootURL = url.slice(url.StartsWith, url.search(curLang) ); 	// grab the URL up to the language of the current page
-		subfolders = url.substring(rootURL.length + curLang.length + 1,url.lastIndexOf("/")); //grab the folders in the URL between the rootURL and the /topic-filename.htm
+		subfolders = url.substring(rootURL.length + curLang.length + 1); // grab everything else
+		
+		//subfolders = url.substring(rootURL.length + curLang.length + 1,url.lastIndexOf("/")); //grab the folders in the URL between the rootURL and the /topic-filename.htm
 		
 		//check if the subfolders var has a slash, so the page is nested in subfolders under the guide level
-		if (subfolders.indexOf('/') == -1) {	
-			contentID = subfolders; 										// if no slash for subfolders, set the variable 
-		} else {
-			contentID = subfolders.substring(0,subfolders.indexOf("/")) ;   // else chop the subfolders after the first slash to get the repo
-		}
+		// if (subfolders.indexOf('/') == -1) {	
+			// contentID = subfolders; 										// if no slash for subfolders, set the variable 
+		// } else {
+			// contentID = subfolders.substring(0,subfolders.indexOf("/")) ;   // else chop the subfolders after the first slash to get the repo
+		// }
 
-alert ("contentID =  " + contentID + "\n rootURL = " + rootURL + "\n url = " + url + "\n curLang = " + curLang );  
+alert ("rootURL = " + rootURL + "\n url = " + url + "\n curLang = " + curLang + "\n subfolders = " + subfolders );  
 
-	
-		for (var i = 0; i < de_langpairs.length; i++) {
-		if (url.search(de_langpairs[i])  != -1) {
-			if (contentID == "agent-desktop-plus") {
-				landingPage = "hello ADP";			// set current language -- IS THIS DUPLICATING LINE 23?
-			} else if (contentID == "supervisor-plus") {
-				landingPage = "hello SUP";
-			} else if (contentID == "crm-agents") {
-				landingPage = "hello SUP";
-			} else {
-				
+		if (lang == "de") {								// check the content ID against the defined languages for german
+			for (var i = 0; i < de_langpairs.length; i++) {
+				if (url.search(de_langpairs[i])  != -1) {
+					if (de_langpairs[i]== "agent-desktop-plus") {
+					// if (contentID == "agent-desktop-plus") {
+						landingPage = "-guide-agent-desktop-plus";			// set current language -- IS THIS DUPLICATING LINE 23?
+					} else if (de_langpairs[i] == "supervisor-plus") {
+						landingPage = "-guide-supervisors-plus";
+					} else if (de_langpairs[i] == "crm-agents/ADT") {
+						landingPage = "-guide-ADT";
+					} else if (de_langpairs[i] == "crm-agents/NetSuite") {
+						landingPage = "-guide-NetSuite";
+					} else if (de_langpairs[i] == "crm-agents/MSDynamics") {
+						landingPage = "-guide-MSD";
+					} else if (de_langpairs[i] == "crm-agents/salesforce") {
+						landingPage = "-guide-Salesforce";
+					} else if (de_langpairs[i] == "crm-agents/salesforce") {
+						landingPage = "hello SUP";
+								
+					} else {
+						
+					}
+				}
 			}
-		}
-		}
-
-
-
-		if (contentID=="crm-agents") {	// process the crm-agents and crm-admin content which has a different structure
-		  alert ("subfolders =  " + subfolders + "\n integration ID = " + subfolders.substring(contentID.length + 1) + "\n\n integration path = " + subfolders.slice(contentID.length+1,subfolders.indexOf("/"),contentID.length+1) );  
-		  
-		  
-		  integrationPath = contentID.length + 1;
-		  integrationPath = subfolders.indexOf(("/"),contentID.length+1);
-		  
-		  integrationPath = subfolders.slice(contentID.length + 1,subfolders.indexOf(("/"),contentID.length+1)); // chop off extra subfolders
-		  
-		  integrationPath = subfolders.slice(11,subfolders.indexOf("/"),contentID.length+1);
-		  integrationPath = contentID + "/" + subfolders.slice(contentID.length + 1,subfolders.indexOf(("/"),contentID.length+1)); // chop off extra subfolders
-		  
-		  integrationID = subfolders.substring(contentID.length + 1); 		// set integrationID to the first level of the subfolders
-		  
-		  
-		  
-		  
-		  //integrationID = integrationID.substring(0,integrationID.indexOf("/")); // chop off extra subfolders
-		  
-		  //alert ("includes a crm subfolder = " + integrationID );  
-		  // integrationPath = contentID + "/" + integrationID;	// add the subfolder for the crm-agents content 
-		  contentID = contentID + "/" + integrationID;	// add the subfolder for the crm-agents content 
-
-alert ("integrationID =  " + integrationID + "contentID =  " + contentID + "\n rootURL = " + rootURL + "\n curLang = " + curLang );  
-
-			if (integrationID=="MSDynamics") {			// set the landing page for each integration 
-			  landingPage =  "-guide-MSD";	// crm-agents/MSDynamics/landing-crm-agents-guide-MSD.htm
-			} else if (integrationID=="salesforce") {
-			  landingPage =  "-guide-Salesforce" ;	// crm-agents/salesforce/landing-crm-agents-guide-Salesforce.htm
-			} else  {
-			  landingPage =  "-guide-" + integrationID ;	// crm-agents/ADT/landing-crm-agents-guide-ADT.htm 
+			if (landingPage != -1) {  // if url isn't in language pair, set to the language home page
+				landingPage = "test";
+			}	
+		} else if (lang == "fr-ca") {
+			for (var i = 0; i < de_langpairs.length; i++) {
+				if (url.search(de_langpairs[i])  != -1) {
+					if (de_langpairs[i]== "agent-desktop-plus") {
+					// if (contentID == "agent-desktop-plus") {
+						landingPage = "-guide-agent-desktop-plus";			// set current language -- IS THIS DUPLICATING LINE 23?
+					} else if (de_langpairs[i] == "supervisor-plus") {
+						landingPage = "-guide-supervisors-plus";
+					} else if (de_langpairs[i] == "crm-agents/ADT") {
+						landingPage = "-guide-ADT";
+					} else if (de_langpairs[i] == "crm-agents/NetSuite") {
+						landingPage = "-guide-NetSuite";
+					} else if (de_langpairs[i] == "crm-agents/MSDynamics") {
+						landingPage = "-guide-MSD";
+					} else if (de_langpairs[i] == "crm-agents/salesforce") {
+						landingPage = "-guide-Salesforce";
+					} else if (de_langpairs[i] == "crm-agents/salesforce") {
+						landingPage = "hello SUP";
+								
+					} else {
+						
+					}
+				}
 			}
-		  landingPage = "/landing-" + contentID.slice(0,contentID.search("/") ) + landingPage ;	
-		} else {
-		  landingPage =  "/landing-" + contentID ;	// 
-		}
-
-
-		if(lang == "de") {								// check the content ID against the defined languages for german
-			if(de_langpairs.indexOf(contentID) +1) {	// if the contentID matches a language pair, add the project landing page
-				// alert ("grab content id = " + contentID.slice(0,contentID.search("/") ) );
-				url = rootURL + lang + "/Content/" + contentID + landingPage + ".htm";
-				// url = rootURL + "/" + contentID + "/landing-" + contentID.substring(0,integrationID.length) + ".htm";
-			} else {									// else route to the German landing page 
-				url = rootURL + lang + "/" + "Default.htm";
-			}
-		  alert ("URL = " + url ); 
+			if (landingPage != -1) {  // if url isn't in language pair, set to the language home page
+				landingPage = "test";
+			}			
 		}
 
 
