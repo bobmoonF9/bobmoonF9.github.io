@@ -57,10 +57,10 @@ function use_lang() {					// on change to the language drop down
 		// var url = "https://documentation.five9.com/de/crm-agents/ADT/softphone/preparing-your-station.htm" ;
 		//var url = "https://documentation.five9.com/de/crm-agents/NetSuite/engagement/_ch-processing-digital-engagement-interactions.htm";
 		// var url = "https://documentation.five9.com/de/crm-agents/MSDynamics/engagement/_ch-processing-digital-engagement-interactions.htm"; 
-		// var url = "https://documentation.five9.com/de/crm-agents/salesforce/engagement/_ch-processing-digital-engagement-interactions.htm";
-		var url = "https://documentation.five9.com/fr-ca/agent-desktop-plus/using-adp/customizing-station/sound-alert-settings.htm";
+		 var url = "https://documentation.five9.com/de/crm-agents/salesforce/engagement/_ch-processing-digital-engagement-interactions.htm";
+		//var url = "https://documentation.five9.com/fr-ca/agent-desktop-plus/using-adp/customizing-station/sound-alert-settings.htm";
 		
-		curLang = "fr-ca";											// for testing, always use de
+		curLang = "de";											// for testing, always use de
 		lang = "de";
 		
 		rootURL = url.slice(url.StartsWith, url.search(curLang) ); 	// grab the URL up to the language of the current page
@@ -78,10 +78,14 @@ alert ("contentID =  " + contentID + "\n rootURL = " + rootURL + "\n url = " + u
 	
 		for (var i = 0; i < de_langpairs.length; i++) {
 		if (url.search(de_langpairs[i])  != -1) {
-			if (contentID = "agent-desktop-plus") {
-				landingPage = "hello world";			// set current language -- IS THIS DUPLICATING LINE 23?
-			} else if (contentID = "supervisor-plus") {
-				landingPage = "hello world";
+			if (contentID == "agent-desktop-plus") {
+				landingPage = "hello ADP";			// set current language -- IS THIS DUPLICATING LINE 23?
+			} else if (contentID == "supervisor-plus") {
+				landingPage = "hello SUP";
+			} else if (contentID == "crm-agents") {
+				landingPage = "hello SUP";
+			} else {
+				
 			}
 		}
 		}
@@ -89,8 +93,24 @@ alert ("contentID =  " + contentID + "\n rootURL = " + rootURL + "\n url = " + u
 
 
 		if (contentID=="crm-agents") {	// process the crm-agents and crm-admin content which has a different structure
+		  alert ("subfolders =  " + subfolders + "\n integration ID = " + subfolders.substring(contentID.length + 1) + "\n\n integration path = " + subfolders.slice(contentID.length+1,subfolders.indexOf("/"),contentID.length+1) );  
+		  
+		  
+		  integrationPath = contentID.length + 1;
+		  integrationPath = subfolders.indexOf(("/"),contentID.length+1);
+		  
+		  integrationPath = subfolders.slice(contentID.length + 1,subfolders.indexOf(("/"),contentID.length+1)); // chop off extra subfolders
+		  
+		  integrationPath = subfolders.slice(11,subfolders.indexOf("/"),contentID.length+1);
+		  integrationPath = contentID + "/" + subfolders.slice(contentID.length + 1,subfolders.indexOf(("/"),contentID.length+1)); // chop off extra subfolders
+		  
 		  integrationID = subfolders.substring(contentID.length + 1); 		// set integrationID to the first level of the subfolders
-		  integrationID = integrationID.substring(0,integrationID.indexOf("/")); // chop off extra subfolders
+		  
+		  
+		  
+		  
+		  //integrationID = integrationID.substring(0,integrationID.indexOf("/")); // chop off extra subfolders
+		  
 		  //alert ("includes a crm subfolder = " + integrationID );  
 		  // integrationPath = contentID + "/" + integrationID;	// add the subfolder for the crm-agents content 
 		  contentID = contentID + "/" + integrationID;	// add the subfolder for the crm-agents content 
