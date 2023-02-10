@@ -55,11 +55,12 @@ function use_lang() {					// on change to the language drop down
 		// var url = "https://documentation.five9.com/de/crm-agents/ADT/softphone/preparing-your-station.htm" ;
 		//var url = "https://documentation.five9.com/de/crm-agents/NetSuite/engagement/_ch-processing-digital-engagement-interactions.htm";
 		// var url = "https://documentation.five9.com/de/crm-agents/MSDynamics/engagement/_ch-processing-digital-engagement-interactions.htm"; 
+		 var url = "https://documentation.five9.com/de/crm-agents/salesforce/engagement/_ch-processing-digital-engagement-interactions.htm";
+		//var url = "https://documentation.five9.com/fr-ca/agenzt-desktop-plus/using-adp/customizing-station/sound-alert-settings.htm";
 		// var url = "https://documentation.five9.com/de/crm-agents/salesforce/engagement/_ch-processing-digital-engagement-interactions.htm";
-		var url = "https://documentation.five9.com/fr-ca/agenzt-desktop-plus/using-adp/customizing-station/sound-alert-settings.htm";
 		
 		curLang = "de";											// for testing, always use de
-		lang = "fr-ca";
+		lang = "de";
 		
 		rootURL = url.slice(url.StartsWith, url.search(curLang) ); 	// grab the URL up to the language of the current page
 		subfolders = url.substring(rootURL.length + curLang.length + 1); // grab everything else
@@ -103,22 +104,22 @@ alert ("rootURL = " + rootURL + "\n url = " + url + "\n curLang = " + curLang + 
 				landingPage = "test";
 			}	
 		} else if (lang == "fr-ca") {
-			for (var i = 0; i < de_langpairs.length; i++) {
-				if (url.search(de_langpairs[i])  != -1) {
-					if (de_langpairs[i]== "agent-desktop-plus") {
+			for (var i = 0; i < frca_langpairs.length; i++) {
+				if (url.search(frca_langpairs[i])  != -1) {
+					if (frca_langpairs[i]== "agent-desktop-plus") {
 					// if (contentID == "agent-desktop-plus") {
 						landingPage = "-guide-agent-desktop-plus";			// set current language -- IS THIS DUPLICATING LINE 23?
-					} else if (de_langpairs[i] == "supervisor-plus") {
+					} else if (frca_langpairs[i] == "supervisor-plus") {
 						landingPage = "-guide-supervisors-plus";
-					} else if (de_langpairs[i] == "crm-agents/ADT") {
+					} else if (frca_langpairs[i] == "crm-agents/ADT") {
 						landingPage = "-guide-ADT";
-					} else if (de_langpairs[i] == "crm-agents/NetSuite") {
+					} else if (frca_langpairs[i] == "crm-agents/NetSuite") {
 						landingPage = "-guide-NetSuite";
-					} else if (de_langpairs[i] == "crm-agents/MSDynamics") {
+					} else if (frca_langpairs[i] == "crm-agents/MSDynamics") {
 						landingPage = "-guide-MSD";
-					} else if (de_langpairs[i] == "crm-agents/salesforce") {
+					} else if (frca_langpairs[i] == "crm-agents/salesforce") {
 						landingPage = "-guide-Salesforce";
-					} else if (de_langpairs[i] == "crm-agents/test") {
+					} else if (frca_langpairs[i] == "crm-agents/test") {
 						landingPage = "hello SUP";
 								
 					} else {
