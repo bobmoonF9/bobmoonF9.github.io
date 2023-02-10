@@ -76,11 +76,11 @@ function use_lang() {					// on change to the language drop down
 alert ("rootURL = " + rootURL + "\n url = " + url + "\n curLang = " + curLang + "\n subfolders = " + subfolders );  
 
 		if (lang == "de") {								// check the content ID against the defined languages for german
-			for (var i = 0; i < de_langpairs.length; i++) {
-				if (url.search(de_langpairs[i])  != -1) {
+			for (var i = 0; i < de_langpairs.length; i++) {					// cycle through defind pairs
+				if (url.search(de_langpairs[i])  != -1) {					// if the repo id is found, then set the landing page 
 					if (de_langpairs[i]== "agent-desktop-plus") {
 					// if (contentID == "agent-desktop-plus") {
-						landingPage = "-guide-agent-desktop-plus";			// set current language -- IS THIS DUPLICATING LINE 23?
+						landingPage = "-guide-agent-desktop-plus";			
 					} else if (de_langpairs[i] == "supervisor-plus") {
 						landingPage = "-guide-supervisors-plus";
 					} else if (de_langpairs[i] == "crm-agents/ADT") {
@@ -91,7 +91,7 @@ alert ("rootURL = " + rootURL + "\n url = " + url + "\n curLang = " + curLang + 
 						landingPage = "-guide-MSD";
 					} else if (de_langpairs[i] == "crm-agents/salesforce") {
 						landingPage = "-guide-Salesforce";
-					} else if (de_langpairs[i] == "crm-agents/salesforce") {
+					} else if (de_langpairs[i] == "crm-agents/test") {
 						landingPage = "hello SUP";
 								
 					} else {
@@ -99,7 +99,7 @@ alert ("rootURL = " + rootURL + "\n url = " + url + "\n curLang = " + curLang + 
 					}
 				}
 			}
-			if (landingPage != -1) {  // if url isn't in language pair, set to the language home page
+			if (landingPage != -1) {  // if url isn't in the set of language pairs, set landing page to the language home page
 				landingPage = "test";
 			}	
 		} else if (lang == "fr-ca") {
@@ -118,7 +118,7 @@ alert ("rootURL = " + rootURL + "\n url = " + url + "\n curLang = " + curLang + 
 						landingPage = "-guide-MSD";
 					} else if (de_langpairs[i] == "crm-agents/salesforce") {
 						landingPage = "-guide-Salesforce";
-					} else if (de_langpairs[i] == "crm-agents/salesforce") {
+					} else if (de_langpairs[i] == "crm-agents/test") {
 						landingPage = "hello SUP";
 								
 					} else {
