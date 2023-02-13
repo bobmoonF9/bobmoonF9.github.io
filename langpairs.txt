@@ -1,0 +1,102 @@
+
+FRENCH
+
+					   'agent-desktop-plus', 
+					   'basic-admin', 
+					   'campaign-admin', 
+					   'digital-engagement', 
+					   'ivr-admin', 
+					   'crm-admins/Salesforce', 
+					   'crm-admins/ADT', 
+					   'crm-agents/Salesforce', 
+					   'crm-agents/ADT', 
+					   'privacy-compliance', 
+					   'reports-dashboards', 
+					   'supervisor-plus', 
+					   'technical-reqs', 
+					   'uc-adapters' 
+
+
+
+basic-admin/landing-basic-admin.htm
+campaign-admin/landing-campaign-admin.htm
+digital-engagement/landing-digital-engagement.htm
+ivr-admin/landing-ivr-admin.htm
+uc-adapters/landing-uc-adapters-admin-gd.htm
+supervisor-plus/landing-supervisor-plus.htm
+agent-desktop-plus/landing-agent-desktop-plus.htm
+reports-dashboards/landing-reports-dashboards.htm
+crm-admins/Salesforce/landing-crm-admins-Salesforce.htm
+crm-admins/ADT/landing-crm-admins-ADT.htm
+crm-agents/ADT/landing-crm-agents-guide-ADT.htm
+crm-agents/Salesforce/landing-crm-agents-guide-Salesforce.htm
+technical-reqs/landing-technical-reqs.htm
+privacy-compliance/landing-privacy-compliance
+
+
+					} else if (frca_langpairs[i] == "basic-admin") {
+						landingPage = "basic-admin/landing-basic-admin.htm";
+					} else if (frca_langpairs[i] == "campaign-admin") {
+						landingPage = "campaign-admin/landing-campaign-admin.htm";
+					} else if (frca_langpairs[i] == "digital-engagement") {
+						landingPage = "digital-engagement/landing-digital-engagement.htm";
+					} else if (frca_langpairs[i] == "ivr-admin") {
+						landingPage = "ivr-admin/landing-ivr-admin.htm";
+					} else if (frca_langpairs[i] == "crm-admins/ADT") {
+						landingPage = "crm-admins/ADT/landing-crm-admins-ADT.htm";
+					} else if (frca_langpairs[i] == "crm-admins/Salesforce") {
+						landingPage = "crm-admins/Salesforce/landing-crm-admins-Salesforce.htm";
+					} else if (frca_langpairs[i] == "crm-agents/ADT") {
+						landingPage = "crm-agents/ADT/landing-crm-agents-guide-ADT.htm";
+					} else if (frca_langpairs[i] == "crm-agents/Salesforce") {
+						landingPage = "crm-agents/Salesforce/landing-crm-agents-guide-Salesforce.htm";
+					} else if (frca_langpairs[i] == "privacy-compliance") {
+						landingPage = "supervisor-plus/landing-supervisor-plus.htm";
+					} else if (frca_langpairs[i] == "reports-dashboards") {
+						landingPage = "reports-dashboards/landing-reports-dashboards.htm";
+					} else if (frca_langpairs[i] == "supervisor-plus") {
+						landingPage = "supervisor-plus/landing-supervisor-plus.htm";
+					} else if (frca_langpairs[i] == "technical-reqs") {
+						landingPage = "technical-reqs/landing-technical-reqs.htm";
+					} else if (frca_langpairs[i] == "uc-adapters") {
+						landingPage = "uc-adapters/landing-uc-adapters-admin-gd.htm";
+
+
+
+
+GERMAN
+
+					   'agent-desktop-plus', 
+					   'crm-agents/ADT', 
+					   'crm-agents/MSDynamics', 
+					   'crm-agents/NetSuite', 
+					   'crm-agents/Oracle', 
+					   'crm-agents/Salesforce', 
+					   'crm-agents/ServiceNow', 
+					   'crm-agents/Zendesk', 
+					   'supervisor-plus', 
+
+crm-agents/MSDynamics/landing-crm-agents-guide-MSD.htm
+crm-agents/NetSuite/landing-crm-agents-guide-NetSuite.htm
+crm-agents/Oracle/landing-crm-agents-guide-Oracle.htm
+crm-agents/ServiceNow/landing-crm-agents-guide-ServiceNow.htm
+crm-agents/Zendesk/landing-crm-agents-guide-Zendesk.htm
+
+					} else if (de_langpairs[i] == "crm-agents/ADT") {
+						landingPage = "crm-agents/ADT/landing-crm-agents-guide-ADT.htm";
+					} else if (de_langpairs[i] == "crm-agents/MSDynamics") {
+						landingPage = "crm-agents/MSDynamics/landing-crm-agents-guide-MSD.htm";
+					} else if (de_langpairs[i] == "crm-agents/NetSuite") {
+						landingPage = "crm-agents/NetSuite/landing-crm-agents-guide-NetSuite.htm";
+					} else if (de_langpairs[i] == "crm-agents/Oracle") {
+						landingPage = "crm-agents/Oracle/landing-crm-agents-guide-Oracle.htm";
+					} else if (de_langpairs[i] == "crm-agents/Salesforce") {
+						landingPage = "crm-agents/Salesforce/landing-crm-agents-guide-Salesforce.htm";
+					} else if (de_langpairs[i] == "crm-agents/ServiceNow") {
+						landingPage = "crm-agents/ServiceNow/landing-crm-agents-guide-ServiceNow.htm";
+					} else if (de_langpairs[i] == "crm-agents/Zendesk") {
+						landingPage = "crm-agents/Zendesk/landing-crm-agents-guide-Zendesk.htm";
+					} else if (de_langpairs[i] == "supervisor-plus") {
+						landingPage = "supervisor-plus/landing-supervisor-plus.htm";
+
+
