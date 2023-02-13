@@ -30,11 +30,7 @@ var path = location.pathname;
 var curLang = "en-us";
 var lang;
 var rootURL;			// the root portion of the URL up to the language
-var subfolders;			// the portions of the URL between the language and the topic file name    -NOT USED
-var contentID;			// the portion of the URL relating to the content repo
-var integrationID;		// the crm integration indicator from the URL
-var integrationPath; 	// the path for crm integrations (contentID/integrationID)   -NOT USED
-var landingPage; 		// the landing page topic for projects that don't follow the naming convention
+var landingPage; 		// the landing page topic path
 
 $(document).ready(function() {			// on page load, find which language folder is in the URL
 	for (var i = 0; i < langs.length; i++) {
