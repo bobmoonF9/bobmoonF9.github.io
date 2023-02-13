@@ -102,10 +102,10 @@ function use_lang() {					// on change to the language drop down
 		//var url = "https://documentation.five9.com/fr-ca/agent-desktop-plus/using-adp/customizing-station/sound-alert-settings.htm";
 		//var url = "https://documentation.five9.com/fr-ca/agenzt-desktop-plus/using-adp/customizing-station/sound-alert-settings.htm";
 
-		var url = "https://documentation.five9.com/en-us/crm-agents/ADT/using-adp/customizing-station/sound-alert-settings.htm";
+		var url = "https://documentation.five9.com/en-us/supervisor-plus/using-adp/customizing-station/sound-alert-settings.htm";
 		
 		
-		// curLang = "en-us";											// for testing, always use de
+		// curLang = "en-us";											// for testing, set the language 
 		// lang = "fr-ca";
 		
 		rootURL = url.slice(url.StartsWith, url.search(curLang) ); 	// grab the URL up to the language of the current page
@@ -120,7 +120,7 @@ function use_lang() {					// on change to the language drop down
 			// contentID = subfolders.substring(0,subfolders.indexOf("/")) ;   // else chop the subfolders after the first slash to get the repo
 		// }
 
-alert ("rootURL = " + rootURL + "\n url = " + url + "\n curLang = " + curLang + "\n subfolders = " + subfolders );  
+		// alert ("rootURL = " + rootURL + "\n url = " + url + "\n curLang = " + curLang + "\n subfolders = " + subfolders );  
 
 		if (lang == "de") {								// check the content ID against the defined languages for german
 			for (var i = 0; i < de_langpairs.length; i++) {					// cycle through defind pairs
@@ -197,8 +197,9 @@ alert ("rootURL = " + rootURL + "\n url = " + url + "\n curLang = " + curLang + 
 
 		url = rootURL + lang + "/Content/" + landingPage  ;   // combine elements to make the landing page URL
 		//url = rootURL + lang + "/" + contentID + "/landing-" + contentID.slice(0,contentID.search("/") ) + ".htm" ;   // combine elements to make the landing page URL
-		// window.location = url;
 		 alert ("URL = " + url ); 
+		 window.location = url;
+
 	}
 }	
 	
