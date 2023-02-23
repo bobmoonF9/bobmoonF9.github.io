@@ -60,6 +60,7 @@ function use_lang() {					// on change to the language drop down
 		}
 	}
 		
+	var filename = path.substring(path.lastIndexOf('/') + 1);
 	if (path.indexOf('/' + lang + '/') == -1) {				// If the current path doesn't include the language picked in the drop-down...
 		var url = window.location.toString();					// set the url variable to current path	
 		
