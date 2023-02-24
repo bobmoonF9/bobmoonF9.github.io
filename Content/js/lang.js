@@ -69,8 +69,8 @@ function use_lang() {					// on change to the language drop down
 		// curLang = "en-us";											
 		// lang = "fr-ca";
 		
-		//replace alphatest and betatest with en-us
-		url = url.replace("alphatest", "en-us");
+		
+		url = url.replace("alphatest", "en-us");		// replace alphatest and betatest with en-us so the URL is parsed correctly
 		url = url.replace("betatest", "en-us");
 		
 		rootURL = url.slice(url.StartsWith, url.search(curLang) ); 	// grab the URL up to the language of the current page
