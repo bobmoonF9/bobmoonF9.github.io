@@ -102,12 +102,17 @@ function use_lang() {					// on change to the language drop down
 		//var url = "https://documentation.five9.com/fr-ca/agent-desktop-plus/using-adp/customizing-station/sound-alert-settings.htm";
 		//var url = "https://documentation.five9.com/fr-ca/agenzt-desktop-plus/using-adp/customizing-station/sound-alert-settings.htm";
 
-		var url = "https://documentation.five9.com/en-us/supervisor-plus/using-adp/customizing-station/sound-alert-settings.htm";
+		// var url = "https://documentation.five9.com/en-us/supervisor-plus/using-adp/customizing-station/sound-alert-settings.htm";
 		
+		var url = "https://documentation.five9.com/alphatest/supervisor-plus/using-adp/customizing-station/sound-alert-settings.htm";
 		
 		// curLang = "en-us";											// for testing, set the language 
 		// lang = "fr-ca";
 		
+		//replace alphatest and betatest with en-us
+		url = url.replace("alphatest", "en-us");
+		url = url.replace("betatest", "en-us");
+				
 		rootURL = url.slice(url.StartsWith, url.search(curLang) ); 	// grab the URL up to the language of the current page
 		subfolders = url.substring(rootURL.length + curLang.length + 1); // grab everything else
 		

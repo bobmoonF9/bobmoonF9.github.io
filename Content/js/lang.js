@@ -65,9 +65,13 @@ function use_lang() {					// on change to the language drop down
 		var url = window.location.toString();					// set the url variable to current path	
 		
 		//override values for  testing
-		// var url = "https://documentation.five9.com/en-us/supervisor-plus/using-adp/customizing-station/sound-alert-settings.htm";
+		var url = "https://documentation.five9.com/alphatest/supervisor-plus/using-adp/customizing-station/sound-alert-settings.htm";
 		// curLang = "en-us";											
 		// lang = "fr-ca";
+		
+		//replace alphatest and betatest with en-us
+		url = url.replace("alphatest", "en-us");
+		url = url.replace("betatest", "en-us");
 		
 		rootURL = url.slice(url.StartsWith, url.search(curLang) ); 	// grab the URL up to the language of the current page
 		subfolders = url.substring(rootURL.length + curLang.length + 1); // grab everything else
