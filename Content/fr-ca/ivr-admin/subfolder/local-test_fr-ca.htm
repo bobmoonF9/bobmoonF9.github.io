@@ -24,6 +24,25 @@
 
 // supported languages - add the project portion of the URL here 
 var langs = [ 'en-us', 'fr-ca', 'de' ];
+var enus_langpairs = [ 'agent-desktop-plus', 
+					   'basic-admin', 
+					   'campaign-admin', 
+					   'digital-engagement', 
+					   'ivr-admin', 
+					   'crm-admins/Salesforce', 
+					   'crm-admins/ADT', 
+					   'crm-agents/Salesforce', 
+					   'crm-agents/ADT', 
+					   'crm-agents/MSDynamics', 
+					   'crm-agents/NetSuite', 
+					   'crm-agents/Oracle', 
+					   'crm-agents/ServiceNow', 
+					   'crm-agents/Zendesk', 					   
+					   'privacy-compliance', 
+					   'reports-dashboards', 
+					   'supervisor-plus', 
+					   'technical-reqs', 
+					   'uc-adapters' ];
 var frca_langpairs = [ 'agent-desktop-plus', 
 					   'basic-admin', 
 					   'campaign-admin', 
@@ -123,7 +142,7 @@ function use_lang() {					// on change to the language drop down
 		//var url = "https://documentation.five9.com/fr-ca/agent-desktop-plus/using-adp/customizing-station/sound-alert-settings.htm";
 		//var url = "https://documentation.five9.com/fr-ca/agenzt-desktop-plus/using-adp/customizing-station/sound-alert-settings.htm";
 
-		//var url = "https://documentation.five9.com/en-us/supervisor-plus/using-adp/customizing-station/sound-alert-settings.htm";
+		// var url = "https://documentation.five9.com/en-us/supervisor-plus/using-adp/customizing-station/sound-alert-settings.htm";
 		
 		 var url = "https://documentation.five9.com/fr-ca/supervisor-plus/using-adp/customizing-station/sound-alert-settings.htm";
 		
@@ -213,7 +232,57 @@ function use_lang() {					// on change to the language drop down
 						landingPage = "home.htm";
 					}
 				}
+			}	
+			} else if (lang == "en-us") {
+			for (var i = 0; i < enus_langpairs.length; i++) {
+				if (url.search(enus_langpairs[i])  != -1) {
+					if (enus_langpairs[i]== "agent-desktop-plus") {
+						landingPage = lpADP;
+					} else if (enus_langpairs[i] == "basic-admin") {
+						landingPage = lpBasic;
+					} else if (enus_langpairs[i] == "campaign-admin") {
+						landingPage = lpCampaign;
+					} else if (enus_langpairs[i] == "digital-engagement") {
+						landingPage = lpDigital;
+					} else if (enus_langpairs[i] == "ivr-admin") {
+						landingPage = lpIVR;
+					} else if (enus_langpairs[i] == "crm-admins/ADT") {
+						landingPage = lpADTAdmin;
+					} else if (enus_langpairs[i] == "crm-admins/Salesforce") {
+						landingPage = lpSFAdmin;
+					} else if (enus_langpairs[i] == "crm-agents/ADT") {
+						landingPage = lpADTAgent;
+					} else if (enus_langpairs[i] == "crm-agents/Salesforce") {
+						landingPage = lpSFAgent;
+					} else if (enus_langpairs[i] == "crm-agents/MSDynamics") {
+						landingPage = lpMSDAgent;
+					} else if (enus_langpairs[i] == "crm-agents/NetSuite") {
+						landingPage = lpNetsuiteAgent;
+					} else if (enus_langpairs[i] == "crm-agents/Oracle") {
+						landingPage = lpOracleAgent;
+					} else if (enus_langpairs[i] == "crm-agents/Salesforce") {
+						landingPage = lpSFAgent;
+					} else if (enus_langpairs[i] == "crm-agents/ServiceNow") {
+						landingPage = lpSNOWAgent;
+					} else if (enus_langpairs[i] == "crm-agents/Zendesk") {
+						landingPage = lpZendeskAgent;
+					} else if (enus_langpairs[i] == "privacy-compliance") {
+						landingPage = lpPrivacy;	// WRONG
+					} else if (enus_langpairs[i] == "reports-dashboards") {
+						landingPage = lpReports;
+					} else if (enus_langpairs[i] == "supervisor-plus") {
+						landingPage = lpSupervisor;  // if url.slice(url.StartsWith, url.search(lpSupervisor) )
+						landingPage = lpSupervisor;
+					} else if (enus_langpairs[i] == "technical-reqs") {
+						landingPage = lpTechReq;
+					} else if (enus_langpairs[i] == "uc-adapters") {
+						landingPage = lpUCAdmin;								
+					} else {
+						landingPage = "home.htm";
+					}
+				}
 			}
+			
 			if (landingPage === undefined) {  // if url isn't in language pair, set to the language home page
 				landingPage = "home.htm";
 			}			
@@ -224,7 +293,7 @@ function use_lang() {					// on change to the language drop down
 		url = rootURL + lang + "/Content/" + landingPage  ;   // combine elements to make the landing page URL
 		//url = rootURL + lang + "/" + contentID + "/landing-" + contentID.slice(0,contentID.search("/") ) + ".htm" ;   // combine elements to make the landing page URL
 		 alert ("URL = " + url ); 
-		 window.location = url;
+		// window.location = url;
 
 	}
 }	
