@@ -24,108 +24,52 @@
 
 // supported languages - add the project portion of the URL here 
 var langs = [ 'en-us', 'fr-ca', 'de' ];
-var enus_repos = [ 'agent-desktop-plus',		// 0 = "agent-desktop-plus/landing-agent-desktop-plus.htm";
-					   'basic-admin', 			// 1 = "basic-admin/landing-basic-admin.htm";
-					   'campaign-admin', 		// 2 = "campaign-admin/landing-campaign-admin.htm";
-					   'digital-engagement', 	// 3 = "digital-engagement/landing-digital-engagement.htm";
-					   'ivr-admin', 			// 4 = "ivr-admin/landing-ivr-admin.htm";
-					   'privacy-compliance', 	// 5 = "privacy-compliance/landing-privacy-compliance.htm";
-					   'reports-dashboards', 	// 6 = "reports-dashboards/landing-reports-dashboards.htm";
-					   'supervisor-plus', 		// 7 = "supervisor-plus/landing-supervisor-plus.htm";
-					   'technical-reqs', 		// 8 = "technical-reqs/landing-technical-reqs.htm";
-					   'uc-adapters',			// 9 = "uc-adapters/landing-uc-adapters-admin-gd.htm";	
-					   'crm-admins/ADT', 		// 10 = "crm-admins/ADT/landing-crm-admins-ADT.htm";
-					   'crm-agents/ADT', 		// 11 = "crm-agents/ADT/landing-crm-agents-guide-ADT.htm";
-					   'crm-admins/Salesforce', // 12 = "crm-admins/Salesforce/landing-crm-admins-Salesforce.htm";
-					   'crm-agents/Salesforce', // 13 = "crm-agents/Salesforce/landing-crm-agents-guide-Salesforce.htm";
-					   'crm-agents/MSDynamics', // 14 = "crm-agents/MSDynamics/landing-crm-agents-guide-MSD.htm";
-					   'crm-agents/NetSuite', 	// 15 = "crm-agents/NetSuite/landing-crm-agents-guide-NetSuite.htm";
-					   'crm-agents/Oracle', 	// 16 = "crm-agents/Oracle/landing-crm-agents-guide-Oracle.htm";
-					   'crm-agents/ServiceNow', // 17 = "crm-agents/ServiceNow/landing-crm-agents-guide-ServiceNow.htm";
-					   'crm-agents/Zendesk']; 	// 18 = "crm-agents/Zendesk/landing-crm-agents-guide-Zendesk.htm";	   
-
-var enus_landingPages = [ "agent-desktop-plus/landing-agent-desktop-plus.htm",			// 0 
-					   "basic-admin/landing-basic-admin.htm",							// 1
-					   "campaign-admin/landing-campaign-admin.htm",						// 2
-					   "digital-engagement/landing-digital-engagement.htm",				// 3
-					   "ivr-admin/landing-ivr-admin.htm",								// 4
-					   "privacy-compliance/landing-privacy-compliance.htm",				// 5
-					   "reports-dashboards/landing-reports-dashboards.htm",				// 6
-					   "supervisor-plus/landing-supervisor-plus.htm",					// 7
-					   "technical-reqs/landing-technical-reqs.htm",						// 8 
-					   "uc-adapters/landing-uc-adapters-admin-gd.htm",					// 9
-					   "crm-admins/ADT/landing-crm-admins-ADT.htm",						// 10
-					   "crm-agents/ADT/landing-crm-agents-guide-ADT.htm",				// 11 
-					   "crm-admins/Salesforce/landing-crm-admins-Salesforce.htm",		// 12
-					   "crm-agents/Salesforce/landing-crm-agents-guide-Salesforce.htm",	// 13
-					   "crm-agents/MSDynamics/landing-crm-agents-guide-MSD.htm",		// 14
-					   "crm-agents/NetSuite/landing-crm-agents-guide-NetSuite.htm",		// 15 
-					   "crm-agents/Oracle/landing-crm-agents-guide-Oracle.htm",			// 16 
-					   "crm-agents/ServiceNow/landing-crm-agents-guide-ServiceNow.htm",	// 17 
-					   "crm-agents/Zendesk/landing-crm-agents-guide-Zendesk.htm"];	  	// 18
-					    
-var frca_repos = [ 'agent-desktop-plus', 		// 0 = "agent-desktop-plus/landing-agent-desktop-plus.htm";
-					   'basic-admin', 			// 1 = "basic-admin/landing-basic-admin.htm";
-					   'campaign-admin', 		// 2 = "campaign-admin/landing-campaign-admin.htm";
-					   'digital-engagement', 	// 3 = "digital-engagement/landing-digital-engagement.htm";
-					   'ivr-admin', 			// 4 = "ivr-admin/landing-ivr-admin.htm";
-					   'privacy-compliance', 	// 5 = "privacy-compliance/landing-privacy-compliance.htm";
-					   'reports-dashboards', 	// 6 = "reports-dashboards/landing-reports-dashboards.htm";
-					   'supervisor-plus', 		// 7 = "supervisor-plus/landing-supervisor-plus.htm";
-					   'technical-reqs', 		// 8 = "technical-reqs/landing-technical-reqs.htm";
-					   'uc-adapters',			// 9 = "uc-adapters/landing-uc-adapters-admin-gd.htm";	
-					   'crm-admins/ADT', 		// 10 = "crm-admins/ADT/landing-crm-admins-ADT.htm";
-					   'crm-agents/ADT', 		// 11 = "crm-agents/ADT/landing-crm-agents-guide-ADT.htm";
-					   'crm-admins/Salesforce', // 12 = "crm-admins/Salesforce/landing-crm-admins-Salesforce.htm";
-					   'crm-agents/Salesforce']; // 13 = "crm-agents/Salesforce/landing-crm-agents-guide-Salesforce.htm";
-var frca_landingPages = [ "agent-desktop-plus/landing-agent-desktop-plus.htm",			// 0 
-					   "basic-admin/landing-basic-admin.htm",							// 1
-					   "campaign-admin/landing-campaign-admin.htm",						// 2
-					   "digital-engagement/landing-digital-engagement.htm",				// 3
-					   "ivr-admin/landing-ivr-admin.htm",								// 4
-					   "privacy-compliance/landing-privacy-compliance.htm",				// 5
-					   "reports-dashboards/landing-reports-dashboards.htm",				// 6
-					   "supervisor-plus/landing-supervisor-plus.htm",					// 7
-					   "technical-reqs/landing-technical-reqs.htm",						// 8 
-					   "uc-adapters/landing-uc-adapters-admin-gd.htm",					// 9
-					   "crm-admins/ADT/landing-crm-admins-ADT.htm",						// 10
-					   "crm-agents/ADT/landing-crm-agents-guide-ADT.htm",				// 11 
-					   "crm-admins/Salesforce/landing-crm-admins-Salesforce.htm",		// 12
-					   "crm-agents/Salesforce/landing-crm-agents-guide-Salesforce.htm",	// 13
-					   
-					   "crm-agents/MSDynamics/landing-crm-agents-guide-MSD.htm",		// 14
-					   "crm-agents/NetSuite/landing-crm-agents-guide-NetSuite.htm",		// 15 
-					   "crm-agents/Oracle/landing-crm-agents-guide-Oracle.htm",			// 16 
-					   "crm-agents/ServiceNow/landing-crm-agents-guide-ServiceNow.htm",	// 17 
-					   "crm-agents/Zendesk/landing-crm-agents-guide-Zendesk.htm"];	  	// 18
-					   
-					   
-var de_repos = [ 'agent-desktop-plus',  		// 0 = "agent-desktop-plus/landing-agent-desktop-plus.htm";
-					   'supervisor-plus', 		// 1 = "supervisor-plus/landing-supervisor-plus.htm";
-					   'crm-agents/ADT', 		// 2 = "crm-agents/ADT/landing-crm-agents-guide-ADT.htm";
-					   'crm-agents/Salesforce', // 3 = "crm-agents/Salesforce/landing-crm-agents-guide-Salesforce.htm";
-					   'crm-agents/MSDynamics', // 4 = "crm-agents/MSDynamics/landing-crm-agents-guide-MSD.htm";
-					   'crm-agents/NetSuite', 	// 5 = "crm-agents/NetSuite/landing-crm-agents-guide-NetSuite.htm";
-					   'crm-agents/Oracle', 	// 6 = "crm-agents/Oracle/landing-crm-agents-guide-Oracle.htm";
-					   'crm-agents/ServiceNow', // 7 = "crm-agents/ServiceNow/landing-crm-agents-guide-ServiceNow.htm";
-					   'crm-agents/Zendesk']; 	// 8 = "crm-agents/Zendesk/landing-crm-agents-guide-Zendesk.htm";	 					   
-
-var de_landingPages = [ "agent-desktop-plus/landing-agent-desktop-plus.htm",			// 0 
-					   "supervisor-plus/landing-supervisor-plus.htm",					// 1
-					   "crm-agents/ADT/landing-crm-agents-guide-ADT.htm",				// 2
-					   "crm-agents/Salesforce/landing-crm-agents-guide-Salesforce.htm",	// 3
-					   "crm-agents/MSDynamics/landing-crm-agents-guide-MSD.htm",		// 4
-					   "crm-agents/NetSuite/landing-crm-agents-guide-NetSuite.htm",		// 5 
-					   "crm-agents/Oracle/landing-crm-agents-guide-Oracle.htm",			// 6 
-					   "crm-agents/ServiceNow/landing-crm-agents-guide-ServiceNow.htm",	// 7 
-					   "crm-agents/Zendesk/landing-crm-agents-guide-Zendesk.htm"];	  	// 8
-					   
-					   
-					   
+var enus_langpairs = [ 'agent-desktop-plus', 
+					   'basic-admin', 
+					   'campaign-admin', 
+					   'digital-engagement', 
+					   'ivr-admin', 
+					   'crm-admins/Salesforce', 
+					   'crm-admins/ADT', 
+					   'crm-agents/Salesforce', 
+					   'crm-agents/ADT', 
+					   'crm-agents/MSDynamics', 
+					   'crm-agents/NetSuite', 
+					   'crm-agents/Oracle', 
+					   'crm-agents/ServiceNow', 
+					   'crm-agents/Zendesk', 					   
+					   'privacy-compliance', 
+					   'reports-dashboards', 
+					   'supervisor-plus', 
+					   'technical-reqs', 
+					   'uc-adapters' ];
+var frca_langpairs = [ 'agent-desktop-plus', 
+					   'basic-admin', 
+					   'campaign-admin', 
+					   'digital-engagement', 
+					   'ivr-admin', 
+					   'crm-admins/Salesforce', 
+					   'crm-admins/ADT', 
+					   'crm-agents/Salesforce', 
+					   'crm-agents/ADT', 
+					   'privacy-compliance', 
+					   'reports-dashboards', 
+					   'supervisor-plus', 
+					   'technical-reqs', 
+					   'uc-adapters' ];
+var de_langpairs = [ 'agent-desktop-plus', 
+					   'crm-agents/ADT', 
+					   'crm-agents/MSDynamics', 
+					   'crm-agents/NetSuite', 
+					   'crm-agents/Oracle', 
+					   'crm-agents/Salesforce', 
+					   'crm-agents/ServiceNow', 
+					   'crm-agents/Zendesk', 
+					   'supervisor-plus' ];
 
 // repos that have been translated - MAINTENANCE: add a variable here and then add the landing page definitition for each language supported
-// var lpADP, lpBasic, lpCampaign, lpDigital, lpIVR, lpPrivacy, lpReports, lpSupervisor, lpTechReq, lpUCAdmin, 
-//   lpADTAdmin, lpADTAgent, lpMSDAgent, lpNetsuiteAgent, lpOracleAgent, lpSFAdmin, lpSFAgent, lpSNOWAgent, lpZendeskAgent;
+var lpADP, lpBasic, lpCampaign, lpDigital, lpIVR, lpPrivacy, lpReports, lpSupervisor, lpTechReq, lpUCAdmin, 
+	lpADTAdmin, lpADTAgent, lpMSDAgent, lpNetsuiteAgent, lpOracleAgent, lpSFAdmin, lpSFAgent, lpSNOWAgent, lpZendeskAgent;
 
 var path = location.pathname;
 var curLang = "en-us";
@@ -178,12 +122,12 @@ function use_lang() {					// on change to the language drop down
 		// var url = "https://documentation.five9.com/de/crm-agents/salesforce/engagement/_ch-processing-digital-engagement-interactions.htm";
 		// var url = "https://documentation.five9.com/de/crm-agents/salesforce/engagement/_ch-processing-digital-engagement-interactions.htm";
 		// var url = "https://documentation.five9.com/de/cZZrm-agents/salesforce/engagement/_ch-processing-digital-engagement-interactions.htm";
+		var url = "https://documentation.five9.com/fr-ca/agent-desktop-plus/using-adp/customizing-station/sound-alert-settings.htm";
+		//var url = "https://documentation.five9.com/fr-ca/agenzt-desktop-plus/using-adp/customizing-station/sound-alert-settings.htm";
 
-		// var url = "https://documentation.five9.com/fr-ca/agent-desktop-plus/using-adp/customizing-station/sound-alert-settings.htm";
-		 var url = "https://documentation.five9.com/fr-ca/agenzt-desktop-plus/using-adp/customizing-station/sound-alert-settings.htm";
 		// var url = "https://documentation.five9.com/en-us/supervisor-plus/using-adp/customizing-station/sound-alert-settings.htm";
-	
-		//var url = "https://documentation.five9.com/fr-ca/supervisor-plus/using-adp/customizing-station/sound-alert-settings.htm";
+		
+		// var url = "https://documentation.five9.com/fr-ca/supervisor-plus/using-adp/customizing-station/sound-alert-settings.htm";
 		
 		// curLang = "en-us";											// for testing, set the language 
 		// lang = "fr-ca";
@@ -193,37 +137,196 @@ function use_lang() {					// on change to the language drop down
 		url = url.replace("betatest", "en-us");
 				
 		rootURL = url.slice(url.StartsWith, url.search(curLang) ); 	// grab the URL up to the language of the current page
+		// subfolders = url.substring(rootURL.length + curLang.length + 1); // grab everything else
+		
+		//subfolders = url.substring(rootURL.length + curLang.length + 1,url.lastIndexOf("/")); //grab the folders in the URL between the rootURL and the /topic-filename.htm
+		
+		//check if the subfolders var has a slash, so the page is nested in subfolders under the guide level
+		// if (subfolders.indexOf('/') == -1) {	
+			// contentID = subfolders; 										// if no slash for subfolders, set the variable 
+		// } else {
+			// contentID = subfolders.substring(0,subfolders.indexOf("/")) ;   // else chop the subfolders after the first slash to get the repo
+		// }
+
+		// alert ("rootURL = " + rootURL + "\n url = " + url + "\n curLang = " + curLang + "\n subfolders = " + subfolders );  
 
 		if (lang == "de") {								// check the content ID against the defined languages for german
-			for (var i = 0; i < de_repos.length; i++) {					// cycle through defined repos
-				if (url.search("/" + de_repos[i] + "/")  != -1) {
-					landingPage = de_landingPages[i];
+			// set landing page variables for this language - MAINTENANCE: add the variables used in this language 
+			lpADP = "agent-desktop-plus/landing-agent-desktop-plus.htm";	
+			lpSupervisor = "supervisor-plus/landing-supervisor-plus.htm";
+			lpADTAdmin = "crm-admins/ADT/landing-crm-admins-ADT.htm";
+			lpADTAgent = "crm-agents/ADT/landing-crm-agents-guide-ADT.htm";
+			lpMSDAgent = "crm-agents/MSDynamics/landing-crm-agents-guide-MSD.htm";
+			lpNetsuiteAgent = "crm-agents/NetSuite/landing-crm-agents-guide-NetSuite.htm";
+			lpOracleAgent = "crm-agents/Oracle/landing-crm-agents-guide-Oracle.htm";
+			lpSFAdmin = "crm-admins/Salesforce/landing-crm-admins-Salesforce.htm";
+			lpSFAgent = "crm-agents/Salesforce/landing-crm-agents-guide-Salesforce.htm";
+			lpSNOWAgent = "crm-agents/ServiceNow/landing-crm-agents-guide-ServiceNow.htm";
+			lpZendeskAgent = "crm-agents/Zendesk/landing-crm-agents-guide-Zendesk.htm";
+
+			for (var i = 0; i < de_langpairs.length; i++) {					// cycle through defind pairs
+				if (url.search(de_langpairs[i])  != -1) {					// if the repo id is found, then set the landing page 
+					if (de_langpairs[i]== "agent-desktop-plus") {			// MAINTENANCE: add the elseif statement to define the landing page for the new language
+						landingPage = lpADP;			
+					} else if (de_langpairs[i] == "crm-agents/ADT") {
+						landingPage = lpADTAgent;
+					} else if (de_langpairs[i] == "crm-agents/MSDynamics") {
+						landingPage = lpMSDAgent;
+					} else if (de_langpairs[i] == "crm-agents/NetSuite") {
+						landingPage = lpNetsuiteAgent;
+					} else if (de_langpairs[i] == "crm-agents/Oracle") {
+						landingPage = lpOracleAgent;
+					} else if (de_langpairs[i] == "crm-agents/Salesforce") {
+						landingPage = lpSFAgent;
+					} else if (de_langpairs[i] == "crm-agents/ServiceNow") {
+						landingPage = lpSNOWAgent;
+					} else if (de_langpairs[i] == "crm-agents/Zendesk") {
+						landingPage = lpZendeskAgent;
+					} else if (de_langpairs[i] == "supervisor-plus") {
+						landingPage = lpSupervisor;
+					} else {
+						landingPage = "home.htm";
+					} 
 				}
 			}
+			if (landingPage === undefined) {  // if url isn't in the set of language pairs, set landing page to the language home page
+				landingPage = "home.htm";
+			}	
 		} else if (lang == "fr-ca") {
-			for (var i = 0; i < frca_repos.length; i++) {					// cycle through defined repos
-				if (url.search("/" + frca_repos[i] + "/")  != -1) {
-					landingPage = frca_landingPages[i];
-				}
-			}
+			// set landing page variables for this language - MAINTENANCE: add the variables used in this language
+			lpADP = "agent-desktop-plus/landing-agent-desktop-plus.htm";			
+			lpBasic = "basic-admin/landing-basic-admin.htm";
+			lpCampaign = "campaign-admin/landing-campaign-admin.htm";
+			lpDigital = "digital-engagement/landing-digital-engagement.htm";
+			lpIVR = "ivr-admin/landing-ivr-admin.htm";
+			lpPrivacy = "privacy-compliance/landing-privacy-compliance.htm";
+			lpReports= "reports-dashboards/landing-reports-dashboards.htm";
+			lpSupervisor = "supervisor-plus/landing-supervisor-plus.htm";
+			lpTechReq = "technical-reqs/landing-technical-reqs.htm";
+			lpUCAdmin = "uc-adapters/landing-uc-adapters-admin-gd.htm";		
+			lpADTAdmin = "crm-admins/ADT/landing-crm-admins-ADT.htm";
+			lpADTAgent = "crm-agents/ADT/landing-crm-agents-guide-ADT.htm";
+			lpSFAdmin = "crm-admins/Salesforce/landing-crm-admins-Salesforce.htm";
+			lpSFAgent = "crm-agents/Salesforce/landing-crm-agents-guide-Salesforce.htm";
 
+			for (var i = 0; i < frca_langpairs.length; i++) {
+				if (url.search(frca_langpairs[i])  != -1) {						// MAINTENANCE: add the elseif statement to define the landing page for the new language
+					if (frca_langpairs[i]== "agent-desktop-plus") {
+						landingPage = lpADP;
+					} else if (frca_langpairs[i] == "basic-admin") {
+						landingPage = lpBasic;
+					} else if (frca_langpairs[i] == "campaign-admin") {
+						landingPage = lpCampaign;
+					} else if (frca_langpairs[i] == "digital-engagement") {
+						landingPage = lpDigital;
+					} else if (frca_langpairs[i] == "ivr-admin") {
+						landingPage = lpIVR;
+					} else if (frca_langpairs[i] == "crm-admins/ADT") {
+						landingPage = lpADTAdmin;
+					} else if (frca_langpairs[i] == "crm-admins/Salesforce") {
+						landingPage = lpSFAdmin;
+					} else if (frca_langpairs[i] == "crm-agents/ADT") {
+						landingPage = lpADTAgent;
+					} else if (frca_langpairs[i] == "crm-agents/Salesforce") {
+						landingPage = lpSFAgent;
+					} else if (frca_langpairs[i] == "privacy-compliance") {
+						landingPage = lpPrivacy;	// WRONG
+					} else if (frca_langpairs[i] == "reports-dashboards") {
+						landingPage = lpReports;
+					} else if (frca_langpairs[i] == "supervisor-plus") {
+						landingPage = lpSupervisor;
+					} else if (frca_langpairs[i] == "technical-reqs") {
+						landingPage = lpTechReq;
+					} else if (frca_langpairs[i] == "uc-adapters") {
+						landingPage = lpUCAdmin;								
+					} else {
+						landingPage = "home.htm";
+					}
+				}
+			}	
 		} else if (lang == "en-us") {
-			for (var i = 0; i < enus_repos.length; i++) {					// cycle through defined repos
-				if (url.search("/" + enus_repos[i] + "/")  != -1) {
-					landingPage = enus_landingPages[i];
+			// set landing page variables for this language - MAINTENANCE: add the variables used in this language
+			lpADP = "agent-desktop-plus/landing-agent-desktop-plus.htm";			
+			lpBasic = "basic-admin/landing-basic-admin.htm";
+			lpCampaign = "campaign-admin/landing-campaign-admin.htm";
+			lpDigital = "digital-engagement/landing-digital-engagement.htm";
+			lpIVR = "ivr-admin/landing-ivr-admin.htm";
+			lpPrivacy = "privacy-compliance/landing-privacy-compliance.htm";
+			lpReports= "reports-dashboards/landing-reports-dashboards.htm";
+			lpSupervisor = "supervisor-plus/landing-supervisor-plus.htm";
+			lpTechReq = "technical-reqs/landing-technical-reqs.htm";
+			lpUCAdmin = "uc-adapters/landing-uc-adapters-admin-gd.htm";		
+			
+			lpADTAdmin = "crm-admins/ADT/landing-crm-admins-ADT.htm";
+			lpADTAgent = "crm-agents/ADT/landing-crm-agents-guide-ADT.htm";
+			lpSFAdmin = "crm-admins/Salesforce/landing-crm-admins-Salesforce.htm";
+			lpSFAgent = "crm-agents/Salesforce/landing-crm-agents-guide-Salesforce.htm";
+			lpMSDAgent = "crm-agents/MSDynamics/landing-crm-agents-guide-MSD.htm";
+			lpNetsuiteAgent = "crm-agents/NetSuite/landing-crm-agents-guide-NetSuite.htm";
+			lpOracleAgent = "crm-agents/Oracle/landing-crm-agents-guide-Oracle.htm";
+			lpSNOWAgent = "crm-agents/ServiceNow/landing-crm-agents-guide-ServiceNow.htm";
+			lpZendeskAgent = "crm-agents/Zendesk/landing-crm-agents-guide-Zendesk.htm";			
+			
+			for (var i = 0; i < enus_langpairs.length; i++) {
+				if (url.search(enus_langpairs[i])  != -1) {						// MAINTENANCE: add the elseif statement to define the landing page for the new language
+					if (enus_langpairs[i]== "agent-desktop-plus") {
+						landingPage = lpADP;
+					} else if (enus_langpairs[i] == "basic-admin") {
+						landingPage = lpBasic;
+					} else if (enus_langpairs[i] == "campaign-admin") {
+						landingPage = lpCampaign;
+					} else if (enus_langpairs[i] == "digital-engagement") {
+						landingPage = lpDigital;
+					} else if (enus_langpairs[i] == "ivr-admin") {
+						landingPage = lpIVR;
+					} else if (enus_langpairs[i] == "crm-admins/ADT") {
+						landingPage = lpADTAdmin;
+					} else if (enus_langpairs[i] == "crm-admins/Salesforce") {
+						landingPage = lpSFAdmin;
+					} else if (enus_langpairs[i] == "crm-agents/ADT") {
+						landingPage = lpADTAgent;
+					} else if (enus_langpairs[i] == "crm-agents/Salesforce") {
+						landingPage = lpSFAgent;
+					} else if (enus_langpairs[i] == "crm-agents/MSDynamics") {
+						landingPage = lpMSDAgent;
+					} else if (enus_langpairs[i] == "crm-agents/NetSuite") {
+						landingPage = lpNetsuiteAgent;
+					} else if (enus_langpairs[i] == "crm-agents/Oracle") {
+						landingPage = lpOracleAgent;
+					} else if (enus_langpairs[i] == "crm-agents/Salesforce") {
+						landingPage = lpSFAgent;
+					} else if (enus_langpairs[i] == "crm-agents/ServiceNow") {
+						landingPage = lpSNOWAgent;
+					} else if (enus_langpairs[i] == "crm-agents/Zendesk") {
+						landingPage = lpZendeskAgent;
+					} else if (enus_langpairs[i] == "privacy-compliance") {
+						landingPage = lpPrivacy;	// WRONG
+					} else if (enus_langpairs[i] == "reports-dashboards") {
+						landingPage = lpReports;
+					} else if (enus_langpairs[i] == "supervisor-plus") {
+						landingPage = lpSupervisor;  // if url.slice(url.StartsWith, url.search(lpSupervisor) )
+						landingPage = lpSupervisor;
+					} else if (enus_langpairs[i] == "technical-reqs") {
+						landingPage = lpTechReq;
+					} else if (enus_langpairs[i] == "uc-adapters") {
+						landingPage = lpUCAdmin;								
+					} else {
+						landingPage = "home.htm";
+					}
 				}
 			}
-		}
-		
-		if (landingPage === undefined) {  // if url isn't in a translated repo, set to the language home page
-			landingPage = "home.htm";		
+			
+			if (landingPage === undefined) {  // if url isn't in language pair, set to the language home page
+				landingPage = "home.htm";
+			}			
 		}
 
-		url = rootURL + lang + "/Content/" + landingPage  ;   // combine elements to make the landing page URL  - MAINTENANCE: Remove the /Content/ portion when necessary
+
+
+		url = rootURL + lang + "/Content/" + landingPage  ;   // combine elements to make the landing page URL
+		//url = rootURL + lang + "/" + contentID + "/landing-" + contentID.slice(0,contentID.search("/") ) + ".htm" ;   // combine elements to make the landing page URL
 		 alert ("URL = " + url ); 
 		// window.location = url;
-		
-
 
 	}
 }	
