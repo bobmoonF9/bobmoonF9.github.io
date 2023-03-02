@@ -138,7 +138,7 @@ function use_lang() {					// on change to the language drop down
 		
 		//override values for  testing
 		// var url = "https://documentation.five9.com/alphatest/crm-agents/using-adp/customizing-station/sound-alert-settings.htm";
-		var url = "https://documentation.five9.com/" + curLang + "/crm-agents/using-adp/customizing-station/sound-alert-settings.htm";
+		var url = "https://documentation.five9.com/" + curLang + "/crm-agents/ADT/using-adp/customizing-station/sound-alert-settings.htm";
 		// curLang = "en-us";											
 		// lang = "fr-ca";
 		
@@ -167,10 +167,11 @@ function use_lang() {					// on change to the language drop down
 					landingPage = enus_landingPages[i];
 				}
 			}
-			if (landingPage === undefined) {  	// if url isn't in a translated repo, set to the language home page
-				landingPage = "home.htm";
-			}			
 		}
+		if (landingPage === undefined) {  	// if url isn't in a translated repo, set to the language home page
+				landingPage = "home.htm";
+			}		
+
 
 		url = rootURL + lang + "/Content/" + landingPage  ; 	// combine elements to make the landing page URL  MAINTENANCE: Remove the /Content/ text when the URL changes
 		// alert ("URL = " + url ); 		
