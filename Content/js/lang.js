@@ -137,7 +137,8 @@ function use_lang() {					// on change to the language drop down
 		var url = window.location.toString();					// set the url variable to current path	
 		
 		//override values for  testing
-		var url = "https://documentation.five9.com/alphatest/crm-agents/using-adp/customizing-station/sound-alert-settings.htm";
+		// var url = "https://documentation.five9.com/alphatest/crm-agents/using-adp/customizing-station/sound-alert-settings.htm";
+		var url = "https://documentation.five9.com/" + curLang + "/crm-agents/using-adp/customizing-station/sound-alert-settings.htm";
 		// curLang = "en-us";											
 		// lang = "fr-ca";
 		
