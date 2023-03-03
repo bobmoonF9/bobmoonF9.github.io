@@ -1,9 +1,9 @@
 ﻿
 
 var langs = [ 'en-us', 'fr-ca', 'de' ];
-// MAINTENANCE: Add all repos that are translated here
-// MAINTENANCE: Add the landing pages for all repo in the array below.
-// MAINTENANCE: It is critical that repos and landing pages are in the correct order.
+// MAINTENANCE: Add any repo that is translated to the EN-US section
+// MAINTENANCE: Add the landing pages for all repos in the array below.
+// IMPORTANT: It is critical that repos and landing pages are in the correct order.
 var enus_repos = [ 'agent-desktop-plus',		// 0 = "agent-desktop-plus/landing-agent-desktop-plus.htm";
 					   'basic-admin', 			// 1 = "basic-admin/landing-basic-admin.htm";
 					   'campaign-admin', 		// 2 = "campaign-admin/landing-campaign-admin.htm";
@@ -77,7 +77,7 @@ var frca_landingPages = [ "agent-desktop-plus/landing-agent-desktop-plus.htm",		
 					   "crm-agents/Oracle/landing-crm-agents-guide-Oracle.htm",			// 16 
 					   "crm-agents/ServiceNow/landing-crm-agents-guide-ServiceNow.htm",	// 17 
 					   "crm-agents/Zendesk/landing-crm-agents-guide-Zendesk.htm"];	  	// 18
-// MAINTENANCE: Add all repos that are translated to DE  here					   
+// MAINTENANCE: Add all repos that are translated to DE here					   
 // MAINTENANCE: Add the landing pages for all de repos in the array below.
 var de_repos = [ 'agent-desktop-plus',  		// 0 = "agent-desktop-plus/landing-agent-desktop-plus.htm";
 					   'supervisor-plus', 		// 1 = "supervisor-plus/landing-supervisor-plus.htm";
@@ -87,8 +87,7 @@ var de_repos = [ 'agent-desktop-plus',  		// 0 = "agent-desktop-plus/landing-age
 					   'crm-agents/NetSuite', 	// 5 = "crm-agents/NetSuite/landing-crm-agents-guide-NetSuite.htm";
 					   'crm-agents/Oracle', 	// 6 = "crm-agents/Oracle/landing-crm-agents-guide-Oracle.htm";
 					   'crm-agents/ServiceNow', // 7 = "crm-agents/ServiceNow/landing-crm-agents-guide-ServiceNow.htm";
-					   'crm-agents/Zendesk']; 	// 8 = "crm-agents/Zendesk/landing-crm-agents-guide-Zendesk.htm";	 					   
-
+					   'crm-agents/Zendesk']; 	// 8 = "crm-agents/Zendesk/landing-crm-agents-guide-Zendesk.htm";	 		   
 var de_landingPages = [ "agent-desktop-plus/landing-agent-desktop-plus.htm",			// 0 
 					   "supervisor-plus/landing-supervisor-plus.htm",					// 1
 					   "crm-agents/ADT/landing-crm-agents-guide-ADT.htm",				// 2
@@ -132,22 +131,18 @@ function use_lang() {					// on change to the language drop down
 		}
 	}
 		
-	// var filename = path.substring(path.lastIndexOf('/') + 1);
 	if (path.indexOf('/' + lang + '/') == -1) {				// If the current path doesn't include the language picked in the drop-down...
 		var url = window.location.toString();					// set the url variable to current path	
 		
 		//override values for  testing
-		// var url = "https://documentation.five9.com/alphatest/crm-agents/using-adp/customizing-station/sound-alert-settings.htm";
-		var url = "https://documentation.five9.com/" + curLang + "/crm-agents/ADT/using-adp/customizing-station/sound-alert-settings.htm";
+		// var url = "https://documentation.five9.com/" + curLang + "/crm-agents/ADT/using-adp/customizing-station/sound-alert-settings.htm";
 		// curLang = "en-us";											
-		// lang = "fr-ca";
-		
+		// lang = "fr-ca";		
 		
 		url = url.replace("alphatest", "en-us");		// replace alphatest and betatest with en-us so the URL is parsed correctly
 		url = url.replace("betatest", "en-us");
 		
 		rootURL = url.slice(url.StartsWith, url.search(curLang) ); 	// grab the URL up to the language of the current page
-		// subfolders = url.substring(rootURL.length + curLang.length + 1); // grab everything else
 
 		if (lang == "de") {								// check the content ID against the defined languages for german
 			for (var i = 0; i < de_repos.length; i++) {					// cycle through defined repos
@@ -172,9 +167,9 @@ function use_lang() {					// on change to the language drop down
 				landingPage = "home.htm";
 			}		
 
-
-		url = rootURL + lang + "/Content/" + landingPage  ; 	// combine elements to make the landing page URL  MAINTENANCE: Remove the /Content/ text when the URL changes
-		// alert ("URL = " + url ); 		
+		// MAINTENANCE: Remove the /Content/ portion of the URL  when the sites are public 
+		url = rootURL + lang + "/Content/" + landingPage  ; 	// combine elements to make the landing page URL  
+		// alert ("URL = " + url ); 							// use this for testing
 		window.location = url;									// navigate to the new page
 	}
 }
